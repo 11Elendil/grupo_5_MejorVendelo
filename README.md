@@ -4,3 +4,6 @@ A pesar de que estaría disponible para todas las edades (existiendo tal vez un 
 ## Integrantes del grupo
 ### Mateo B.
 Hola! Mi nombre es Mateo Briggs, estudio ingeniería, tengo 21 años y soy nuevo en el mundo de la programación.
+
+### Mateo F.
+Buenas! Soy Mateo Fernández, me entusiasma adquirir nuevos conocimientos. Estudio ingeniería informática, y tengo 21 años.
