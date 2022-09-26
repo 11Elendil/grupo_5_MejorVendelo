@@ -7,5 +7,9 @@ Hola! Mi nombre es Mateo Briggs, estudio ingeniería, tengo 21 años y soy nuevo
 
 ### Mateo F.
 Buenas! Soy Mateo Fernández, me entusiasma adquirir nuevos conocimientos. Estudio ingeniería informática, y tengo 21 años.
+
 ### Lautaro G.
 Hola! Mi nombre es Lautaro Goscilo, estudie y me recibi de planificador de medios y Lic. en periodismo. Estudie algo de programacion en la secundaria con pascal hace muchos años ya. Tengo 34 años y me gusta adquirir nuevos conocimientos. 
+
+### Micaela P.
+¡Hola! Mi nombre es Micaela y tengo 30 años. Soy licenciada en Comunicación, trabajo en Marketing Digital y este curso es mi primera aproximación al mundo de la Programación.
