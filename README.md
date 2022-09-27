@@ -13,3 +13,6 @@ Hola! Mi nombre es Lautaro Goscilo, estudie y me recibi de planificador de medio
 
 ### Micaela P.
 ¡Hola! Mi nombre es Micaela y tengo 30 años. Soy licenciada en Comunicación, trabajo en Marketing Digital y este curso es mi primera aproximación al mundo de la Programación.
+
+### Gaston T.
+Hola ! mi nombre es Gaston  Terminiello , estudio analisis de sistema, tengo 26 años, siempre busco ampliar mis conocimientos en programacion. 
