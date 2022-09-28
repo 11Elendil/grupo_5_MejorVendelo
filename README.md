@@ -19,3 +19,6 @@ Hola! Mi nombre es Lautaro Goscilo, estudie y me recibi de planificador de medio
 
 ### Gaston T.
 Hola ! mi nombre es Gaston  Terminiello , estudio analisis de sistema, tengo 26 años, siempre busco ampliar mis conocimientos en programacion. 
+
+### Reymundo C.
+Hola! mi nombres reymundo Cuezzo , soy tecnico electronico , tecnico en refrigeración .Tengo 44 años y mi meta es aprender a programar.
