@@ -4,11 +4,11 @@ La idea de nuestro proyecto es crear un sitio web orientado a la compra y venta 
 A pesar de que estaría disponible para todas las edades (existiendo tal vez un mínimo de 13/14 años para poder crear una cuenta), el sitio apuntará principalmente a un público de entre 16 y 35 años. En cuanto al nivel socioeconómico de nuestros usuarios creemos que estaríamos apuntando a los segmentos C2 y C3. Esto se debe a que, por lo que vemos a nuestro alrededor, esta es la gente que se encuentra más interesada en comprar y vender su ropa de esta forma.  
 
 Nos inspiramos en los siguientes sitios por su alta relación para con nuestro servicio:
-https://www.renovatuvestidor.com/
-https://galponderopa.com
-https://urbanluxurymarcas.com
-https://www.theweb.com.ar
-https://www.somoscocoliche.com
+- https://www.renovatuvestidor.com/
+- https://galponderopa.com
+- https://urbanluxurymarcas.com
+- https://www.theweb.com.ar
+- https://www.somoscocoliche.com
 
 ### Mateo B.
 Hola! Mi nombre es Mateo Briggs, estudio ingeniería, tengo 21 años y soy nuevo en el mundo de la programación.
