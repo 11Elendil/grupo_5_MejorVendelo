@@ -1,0 +1,23 @@
+{
+  "name": "grupo_5_mejorvendelo",
+  "version": "1.0.0",
+  "description": "La idea de nuestro proyecto es crear un sitio web orientado a la compra y venta de ropa. Este sería un espacio donde la gente a través de nuestra página pueda crear su propia cuenta, subir las prendas que tenga en buen estado, haya dejado de usar y desee vender, y a su vez, comprar a otros usuarios. También existirá la posibilidad de alquilar cierta clase de ropa, tal como trajes, vestidos de fiestas o disfraces. Para que esta última idea funcione los usuarios podrán puntuarse y valorarse unos a otros dependiendo del estado en que entreguen y devuelvan las prendas de alquiler.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/11Elendil/grupo_5_MejorVendelo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/11Elendil/grupo_5_MejorVendelo/issues"
+  },
+  "homepage": "https://github.com/11Elendil/grupo_5_MejorVendelo#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
