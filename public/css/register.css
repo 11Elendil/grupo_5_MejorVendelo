@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.titulo{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    font-size: 25px;
+
+}
+
+body{
+    height: 100vh;
+}
+
+form{
+    padding: 20px;
+    
+}
+
+.campo-form {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-form label{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.caja-boton{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.caja-boton button{
+    width: 50vh;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid black
+
+}
+
+img{
+    display: none;
+}
+
+
+@media(min-width: 426px){
+    /*Tablets*/
+
+}
+
+@media(min-width: 769px){
+    /*Desktop*/
+    body{
+        display: flex;
+        justify-content: space-between  ;
+    }
+    img{
+        display: flex;
+        width: 50%;
+    }
+    form {
+        width: 50%;
+    }
+}
