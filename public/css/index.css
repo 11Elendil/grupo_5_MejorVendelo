@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    margin: 0px;
+}
+
+/*HEADER*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(127, 255, 212, 0.553);
+}
+
+header p{
+    align-self: center;
+}
+.barrasMenu{
+    margin-left: 5px
+}
+
+.barraDeBusqueda{
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.botonIngresar{
+    margin-right: 5px
+}
+/*MAIN*/
+
+.carrusel{
+    width: 100%;
+}
+
+.promociones{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.articulo img{
+    width: 255px;
+}
+.articulo{
+    margin: 10px;
+}
+
+/*FOOTER*/
+
+footer{
+    text-align: center;
+}
+
+.redesSociales{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 30px;
+}
