@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    background-color: #f4eb9e;
 }
 
 body{
@@ -12,7 +13,8 @@ body{
 header{
     display: flex;
     justify-content: space-between;
-    background-color: rgba(127, 255, 212, 0.553);
+    background-color: #4f393c;
+    color: white;
 }
 
 header p{
