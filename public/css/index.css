@@ -1,11 +1,12 @@
 *{
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    background-color: #f4eb9e;
+    /*background-color: #f4eb9e;*/
 }
 
 body{
     margin: 0px;
+    background-color: #f4eb9e
 }
 
 /*HEADER*/
@@ -20,21 +21,51 @@ header{
 header p{
     align-self: center;
 }
+
 .barrasMenu{
-    margin-left: 5px
+    margin-left: 5px;
+    cursor: pointer;
 }
 
-.barraDeBusqueda{
-    display: flex;
-    width: 45%;
-    justify-content: space-between;
+.barraDeBusqueda {
+    padding-left: 7px;
+    padding-right: 7px;
+    height: 20px;
     background-color: white;
-    padding: 5px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.443);
+    align-self: center;
+    font-size: 12px;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.textoBarra{
+    height: 100%;
+}
+
+.barraDeBusqueda input {
+    border: none;
+    width: 100%;
+}
+
+.barraDeBusqueda button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    height: 100%;
+    color: #757575;
+}
+
+input:focus {
+    outline: none
 }
 
 .botonIngresar{
-    margin-right: 5px
+    margin-right: 5px;
+    cursor: pointer;
 }
 /*MAIN*/
 
@@ -42,16 +73,43 @@ header p{
     width: 100%;
 }
 
+.tituloSeccion{
+    margin: 10px;
+}
 .promociones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.articulo{
+    background-color: white;
+    width: 40vw;
+    margin-bottom: 10px;
+    border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.articulo img{
-    width: 255px;
+.articulo:hover{
+    width: 45vw;
+    box-shadow: #8f810b;
 }
-.articulo{
-    margin: 10px;
+
+.imagenArticulo {
+    width: 100%;
+}
+
+.articulo p img{
+    width: 100%;
+}
+.descripcion, .usuario{
+    width: 100%;
+    text-align: center;
+}
+
+.precio{
+    margin-left: 15px;
 }
 
 /*FOOTER*/
@@ -65,4 +123,13 @@ footer{
     justify-content: space-around;
     text-align: center;
     font-size: 30px;
+}
+@media(min-width: 450px){
+    .articulo{
+        width: 27vw;
+        transition: all 0.4s;
+    }
+    .articulo:hover{
+        width: 30vw;
+    }
 }
