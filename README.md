@@ -13,6 +13,8 @@ Nos inspiramos en los siguientes sitios por su alta relación para con nuestro s
 ## Tablero de trabajo
 - https://trello.com/b/MUt6QSNU/actividades
 
+## Integrantes
+
 ### Mateo B.
 Hola! Mi nombre es Mateo Briggs, estudio ingeniería, tengo 21 años y soy nuevo en el mundo de la programación.
 
