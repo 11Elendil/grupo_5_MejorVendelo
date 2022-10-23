@@ -15,7 +15,8 @@
 .titulo{
     display: flex;
     justify-content: space-around;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 70px;
     font-size: 25px;
     color: var(--marron);
 }
@@ -51,8 +52,6 @@ form{
     display: flex;
     justify-content: space-around;
     margin-top: 60px;
-
-    
 }
 
 .caja-boton button{
@@ -69,11 +68,11 @@ form{
     background-color: var(--verde-oscuro);
 }
 
-.contenedor-imagen{
+.contenedor-logo{
     display: none;
 }
 
-.imagen{
+.logo{
     display: none;
 }
 
@@ -91,15 +90,43 @@ form{
         display: flex;
         justify-content: space-between  ;
     }
-    .contenedor-imagen{
+    .contenedor-logo{
         display: flex;
         width: 50%;
+        background-image: url("/images/ropa.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        justify-content: center;
+        align-items: center;
+        
     }
-    .imagen{
+    
+    .logo{
         display: flex;
         width: 100%;
+        background-color: var(--verde-claro);
+        width: 200px;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        border-radius: 20px;
     }
+
     form {
         width: 50%;
     }
+    .titulo{
+        margin-top: 60px;
+    }
+
+    .campo-form {
+        margin-bottom: 60px;
+    }
+
+    .caja-boton{
+        margin-top: 100px;
+    }
+
 }
