@@ -120,6 +120,19 @@ button {
     background: #fff;
     color: #9cd0ac
   }
+  /*FOOTER*/
+
+footer {
+    text-align: center;
+}
+
+.redesSociales {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
 @media(min-width: 450px){
     
 
