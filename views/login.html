@@ -14,14 +14,42 @@
 </head>
 
 <body>
-    <header>
+    
         <header>
             <p class="barrasMenu"><i class="fas fa-bars"></i></p>
             <p>Logo</p>
             <form class="barraDeBusqueda"><input class="textoBarra" placeholder="Buscá productos, marcas..."><button><i class="fas fa-search"></i></button></i></form>
             <p class="botonIngresar">Ingresar</p>
         </header>
+        <main>
+            <form action="resultado.html" method="POST">
+                <p>
+                  <label></label>
+                  <input type="text" name="nombre" required placeholder="Nombre de Usuario">
+                </p>
+          
+                <p>
+                  <label></label>
+                  <input type="password" name="contraseña" required placeholder="Contraseña">
+                </p>
+    
+                
+                    <button class=“botonEnviar” type="submit" value="ENVIAR" >ENVIAR</button>
+                    
+          
+            </form> 
+    
+        </main>
     </header>
+    <footer>
+        <h3>¿Querés saber como funciona nuestra págia?</h3>
+        <p>¡Acá te contamos!</p>
+        <h3>¿Tuviste algún problema comprando?</h3>
+        <p>Hace click acá para comunicarte con servicio al cliente</p>
+        <h3>Encontranos también en nuestras redes sociales</h3>
+        <p class="redesSociales"><i class="fab fa-whatsapp"></i><i class="fab fa-instagram"></i><i class="fab fa-twitter"></i></p>
+    </footer>
+
     
 </body>
 </html>

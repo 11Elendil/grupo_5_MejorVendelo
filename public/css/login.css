@@ -67,3 +67,73 @@ input:focus {
     margin-right: 5px;
     cursor: pointer;
 }
+
+/*MAIN*/
+form {
+    text-align: center;
+}
+input {
+    writing-mode: horizontal-tb !important;
+    font-size: 21px;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    border: none;
+    border-radius: 7px;
+    
+    
+}
+
+button {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #9cd0ac;
+    background: #9cd0ac;
+  }
+  button:hover {
+    background: #fff;
+    color: #9cd0ac
+  }
+  /*FOOTER*/
+
+footer {
+    text-align: center;
+}
+
+.redesSociales {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+@media(min-width: 450px){
+    
+
+}
