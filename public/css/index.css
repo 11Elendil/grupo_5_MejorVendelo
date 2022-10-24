@@ -223,6 +223,10 @@ footer {
     font-size: 30px;
     cursor: pointer;
 }
+.logo {
+    width: 10%;
+    display: flex;
+}
 
 @media(min-width: 450px) {
     .articulo {
