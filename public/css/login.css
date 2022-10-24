@@ -67,6 +67,10 @@ input:focus {
     margin-right: 5px;
     cursor: pointer;
 }
+.logo{
+    width: 10%;
+    display: flex;
+}
 
 /*MAIN*/
 form {
@@ -117,8 +121,8 @@ button {
     background: #9cd0ac;
   }
   button:hover {
-    background: #fff;
-    color: #9cd0ac
+    background:#9cd0ac;
+    color: #f4eb9e
   }
   /*FOOTER*/
 
