@@ -73,6 +73,8 @@ input:focus {
 .botonIngresar {
     margin-right: 5px;
     cursor: pointer;
+    color: white;
+    text-decoration: none;
 }
 
 /*MAIN*/

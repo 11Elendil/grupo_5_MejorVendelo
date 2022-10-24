@@ -48,6 +48,10 @@ form{
     font-size: 20px;
 }
 
+input:focus {
+    outline: none
+}
+
 .caja-boton{
     display: flex;
     justify-content: space-around;
@@ -58,14 +62,18 @@ form{
     width: 50vh;
     height: 50px;
     border-radius: 20px;
-    border: 0.2px solid black;
+    border: none;
     background-color: var(--verde-claro);
     font-size: 20px;
-    transition: background-color 600ms; 
+    transition: all 600ms; 
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .caja-boton button:hover{
-    background-color: var(--verde-oscuro);
+    background:#9cd0ac;
+    color: #f4eb9e
 }
 
 .contenedor-logo{
@@ -122,7 +130,7 @@ form{
     }
 
     .campo-form {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
     }
 
     .caja-boton{
