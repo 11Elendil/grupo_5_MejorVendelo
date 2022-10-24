@@ -128,12 +128,12 @@ button.buy {
   button.buy:hover {
     transform: translateY(-4px) translateX(-2px);
     box-shadow: 2px 5px 0 0 #9cd0ac;
-  };
+  }
   
   button.buy:active {
     transform: translateY(2px) translateX(1px);
     box-shadow: 0 0 0 0 #9cd0ac;
-  };
+  }
 
 
 @media(min-width:450px){
@@ -151,6 +151,6 @@ button.buy {
     .card{
         width: 20%;
     }
-};
+}
 @media(min-width:768px){
-};
+}
