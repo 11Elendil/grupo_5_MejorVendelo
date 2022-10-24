@@ -113,12 +113,12 @@ button {
     display: inline-block;
     outline: none;
     border-radius: 20px;
-    border: 2px solid #ff0a78;
-    background: #ff0a78;
+    border: 2px solid #9cd0ac;
+    background: #9cd0ac;
   }
   button:hover {
     background: #fff;
-    color: #ff0a78
+    color: #9cd0ac
   }
 @media(min-width: 450px){
     
