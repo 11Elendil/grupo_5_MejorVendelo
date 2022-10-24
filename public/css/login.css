@@ -11,62 +11,6 @@ body{
 
 /*HEADER*/
 
-header{
-    display: flex;
-    justify-content: space-between;
-    background-color: #4f393c;
-    color: white;
-}
-
-header p{
-    align-self: center;
-}
-
-.barrasMenu{
-    margin-left: 5px;
-    cursor: pointer;
-}
-
-.barraDeBusqueda {
-    padding-left: 7px;
-    padding-right: 7px;
-    height: 20px;
-    background-color: white;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.443);
-    align-self: center;
-    font-size: 12px;
-    justify-content: space-between;
-    width: 50%;
-}
-
-.textoBarra{
-    height: 100%;
-}
-
-.barraDeBusqueda input {
-    border: none;
-    width: 100%;
-}
-
-.barraDeBusqueda button {
-    border: none;
-    background-color: white;
-    cursor: pointer;
-    height: 100%;
-    color: #757575;
-}
-
-input:focus {
-    outline: none
-}
-
-.botonIngresar{
-    margin-right: 5px;
-    cursor: pointer;
-}
 
 /*MAIN*/
 form {
@@ -117,9 +61,22 @@ button {
     background: #9cd0ac;
   }
   button:hover {
-    background: #fff;
-    color: #9cd0ac
+    background:#9cd0ac;
+    color: #f4eb9e
   }
+  /*FOOTER*/
+
+footer {
+    text-align: center;
+}
+
+.redesSociales {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
 @media(min-width: 450px){
     
 

@@ -16,6 +16,8 @@ header p img{
     margin-bottom: 46px;
     background: beige;
     width: 100vw;
+    
+
 }
 .article{
     display: flex;
@@ -136,9 +138,12 @@ button.buy {
   }
 
 
-@media(min-width:450px){
+@media (min-width:450px){
    .images-none{
-    display: none;
+    
+    
+   display: none;
+
    }
    .carrusel{
     display: flex;

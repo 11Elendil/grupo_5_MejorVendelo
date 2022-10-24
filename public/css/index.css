@@ -16,6 +16,7 @@ header {
     justify-content: space-between;
     background-color: #4f393c;
     color: white;
+    height: 50px;
 }
 
 header p {
@@ -25,6 +26,11 @@ header p {
 .barrasMenu {
     margin-left: 5px;
     cursor: pointer;
+    font-size: 25px;
+}
+
+.logo{
+    margin: 5px;
 }
 
 .barraDeBusqueda {
@@ -40,6 +46,7 @@ header p {
     font-size: 12px;
     justify-content: space-between;
     width: 50%;
+    height: 30px;
 }
 
 .textoBarra {
@@ -225,6 +232,17 @@ footer {
 }
 
 @media(min-width: 450px) {
+
+    .barrasMenu{
+        position: relative;
+        left: 10px;
+    }
+
+    .botonIngresar{
+        position: relative;
+        right: 10px;
+    }
+
     .articulo {
         width: 27vw;
         transition: all 0.4s;
