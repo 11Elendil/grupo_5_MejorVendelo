@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    /*background-color: #f4eb9e;*/
+}
+
 header p img{
     width: 60px;
     border-radius: 52%;
