@@ -8,8 +8,10 @@
 
 
 *{
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    margin:0;
+    /*background-color: #f4eb9e;*/
 }
 
 .titulo{
@@ -92,6 +94,7 @@ input:focus {
 
 }
 
+
 @media(min-width: 769px){
     /*Desktop*/
     body{
@@ -101,6 +104,7 @@ input:focus {
     .contenedor-logo{
         display: flex;
         width: 50%;
+        height: 100vh;
         background-image: url("/images/ropa.jpeg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -126,7 +130,7 @@ input:focus {
         width: 50%;
     }
     .titulo{
-        margin-top: 60px;
+        margin-top: 30px;
     }
 
     .campo-form {
@@ -134,7 +138,7 @@ input:focus {
     }
 
     .caja-boton{
-        margin-top: 100px;
+        margin-top: 60px;
     }
 
 }

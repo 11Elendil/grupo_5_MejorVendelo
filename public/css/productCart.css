@@ -1,5 +1,13 @@
-.logo{
-    display: flex;
+
+*{
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+header p img{
+    width: 60px;
+    border-radius: 52%;
+
 }
 .productCart{
     display: flex;
