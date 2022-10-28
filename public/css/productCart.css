@@ -1,6 +1,5 @@
-header p img{
-    width: 60px;
-    border-radius: 52%;
+.logo{
+    display: flex;
 }
 .productCart{
     display: flex;
@@ -22,9 +21,8 @@ header p img{
 .article{
     display: flex;
     flex-wrap: wrap;
-    position: absolute;
-    justify-content: space-between;
-
+    position: relative;
+    justify-content: center;
 }
 article img{
     display: flex;
@@ -140,18 +138,19 @@ button.buy {
 
 @media (min-width:450px){
    .images-none{
-    
-    
    display: none;
-
    }
-   .carrusel{
+   .article{
     display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
    }
     .product1{
         width: 40%;
         margin-top: 20px;
         margin-bottom: 20px;
+       
     }
     .card{
         width: 20%;
