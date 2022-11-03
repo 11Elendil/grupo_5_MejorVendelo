@@ -14,6 +14,11 @@ body form {
     flex-wrap: wrap;
     justify-content: center;
 }
+body form div{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .titleForm{
     margin: 10px;
