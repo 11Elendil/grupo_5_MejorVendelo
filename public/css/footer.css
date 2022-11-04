@@ -1,0 +1,11 @@
+footer {
+    text-align: center;
+}
+
+.redesSociales {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
