@@ -24,7 +24,7 @@ header p {
 }
 
 .barrasMenu {
-    margin-left: 5px;
+    margin-left: 15px;
     cursor: pointer;
     font-size: 25px;
 }
@@ -70,11 +70,20 @@ input:focus {
     outline: none
 }
 
+.fa-shopping-cart{
+    color:white;
+    position: relative;
+    top: 20px;
+    display: none;
+    right: 11px;
+}
+
 .botonIngresar {
     margin-right: 5px;
     cursor: pointer;
     color: white;
     text-decoration: none;
+    display: none;
 }
 
 /*MAIN*/
@@ -252,5 +261,16 @@ footer {
 
     .articulo:hover {
         width: 30vw;
+    }
+}
+@media(min-width: 600px){
+    .barrasMenu{
+        display: none;
+    }
+    .fa-shopping-cart{
+        display: block;
+    }
+    .botonIngresar{
+        display: block;
     }
 }

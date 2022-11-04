@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="/css/productForm.css">
+        <title>Document</title>
+    </head>
+
+<%- include("partials/header")%>
+   
+<body>
+    <form action="/grupo_5_MejorVendelo/" method="post">
+        <div class="createProduct">
+        <div class="titleForm">
+            <div class="imageForm">
+                <img src="" alt="">
+                <label>PUBLICA TU PRODUCTO</label>    
+            </div>
+        </div>
+        <div class="name">
+            <label for="nameProduct">Nombre Del Producto</label>
+            <input type="text" name="nameproduct" id="nameproduct" placeholder="remera,pantalon...">
+        </div>
+        <div class="imageinput">
+           <label for="imageinput">Imagen del Producto</label>
+           <div class="iconImageInput"> <i class="fa-solid fa-camera"></i><input type="file"  id="imageinput" accept="image/*" multiple></div>
+        </div>
+        <div class="priceForm">
+            <input type="number" name="priceForm" id="priceForm">
+        </div>
+        <div class="categoryForm">
+            <p type="text" name="category" id="category" placeholder="categoria del producto">categoria</p>
+            <select>
+                <option value="hombre">hombre</option>
+                <option value="mujer">mujer</option>
+                <option value="unisex">unisex</option>
+            </select>
+        </div>
+        <div class="subcategory">
+            <p type="text" name="subcategory" id="subcategory" placeholder="subcategoria del producto">subcategoria</p>
+            <select>
+                <option value="remera">remera</option>
+                <option value="pantalon">pantalon</option>
+                <option value="zapatillas">zapatillas</option>
+            </select>
+         
+        </div>
+        <div class="condicion">
+            <input type="radio" name="condicion" value="nuevo">NUEVO
+            <input type="radio" name="condicion" value="usado">USADO
+        </div>
+        <div class="talle">
+            <input type="checkbox" name="talle" id="S" value="S">S
+            <input type="checkbox" name="talle" id="M" value="M">M
+            <input type="checkbox" name="talle" id="L" value="L">L
+            <input type="checkbox" name="talle" id="XL" value="XL">XL
+            <input type="checkbox" name="talle" id="XXL" value="XXL">XXL
+            
+        </div>
+        <div class="colorForm">
+            <input type="text" name="colorForm" id="colorForm" placeholder="color del producto">
+        </div>
+        <br>
+        <button class=“botonEnviar” type="submit" value="ENVIAR">ENVIAR</button>
+        <br>
+        
+        <button class=“botonLimpiar” type="reset" value="LIMPIAR">LIMPIAR</button>
+        </div>
+        
+    </form>
+    <%- include("./partials/footer") %>
+</body>
+</html>

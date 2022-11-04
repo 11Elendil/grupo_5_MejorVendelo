@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    /*background-color: #f4eb9e;*/
+}
+
+body {
+    margin: 0px;
+    background-color: #f4eb9e
+}
+
+body form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+body form div{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.titleForm{
+    margin: 10px;
+    font-size: 25px;
+}
+.condicion{
+    display: block;
+    margin:5%;
+    text-align: center;
+    
+}
+.talle{
+    display: block;
+    margin:5%;
+    text-align: center;
+    
+}
+.imageinput{
+    margin: 5%;
+}
+.nameproduct{
+    margin:5%;
+}
+button {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #9cd0ac;
+    background: #9cd0ac;
+  }
+  button:hover {
+    background:#9cd0ac;
+    color: #f4eb9e
+  }
