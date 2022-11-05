@@ -26,14 +26,60 @@ header {
 }
 
 .foto-producto img{
-    width: 100%;
+    width: 107%;
+    position: relative;
+    right: -18em;
+}
+.fotosPequeñas{
+    
+    display: flex;
+    flex-flow:column;
+    align-items: center;
+    justify-content: flex-start;
+
+    right: -4em;
+    position: relative;
+    
+}
+.camisa2{
+    width: 98px;
+    margin: 0px 8px 8px 8px;
+
+
+}
+.camisa3{
+    width: 98px;
+    margin: 0px 8px 8px 8px;
+}
+.camisa4{
+    width: 98px;
+    margin: 0px 8px 8px 8px;
 }
 
 .contenedor-descripcion{
-    display: flex;
+    
+    right: -39em;
+    position: relative;
+    padding: 2%;
+    
+    height: 557px;
+    width: 500px;
+    bottom:2px;
+}
+.contenedorEnviosPagos{
+    font-size: 30px;
+    position: relative;
+    right: 10%;
+    bottom: -2px;
+    width: 499px;
+}
+.pagos{
     text-align: center;
-    align-items: center;
-    justify-content: center;
+
+}
+.envios{
+    text-align: center;
+
 }
 
 h2, p{
@@ -80,4 +126,14 @@ h2, p{
     
 
 }
+.contactanos{
+    
+    font-size: 16px;
+    right: 282px;
+    position: relative;
+
+}
+
+ 
+
 
