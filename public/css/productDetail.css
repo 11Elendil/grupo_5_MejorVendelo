@@ -28,7 +28,7 @@ header {
 .foto-producto img{
     width: 107%;
     position: relative;
-    right: -18em;
+    right: -30em;
 }
 .fotosPequeñas{
     
@@ -37,7 +37,7 @@ header {
     align-items: center;
     justify-content: flex-start;
 
-    right: -4em;
+    right: -29em;
     position: relative;
     
 }
@@ -58,7 +58,7 @@ header {
 
 .contenedor-descripcion{
     
-    right: -39em;
+    right: -31em;
     position: relative;
     padding: 2%;
     
@@ -106,7 +106,7 @@ h2, p{
     font-weight: bold;
 }
 
-.caja-boton button:hover{
+.caja-boton button:hover {
     background:#9cd0ac;
     color: #f4eb9e
 }
@@ -124,14 +124,6 @@ h2, p{
         flex-direction: row;
     }
     
-
-}
-.contactanos{
-    
-    font-size: 16px;
-    right: 282px;
-    position: relative;
-
 }
 
  
