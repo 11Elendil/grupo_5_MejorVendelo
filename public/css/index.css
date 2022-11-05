@@ -9,83 +9,6 @@ body {
     background-color: #f4eb9e
 }
 
-/*HEADER*/
-
-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #4f393c;
-    color: white;
-    height: 50px;
-}
-
-header p {
-    align-self: center;
-}
-
-.barrasMenu {
-    margin-left: 15px;
-    cursor: pointer;
-    font-size: 25px;
-}
-
-.logo{
-    margin: 5px;
-}
-
-.barraDeBusqueda {
-    padding-left: 7px;
-    padding-right: 7px;
-    height: 20px;
-    background-color: white;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.443);
-    align-self: center;
-    font-size: 12px;
-    justify-content: space-between;
-    width: 50%;
-    height: 30px;
-}
-
-.textoBarra {
-    height: 100%;
-}
-
-.barraDeBusqueda input {
-    border: none;
-    width: 100%;
-}
-
-.barraDeBusqueda button {
-    border: none;
-    background-color: white;
-    cursor: pointer;
-    height: 100%;
-    color: #757575;
-}
-
-input:focus {
-    outline: none
-}
-
-.fa-shopping-cart{
-    color:white;
-    position: relative;
-    top: 20px;
-    display: none;
-    right: 11px;
-}
-
-.botonIngresar {
-    margin-right: 5px;
-    cursor: pointer;
-    color: white;
-    text-decoration: none;
-    display: none;
-}
-
 /*MAIN*/
 
 #carrusel-caja {
@@ -230,29 +153,10 @@ input:focus {
 
 /*FOOTER*/
 
-footer {
-    text-align: center;
-}
 
-.redesSociales {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    font-size: 30px;
-    cursor: pointer;
-}
 
 @media(min-width: 450px) {
 
-    .barrasMenu{
-        position: relative;
-        left: 10px;
-    }
-
-    .botonIngresar{
-        position: relative;
-        right: 10px;
-    }
 
     .articulo {
         width: 27vw;
@@ -264,13 +168,7 @@ footer {
     }
 }
 @media(min-width: 600px){
-    .barrasMenu{
-        display: none;
-    }
     .fa-shopping-cart{
-        display: block;
-    }
-    .botonIngresar{
         display: block;
     }
 }
