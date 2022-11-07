@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="/css/index.css">
         <link rel="stylesheet" href="/css/productForm.css">
         <title>Document</title>
     </head>
@@ -20,18 +21,22 @@
                 <label>PUBLICA TU PRODUCTO</label>    
             </div>
         </div>
-        <div class="name">
-            <label for="nameProduct">Nombre Del Producto</label>
-            <input type="text" name="nameproduct" id="nameproduct" placeholder="remera,pantalon...">
+        <div class="nameproduct">
+            <label for="nameproduct">Nombre Del Producto</label>
+            <input type="text" name="nameroduct" id="nameproduct" placeholder="remera,pantalon...">
         </div>
         <div class="imageinput">
-           <label for="imageinput">Imagen del Producto</label>
-           <div class="iconImageInput"> <i class="fa-solid fa-camera"></i><input type="file"  id="imageinput" accept="image/*" multiple></div>
+            <label for="imageinput">Imagen del Producto</label>
+            <button class="iconImageInput"> 
+            <i class="fa-solid fa-camera"></i>
+            <input type="file"  id="imageinput" accept="image/*" multiple>
+            </button>
         </div>
         <div class="priceForm">
-            <input type="number" name="priceForm" id="priceForm">
+            <p class="precio">precio</p>
+            <input type="number" name="priceForm" id="priceForm" placeholder="$">
         </div>
-        <div class="categoryForm">
+        <div class="category">
             <p type="text" name="category" id="category" placeholder="categoria del producto">categoria</p>
             <select>
                 <option value="hombre">hombre</option>
@@ -46,7 +51,6 @@
                 <option value="pantalon">pantalon</option>
                 <option value="zapatillas">zapatillas</option>
             </select>
-         
         </div>
         <div class="condicion">
             <input type="radio" name="condicion" value="nuevo">NUEVO
@@ -63,13 +67,12 @@
         <div class="colorForm">
             <input type="text" name="colorForm" id="colorForm" placeholder="color del producto">
         </div>
-        <br>
+       <div class="enviar-limpiar">
         <button class=“botonEnviar” type="submit" value="ENVIAR">ENVIAR</button>
         <br>
-        
         <button class=“botonLimpiar” type="reset" value="LIMPIAR">LIMPIAR</button>
         </div>
-        
+        </div>
     </form>
     <%- include("./partials/footer") %>
 </body>
