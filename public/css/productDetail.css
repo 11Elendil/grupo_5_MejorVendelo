@@ -7,6 +7,7 @@
 body{
     background-color:#ffffff;
     width: 100%;
+    margin: 0px;
     background-color: #f4eb9e
 
 }
@@ -123,8 +124,8 @@ h2, p{
         display: flex;
         width: 145%;
         position: relative;
-        right: -84px;
-        top: -202px;
+        right: -50px;
+        top: -174px;
     }
     .fotosPequeñas {
         display: flex;
