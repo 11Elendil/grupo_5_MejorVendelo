@@ -11,67 +11,44 @@ body{
 
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #4f393c;
-    width: 100vw;
-    text-align: center;
-    margin: auto;
-}
 
 .contenedor-general{
     display: flex;
     flex-direction: column;
+
+    
 }
 
 .foto-producto img{
-    width: 107%;
-    position: relative;
-    right: -30em;
+   
+    display: flex;
+   
+    width: 123%;
 }
 .fotosPequeñas{
     
     display: flex;
-    flex-flow:column;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
 
-    right: -29em;
-    position: relative;
+ width: 50px;
+
+
     
 }
-.camisa2{
-    width: 98px;
-    margin: 0px 8px 8px 8px;
-
-
-}
-.camisa3{
-    width: 98px;
-    margin: 0px 8px 8px 8px;
-}
-.camisa4{
-    width: 98px;
-    margin: 0px 8px 8px 8px;
+.foto-producto{
+    display: flex; 
+    width: 50%;
+    margin-left: 88px;
+    margin-top: -173px;
 }
 
-.contenedor-descripcion{
-    
-    right: -31em;
-    position: relative;
-    padding: 2%;
-    
-    height: 557px;
-    width: 500px;
-    bottom:2px;
-}
+
 .contenedorEnviosPagos{
     font-size: 30px;
-    position: relative;
-    right: 10%;
+
+
     bottom: -2px;
-    width: 499px;
+
 }
 .pagos{
     text-align: center;
@@ -112,16 +89,47 @@ h2, p{
 }
 
 
-@media(min-width: 426px) {
-
-
+@media(min-width:450px){
+    .contenedor-descripcion {
+        top: -71px;
+        position: relative;
+    }
+    .foto-producto img {
+        display: flex;
+        width: 145%;
+        position: relative;
+        right: -8px;
+        top: -112px;
+}
+.fotosPequeñas {
+    display: flex;
+    flex-direction: column;
+    width: 79px;
 }
 
-@media(min-width: 769px){
-
-    .contenedor-general{
+}
+@media(min-width: 768px){
+    .contenedorEnviosPagos {
+    
+        bottom: -68px;
+    
+        
+    }
+    .contenedor-descripcion {
+        top: -125px;
+        position: relative;
+    }
+    .foto-producto img {
         display: flex;
-        flex-direction: row;
+        width: 145%;
+        position: relative;
+        right: -84px;
+        top: -202px;
+    }
+    .fotosPequeñas {
+        display: flex;
+        flex-direction: column;
+        width: 104px;
     }
     
 }
