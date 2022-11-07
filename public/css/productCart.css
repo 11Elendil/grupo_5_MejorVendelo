@@ -1,4 +1,15 @@
 
+* {
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    /*background-color: #f4eb9e;*/
+}
+
+body {
+    margin: 0px;
+    background-color: #f4eb9e
+}
+
 .productCart{
     display: none;
 }

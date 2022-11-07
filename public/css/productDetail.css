@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     font-family: 'Jost', sans-serif;
     /*background-color: #f4eb9e;*/
@@ -11,29 +11,52 @@ body{
 
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    background-color: #4f393c ;
-    width: 100vw;
-    text-align: center;
-    margin: auto;
-}
 
 .contenedor-general{
     display: flex;
     flex-direction: column;
+
+    
 }
 
 .foto-producto img{
-    width: 100%;
+   
+    display: flex;
+   
+    width: 123%;
+}
+.fotosPequeñas{
+    
+    display: flex;
+    flex-direction: column;
+
+ width: 50px;
+
+
+    
+}
+.foto-producto{
+    display: flex; 
+    width: 50%;
+    margin-left: 88px;
+    margin-top: -173px;
 }
 
-.contenedor-descripcion{
-    display: flex;
+
+.contenedorEnviosPagos{
+    font-size: 30px;
+
+
+    bottom: -2px;
+
+}
+.pagos{
     text-align: center;
-    align-items: center;
-    justify-content: center;
+
+}
+.envios{
+    text-align: center;
+
 }
 
 h2, p{
@@ -60,24 +83,57 @@ h2, p{
     font-weight: bold;
 }
 
-.caja-boton button:hover{
+.caja-boton button:hover {
     background:#9cd0ac;
     color: #f4eb9e
 }
 
 
-@media(min-width: 426px){
-
-
+@media(min-width:450px){
+    .contenedor-descripcion {
+        top: -71px;
+        position: relative;
+    }
+    .foto-producto img {
+        display: flex;
+        width: 145%;
+        position: relative;
+        right: -8px;
+        top: -112px;
+}
+.fotosPequeñas {
+    display: flex;
+    flex-direction: column;
+    width: 79px;
 }
 
-@media(min-width: 769px){
-
-    .contenedor-general{
+}
+@media(min-width: 768px){
+    .contenedorEnviosPagos {
+    
+        bottom: -68px;
+    
+        
+    }
+    .contenedor-descripcion {
+        top: -125px;
+        position: relative;
+    }
+    .foto-producto img {
         display: flex;
-        flex-direction: row;
+        width: 145%;
+        position: relative;
+        right: -84px;
+        top: -202px;
+    }
+    .fotosPequeñas {
+        display: flex;
+        flex-direction: column;
+        width: 104px;
     }
     
-
 }
+
+ 
+
 
