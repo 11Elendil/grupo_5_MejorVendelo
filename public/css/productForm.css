@@ -11,7 +11,6 @@ body {
 
 body form {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 body form div{
@@ -25,6 +24,56 @@ body form div{
     margin: 10px;
     font-size: 25px;
 }
+.nameproduct{
+    margin:5%;
+    text-align: center;
+}
+/*imagen del producto*/
+.imageinput{
+    margin: 5%;
+    text-align: center;
+}
+
+.iconImageInput input{
+    display: none;
+}
+button.iconImageInput{
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 75px;
+    background:#9cd0ac;
+    border-radius: 45%;
+}
+.iconImageInput i{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.iconImageInput i:hover{
+color: #f4eb9e;
+}
+
+/*FIN imagen del producto*/
+
+.priceForm{
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    text-align: center;
+}
+.category{
+    text-align: center;
+}
+.subcategory{
+    text-align: center;
+}
+
 .condicion{
     display: block;
     margin:5%;
@@ -37,13 +86,12 @@ body form div{
     text-align: center;
     
 }
-.imageinput{
-    margin: 5%;
+
+/*botone de envio*/
+.enviar-limpiar{
+    margin-top: 20px;
 }
-.nameproduct{
-    margin:5%;
-}
-button {
+.enviar-limpiar button {
     min-width: 130px;
     height: 40px;
     color: #fff;
@@ -58,7 +106,12 @@ button {
     border: 2px solid #9cd0ac;
     background: #9cd0ac;
   }
-  button:hover {
+  .enviar-limpiar button:hover {
     background:#9cd0ac;
     color: #f4eb9e
   }
+/*fin botones envio*/
+ 
+  @media (min-width: 450px){
+   
+  };
