@@ -13,41 +13,41 @@
         </div>
         <div class="nameproduct">
             <label for="nameproduct">Nombre Del Producto</label>
-            <input type="text" name="nameroduct" id="nameproduct" placeholder="remera,pantalon...">
+            <input type="text" name="nameroduct" id="nameproduct" placeholder="Remera,pantalon..." required>
         </div>
         <div class="imageinput">
             <label for="imageinput">Imagen del Producto</label>
             <button class="iconImageInput"> 
             <i class="fa-solid fa-camera"></i>
-            <input type="file"  id="imageinput" accept="image/*" multiple>
+            <input type="file"  id="imageinput" accept="image/*" multiple required>
             </button>
         </div>
         <div class="priceForm">
-            <p class="precio">precio</p>
-            <input type="number" name="priceForm" id="priceForm" placeholder="$">
+            <p class="precio">Precio</p>
+            <input type="number" name="priceForm" id="priceForm" placeholder="$" required>
         </div>
         <div class="category">
-            <p type="text" name="category" id="category" placeholder="categoria del producto">categoria</p>
+            <p type="text" name="category" id="category" placeholder="Categoria del producto">Categoria</p>
             <select>
-                <option value="hombre">hombre</option>
-                <option value="mujer">mujer</option>
-                <option value="unisex">unisex</option>
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+                <option value="unisex">Unisex</option>
             </select>
         </div>
         <div class="subcategory">
-            <p type="text" name="subcategory" id="subcategory" placeholder="subcategoria del producto">subcategoria</p>
+            <p type="text" name="subcategory" id="subcategory" placeholder="Subcategoria del producto">Subcategoria</p>
             <select>
-                <option value="remera">remera</option>
-                <option value="pantalon">pantalon</option>
-                <option value="zapatillas">zapatillas</option>
+                <option value="remera">Remera</option>
+                <option value="pantalon">Pantalón</option>
+                <option value="zapatillas">Zapatillas</option>
             </select>
         </div>
-        <div class="condicion">
-            <input type="radio" name="condicion" value="nuevo">NUEVO
-            <input type="radio" name="condicion" value="usado">USADO
+        <div class="condicion" required>
+            <input type="radio" name="condicion" value="nuevo" >NUEVO
+            <input type="radio" name="condicion" value="usado" >USADO
         </div>
-        <div class="talle">
-            <input type="checkbox" name="talle" id="S" value="S">S
+        <div class="talle" required>
+            <input type="checkbox" name="talle" id="S" value="S" >S
             <input type="checkbox" name="talle" id="M" value="M">M
             <input type="checkbox" name="talle" id="L" value="L">L
             <input type="checkbox" name="talle" id="XL" value="XL">XL
@@ -55,13 +55,20 @@
             
         </div>
         <div class="colorForm">
-            <input type="text" name="colorForm" id="colorForm" placeholder="color del producto">
+            <input type="text" name="colorForm" id="colorForm" placeholder="Color del producto" required>
+        </div>
+        <br>
+        <div class="descrip" >
+            <textarea name="cajaTexto" id="cajaTexto" cols="30" rows="10" placeholder="Descripción..."></textarea>
         </div>
        <div class="enviar-limpiar">
         <button class=“botonEnviar” type="submit" value="ENVIAR">ENVIAR</button>
         <br>
         <button class=“botonLimpiar” type="reset" value="LIMPIAR">LIMPIAR</button>
         </div>
+     
+
         </div>
-    </form>
+        
+       </form>
     <%- include("./partials/footer") %>
