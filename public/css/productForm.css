@@ -20,6 +20,12 @@ body form div{
     width: auto;
 }
 
+.imagen1{
+    display: none;
+}
+.imagen2{
+    display: none;
+}
 .titleForm{
     margin: 10px;
     font-size: 25px;
@@ -32,6 +38,7 @@ body form div{
     border: none;
     border-radius: 5px;
 }
+
 /*imagen del producto*/
 .imageinput{
     margin: 5%;
@@ -50,6 +57,7 @@ button.iconImageInput{
     height: 75px;
     background:#9cd0ac;
     border-radius: 45%;
+    border: none;
 }
 .iconImageInput i{
     display: flex;
@@ -139,5 +147,28 @@ color: #f4eb9e;
 /*fin botones envio*/
  
   @media (min-width: 450px){
+.contenedorGeneral{
+    display: flex
+}
+.imagen1{
+    display: flex;
+    width: 40%;
+    height: 10%;
+    margin-top: 15%;
+}
+
+.imagen2{
+    display: flex;
+    width: 40%;
+    height: 10%;
+    margin-top: 15%;
+}
+.imagen1 img{
+    
+    width: 100%;
+}
+.imagen2 img{
    
+    width: 100%;
+}
   };

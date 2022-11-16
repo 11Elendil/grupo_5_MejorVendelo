@@ -2,7 +2,10 @@
 
 
     <%- include("partials/header")%>
-
+    <div class="contenedorGeneral">
+<div class="imagen1">
+    <img src="/images/perchero1.jpg" alt="imagen1">
+</div>
     <form action="/grupo_5_MejorVendelo/" method="post">
         <div class="createProduct">
         <div class="titleForm">
@@ -17,6 +20,7 @@
         </div>
         <div class="imageinput">
             <label for="imageinput">Imagen del Producto</label>
+            <br>
             <button class="iconImageInput"> 
             <i class="fa-solid fa-camera"></i>
             <input type="file"  id="imageinput" accept="image/*" multiple required>
@@ -71,4 +75,8 @@
         </div>
         
        </form>
+       <div class="imagen1">
+        <img src="/images/perchero2.png" alt="imagen2">
+    </div>
+</div>
     <%- include("./partials/footer") %>
