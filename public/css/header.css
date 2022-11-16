@@ -94,4 +94,7 @@ input:focus {
     .botonIngresar{
         display: block;
     }
+    .fa-shopping-cart{
+        display: block;
+    }
 }

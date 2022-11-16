@@ -11,3 +11,7 @@ Con este segundo sprint notamos la importancia de realizar las tareas con más t
 De todos modos pudimos ayudarnos entre nosotros para poder resolver las distintas dudas que iban surgiendo a lo largo del sprint y mejorar nuestra capacidad de trabajo en equipo.  
 
 Nuestros objetivos para el tercer sprint serían trabajar con más conciencia acerca de la cantidad de tiempo y mantener la buena comunicación en el grupo. También podríamos aprovechar más las herramientas que nos brinda el Trello. 
+
+## Sprint 3
+
+Mejoramos como grupo. Estuvimos mas organizados aplicando correctamente la herramienta de Trello. LLegamos mas traquilos a la entrega utilizando mejor los tiempos que teniamos disponibles. Esperamos poder continuar con esta gran mecanica de trabajo y mantenerala a lo largo de los siguientes Sprints.

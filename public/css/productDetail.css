@@ -10,7 +10,6 @@ body{
     margin: 0px;
     background-color: #f4eb9e
 
-}
 
 
 .contenedor-general{
@@ -20,6 +19,63 @@ body{
     
 }
 
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+:root {
+  --grey50: hsla(0, 0%, 98%, 1); /* Material Pallete 50 */
+  --grey900: hsla(0, 0%, 13%, 0.25); /* Material Pallete Grey 900 */
+}
+
+body {
+  background-color: #f4eb9e;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.thumb {
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.5rem;
+  margin-top: 0;
+}
+
+.thumb > li {
+  border: 0.125rem solid var(--grey900);
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+  width: 6.25rem;
+}
+
+.thumb > li > a > picture > img {
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.imgBox {
+  border: 0.125rem solid var(--grey900);
+  width: 31.25rem;
+}
+
+.imgBox > picture > img {
+  vertical-align: bottom;
+  width: 100%;
+}
+
+p {
+  text-align: center;
+}
 .foto-producto img{
    
     display: flex;
@@ -124,8 +180,8 @@ h2, p{
         display: flex;
         width: 145%;
         position: relative;
-        right: -84px;
-        top: -202px;
+        right: -50px;
+        top: -174px;
     }
     .fotosPequeñas {
         display: flex;
@@ -134,7 +190,3 @@ h2, p{
     }
     
 }
-
- 
-
-

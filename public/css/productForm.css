@@ -27,6 +27,10 @@ body form div{
 .nameproduct{
     margin:5%;
     text-align: center;
+    }
+.nameproduct input{
+    border: none;
+    border-radius: 5px;
 }
 /*imagen del producto*/
 .imageinput{
@@ -66,6 +70,10 @@ color: #f4eb9e;
     flex-wrap: wrap;
     place-content: center;
     text-align: center;
+}
+.priceForm input{
+    border: none;
+    border-radius: 5px;
 }
 .category{
     text-align: center;
@@ -110,6 +118,24 @@ color: #f4eb9e;
     background:#9cd0ac;
     color: #f4eb9e
   }
+  .descrip{
+    display: flex;
+  }
+  select{
+    border: none;
+    border-radius: 5px;
+  }
+  .colorForm input{
+    border: none;
+    border-radius: 5px;
+  }
+
+  
+  textarea{
+    border: none;
+    border-radius: 5px;
+  }
+  
 /*fin botones envio*/
  
   @media (min-width: 450px){

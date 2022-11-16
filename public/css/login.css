@@ -16,7 +16,7 @@ body{
 form {
     text-align: center;
 }
-input {
+.inputFormulario {
     writing-mode: horizontal-tb !important;
     font-size: 21px;
     text-rendering: auto;
