@@ -9,7 +9,7 @@ body{
     width: 100%;
     margin: 0px;
     background-color: #f4eb9e
-
+}
 
 
 .contenedor-general{
@@ -49,6 +49,8 @@ h1 {
   flex-direction: column;
   margin-right: 0.5rem;
   margin-top: 0;
+  padding: 0px;
+  justify-content: center;
 }
 
 .thumb > li {
@@ -71,6 +73,7 @@ h1 {
 .imgBox > picture > img {
   vertical-align: bottom;
   width: 100%;
+  height: 100%;
 }
 
 p {
@@ -173,8 +176,10 @@ h2, p{
         
     }
     .contenedor-descripcion {
-        top: -125px;
-        position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    text-align: center;
     }
     .foto-producto img {
         display: flex;

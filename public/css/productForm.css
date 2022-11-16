@@ -28,7 +28,8 @@ body form div{
 }
 .titleForm{
     margin: 10px;
-    font-size: 25px;
+    font-size: 40px;
+    text-align: center;
 }
 .nameproduct{
     margin:5%;
@@ -148,27 +149,43 @@ color: #f4eb9e;
  
   @media (min-width: 450px){
 .contenedorGeneral{
-    display: flex
+    display: flex;
+    justify-content: center;
 }
 .imagen1{
-    display: flex;
-    width: 40%;
-    height: 10%;
-    margin-top: 15%;
+    display: none;
+  
 }
 
 .imagen2{
-    display: flex;
-    width: 40%;
-    height: 10%;
-    margin-top: 15%;
+    display: none;
+  
 }
-.imagen1 img{
+
+  }
+@media( min-width: 790px){
+    .contenedorGeneral{
+        display: flex
+    }
+    .imagen1{
+        display: flex;
+        width: 40%;
+        height: 10%;
+        margin-top: 15%;
+    }
     
-    width: 100%;
+    .imagen2{
+        display: flex;
+        width: 40%;
+        height: 10%;
+        margin-top: 15%;
+    }
+    .imagen1 img{
+        
+        width: 100%;
+    }
+    .imagen2 img{
+       
+        width: 100%;
+    }
 }
-.imagen2 img{
-   
-    width: 100%;
-}
-  };
