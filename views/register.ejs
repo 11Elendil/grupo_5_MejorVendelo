@@ -22,18 +22,36 @@
         </div>
 
         <div class="campo-form">
-            <label>Nombre y apellido</label>
-            <input type="text" name="nombreYApellido" required>
+            <label>Nombre</label>
+            <input type="text" name="nombre" required>
         </div>
 
         <div class="campo-form">
-            <label>Nombre de usuario</label>
-            <input type="text" name="nombreUsuario" required>
+            <label>Apellido</label>
+            <input type="text" name="apellido" required>
         </div>
         <div class="campo-form">
             <label>Email</label>
             <input type="email" name="emailUsuario" required>
         </div>
+        <div class="campo-form">
+            <div class="radio-buttons">
+                <div>
+                    <label>Comprador</label>
+                    <input type="radio" name="type" required>
+                </div>
+                <div>
+                    <label>Vendedor</label>
+                    <input type="radio" name="type" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="campo-form">
+            <label>Agrega una foto</label>
+            <input class="imagen-input" type="file" name="avatar">
+        </div>
+
         <div class="campo-form">
             <label>Contraseña</label>
             <input type="password" name="contraseniaUsuario" required>
