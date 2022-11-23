@@ -38,5 +38,5 @@ router.post('/', upload.single('imageinput'), productsController.store)
 
 /* GET ONE PRODUCT */
 router.get('/detail/:id', productsController.detail)
-
+// router.get ('/products)
 module.exports = router

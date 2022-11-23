@@ -1,11 +1,24 @@
-<%- include("./partials/head", {pageTitle: "Productos", stylesheet: "index.css"}) %>
+<%- include("./partials/head", {pageTitle: "Productos", stylesheet: "products.css"}) %>
 
 
     <%- include("partials/header")%>
    <!--comenzar a codear-->
+    
+  <%  products.forEach(product => { %>
+
+    <div class="product1">
+<h2><%=product.nombre %> </h2><br>
+  <img src="/images/<%= product.imagen %> " alt="">
+      <div class="info-podruct">
+
+        <div class="description"><%=product.descripción%></div>
+        <div class="price">$<%= product.precio %></div>
+        </div>
+        </div>
+   <% }) %> 
    
-   
-   
+
+    
    
    
    

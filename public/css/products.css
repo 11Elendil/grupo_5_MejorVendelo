@@ -1,0 +1,18 @@
+
+* {
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    /*background-color: #f4eb9e;*/
+}
+.product1{
+flex-direction: column;
+text-align: center;
+display: flex; 
+width: 18%;
+margin-left: 793px;
+margin-top: 96px;
+}
+body{
+    margin: 0px;
+    background-color: #f4eb9e;
+}
