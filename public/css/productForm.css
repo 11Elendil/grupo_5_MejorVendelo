@@ -23,9 +23,7 @@ body form div{
 .imagen1{
     display: none;
 }
-.imagen2{
-    display: none;
-}
+
 .titleForm{
     margin: 10px;
     font-size: 40px;
@@ -174,18 +172,11 @@ color: #f4eb9e;
         margin-top: 15%;
     }
     
-    .imagen2{
-        display: flex;
-        width: 40%;
-        height: 10%;
-        margin-top: 15%;
-    }
+   
     .imagen1 img{
         
         width: 100%;
     }
-    .imagen2 img{
-       
-        width: 100%;
-    }
+    
+    
 }
