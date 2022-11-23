@@ -2,11 +2,13 @@
 
 
     <%- include("partials/header")%>
+    <script src="/js/productForm.js" defer></script>
+    
     <div class="contenedorGeneral">
 <div class="imagen1">
-    <img src="/images/perchero1.jpg" alt="imagen1">
+    <img src="/images/<%= products.image  %> " alt="imagen1">
 </div>
-    <form action="/grupo_5_MejorVendelo/" method="post">
+    <form action="/products" method="post" enctype="multipart/form-data">
         <div class="createProduct">
         <div class="titleForm">
             <div class="imageForm">
@@ -16,15 +18,13 @@
         </div>
         <div class="nameproduct">
             <label for="nameproduct">Nombre Del Producto</label>
-            <input type="text" name="nameroduct" id="nameproduct" placeholder="Remera,pantalon..." required>
+            <input type="text" name="nameproduct" id="nameproduct" placeholder="Remera,pantalon..." required>
         </div>
         <div class="imageinput">
             <label for="imageinput">Imagen del Producto</label>
-            <br>
-            <button class="iconImageInput"> 
-            <i class="fa-solid fa-camera"></i>
-            <input type="file"  id="imageinput" accept="image/*" multiple required>
-            </button>
+            <button type="button" class="iconImageInput" id="botonimagen"> <i class="fa-solid fa-camera"></i></button>
+            <input type="file" name="imageInput" id="imageinput" accept="image/*" multiple required>
+            
         </div>
         <div class="priceForm">
             <p class="precio">Precio</p>

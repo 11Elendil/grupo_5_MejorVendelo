@@ -14,13 +14,7 @@ const controller = {
     productCart: (req,res) => {
         return res.render("productCart.ejs");
     },
-    productDetail: (req,res) => {
-        return res.render("productDetail.ejs");
-    },
-    productform: (req,res) => {
-        return res.render("productForm.ejs");
-    },
-
+  
 }
 
 module.exports = controller;

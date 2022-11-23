@@ -46,8 +46,8 @@ body form div{
     text-align: center;
 }
 
-.iconImageInput input{
-    display: none;
+.imageinput input{
+    visibility: hidden;
 }
 button.iconImageInput{
     width: 80px;
