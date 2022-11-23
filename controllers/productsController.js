@@ -32,7 +32,14 @@
         fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2));
 
         return res.send(req.file);
-    } 
+    },
+    edit: (req, res) =>{
+        const idProduct = req.params.id;
+		const product = products.find( product => {
+			return product.id == idProduct
+		})
+		res.render("prodcutEdit", { product })
+    }
  };
 
  module.exports = productsController;

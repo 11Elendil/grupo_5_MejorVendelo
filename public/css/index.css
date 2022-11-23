@@ -142,9 +142,11 @@ body {
 }
 
 .descripcion,
-.usuario {
+.nombre {
     width: 100%;
     text-align: center;
+    color: black;
+    text-decoration: none;
 }
 
 .precio {

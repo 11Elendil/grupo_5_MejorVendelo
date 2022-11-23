@@ -38,5 +38,7 @@ router.post('/', upload.single('imageinput'), productsController.store)
 
 /* GET ONE PRODUCT */
 router.get('/detail/:id', productsController.detail)
+router.get('/:id/edit', productsController.edit); 
+//router.put('/:id', productsController.update);
 
 module.exports = router
