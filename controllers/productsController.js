@@ -15,7 +15,7 @@
     detail : (req,res)=>{
     const productDetail = req.params.id
     const product = products.find((product)=> product.id == productDetail)
-    if(product){
+    if(!product){
     res.send( 'no existe el producto')
         
     }
