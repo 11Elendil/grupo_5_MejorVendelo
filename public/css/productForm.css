@@ -29,22 +29,22 @@ body form div{
     font-size: 40px;
     text-align: center;
 }
-.nameproduct{
+.nombre{
     margin:5%;
     text-align: center;
     }
-.nameproduct input{
+.nombre input{
     border: none;
     border-radius: 5px;
 }
 
 /*imagen del producto*/
-.imageinput{
+.imagen{
     margin: 5%;
     text-align: center;
 }
 
-.imageinput input{
+.imagen input{
     visibility: hidden;
 }
 button.iconImageInput{
