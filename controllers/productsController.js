@@ -15,10 +15,12 @@
     detail : (req,res)=>{
     const productDetail = req.params.id
     const product = products.find((product)=> product.id == productDetail)
-    if(product){
-        res.render('productDetail' , {product:product})
+    if(!product){
+    res.send( 'no existe el producto')
+        
     }
-    return res.send( 'no existe el producto')
+    return res.render('productDetail' , {product:product})
+    
     },
     create: (req,res)=>{
         res.render('productForm')

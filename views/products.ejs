@@ -3,7 +3,7 @@
 
     <%- include("partials/header")%>
    <!--comenzar a codear-->
-    
+  <div class="contenedor" >
   <%  products.forEach(product => { %>
 
     <div class="product1">
@@ -14,9 +14,9 @@
         <div class="descrition"><%=product.descripción%></div>
         <div class="price">$<%= product.precio %></div>
         </div>
-      </div>
-          <% }) %> 
-   
+        </div>
+   <% }) %> 
+  </div>
 
     
    

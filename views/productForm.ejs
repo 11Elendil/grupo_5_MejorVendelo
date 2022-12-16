@@ -16,20 +16,26 @@
                 <label>PUBLICA TU PRODUCTO</label>    
             </div>
         </div>
-        <div class="nameproduct">
-            <label for="nameproduct">Nombre Del Producto</label>
-            <input type="text" name="nameproduct" id="nameproduct" placeholder="Remera,pantalon..." required>
+        <div class="name">
+            <label for="name">Nombre Del Producto</label>
+            <input type="text" name="name" id="name" placeholder="Remera,pantalon..." required>
         </div>
-        <div class="imageinput">
-            <label for="imageinput">Imagen del Producto</label>
-            <button type="button" class="iconImageInput" id="botonimagen"> <i class="fa-solid fa-camera"></i></button>
-            <input type="file" name="imageInput" id="imageinput" accept="image/*" multiple required>
+        <div class="image">
+            <label for="image">Imagen del Producto</label>
+            <br>
+            <button type="button" class="iconImageInput" id="image"> <i class="fa-solid fa-camera"></i></button>
+            <input type="file" name="image" id="image" accept="image/*" multiple required>
             
         </div>
-        <div class="priceForm">
-            <p class="precio">Precio</p>
-            <input type="number" name="priceForm" id="priceForm" placeholder="$" required>
+        <div class="price">
+            <p class="price">Precio</p>
+            <input type="number" name="price" id="price" placeholder="$" required>
         </div>
+        <br>
+
+        <div class="brand">
+        <input type="text" name="brand" id="brand" placeholder="Marca del producto" required> </div>
+
         <div class="category">
             <p type="text" name="category" id="category" placeholder="Categoria del producto">Categoria</p>
             <select>
@@ -46,24 +52,24 @@
                 <option value="zapatillas">Zapatillas</option>
             </select>
         </div>
-        <div class="condicion" required>
-            <input type="radio" name="condicion" value="nuevo" >NUEVO
-            <input type="radio" name="condicion" value="usado" >USADO
+        <div class="condition" required>
+            <input type="radio" name="condition" value="nuevo" >NUEVO
+            <input type="radio" name="condition" value="usado" >USADO
         </div>
-        <div class="talle" required>
-            <input type="checkbox" name="talle" id="S" value="S" >S
-            <input type="checkbox" name="talle" id="M" value="M">M
-            <input type="checkbox" name="talle" id="L" value="L">L
-            <input type="checkbox" name="talle" id="XL" value="XL">XL
-            <input type="checkbox" name="talle" id="XXL" value="XXL">XXL
+        <div class="size" required>
+            <input type="checkbox" name="size" id="S" value="S" >S
+            <input type="checkbox" name="size" id="M" value="M">M
+            <input type="checkbox" name="size" id="L" value="L">L
+            <input type="checkbox" name="size" id="XL" value="XL">XL
+            <input type="checkbox" name="size" id="XXL" value="XXL">XXL
             
         </div>
-        <div class="colorForm">
-            <input type="text" name="colorForm" id="colorForm" placeholder="Color del producto" required>
+        <div class="color">
+            <input type="text" name="color" id="color" placeholder="Color del producto" required>
         </div>
         <br>
-        <div class="descrip" >
-            <textarea name="cajaTexto" id="cajaTexto" cols="30" rows="10" placeholder="Descripción..."></textarea>
+        <div class="description" >
+            <textarea name="description" id="description" cols="30" rows="10" placeholder="Descripción..."></textarea>
         </div>
        <div class="enviar-limpiar">
         <button class=“botonEnviar” type="submit" value="ENVIAR">ENVIAR</button>
