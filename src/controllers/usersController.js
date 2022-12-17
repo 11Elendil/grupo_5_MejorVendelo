@@ -12,7 +12,7 @@ const usersController = {
     
         // Si hay errores, renderizar la vista de login con los errores
         if (!errors.isEmpty()) {
-            return res.render('users/login', {errors: errors.errors});
+            return res.render('/users/login', {errors: errors.errors});
         }
     
         // Si no hay errores, verificar si el usuario está registrado en el archivo de usuarios
@@ -36,7 +36,7 @@ const usersController = {
         }
     },
     register: function(req, res){
-        return  res.render('users/register');
+        return  res.render('/users/register');
       },
     
 
@@ -59,6 +59,7 @@ create: function (req, res) {
 
 },
 ingresar: (req,res) =>{
+    
     const errors = validationResult(req);
     //return res.send(errors.mapped());
     if(errors.isEmpty()){
