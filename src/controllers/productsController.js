@@ -28,7 +28,8 @@
     store: (req,res)=>{
         const newProductField = req.body;
         /* AGREGANDO EL PRODUCTO*/
-        newProductField.id = products.length,
+        newProductField.price = Number(newProductField.price) 
+        newProductField.id = products.length + 1,
         newProductField.image = req.file.filename;
         /*SUMANDO AL ARRAY */
         products.push(newProductField);
