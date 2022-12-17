@@ -1,0 +1,70 @@
+<%- include("../partials/head", {pageTitle: "Registrarme", stylesheet: "register.css"}) %>
+
+    <header>
+        <p class="barrasMenu"><i class="fas fa-bars"></i></p>
+        <a href="/">
+            <img class="logo" src="images/logoConTitulo.png" height="45px">
+        </a>
+    </header>
+    
+    <div class="contenedor-logo">
+        <a href="/">
+            <img class="logo2" src="/images/isologoNaranja.png">
+        </a>
+    </div>
+    
+    <form action="/register" method="post" enctype="multipart/form-data">
+
+        <div class="titulo">
+            <h2>COMPLETA TUS DATOS</h2>
+        </div>
+
+        <div class="campo-form">
+            <label>Nombre</label>
+            <input type="text" name="nombre" required>
+        </div>
+
+        <div class="campo-form">
+            <label>Apellido</label>
+            <input type="text" name="apellido" required>
+        </div>
+        <div class="campo-form">
+            <label>Email</label>
+            <input type="email" name="emailUsuario" required>
+        </div>
+        <div class="campo-form">
+            <div class="radio-buttons">
+                <div>
+                    <label>Comprador</label>
+                    <input type="radio" name="type" required>
+                </div>
+                <div>
+                    <label>Vendedor</label>
+                    <input type="radio" name="type" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="campo-form">
+            <label>Agrega una foto</label>
+            <input class="imagen-input" type="file" name="avatar">
+        </div>
+
+        <div class="campo-form">
+            <label>Contraseña</label>
+            <input type="password" name="contraseniaUsuario" required>
+        </div>
+        <div class="campo-form">
+            <label>Confirmar contraseña</label>
+            <input type="password" name="contraseniaUsuario" required>
+        </div>
+
+        <div class="caja-boton">
+            <button type="submit">CREA TU CUENTA</button>
+        </div>
+    </form>
+
+
+</body>
+
+</html>
