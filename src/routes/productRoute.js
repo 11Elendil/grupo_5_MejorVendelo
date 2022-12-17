@@ -33,7 +33,7 @@ router.get('/', productsController.index)
 /* GET ADD PRODUCTS */
 router.get('/create', productsController.create)
 /* POST ADD PRODUCTS */
-router.post('/', upload.single('imageinput'), productsController.store)
+router.post('/', upload.single('image'), productsController.store)
 
 
 /* GET ONE PRODUCT */

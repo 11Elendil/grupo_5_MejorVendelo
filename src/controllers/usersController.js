@@ -51,9 +51,34 @@ create: function (req, res) {
         password: bcrypt.hashSync(req.body.password, 10)
     };
 
+
+
 } else { 
     return res.render('login', {errors: errors.errors});
 }
+
+},
+ingresar: (req,res) =>{
+    const errors = validationResult(req);
+    //return res.send(errors.mapped());
+    if(errors.isEmpty()){
+      let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
+      let usuarioLogueado = archivoUsuarios.find(usuario => usuario.email == req.body.email)
+      //return res.send(usuarioLogueado);
+      //Como podemos modificar nuestros req.body
+      delete usuarioLogueado.password;
+      req.session.usuario = usuarioLogueado;  //Guardar del lado del servidor
+      //Aquí voy a guardar las cookies del usuario que se loguea
+      if(req.body.recordarme){
+        res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})
+      }
+      return res.redirect('/');   //Aquí ustedes mandan al usuario para donde quieran (Perfil- home - a donde deseen)
+
+    }else{
+      //Devolver a la vista los errores
+      res.render(path.resolve(__dirname, '../views/users/login'),{errors:errors.mapped(),old:req.body});        
+    }
+  },
 }
-}
+
 module.exports = usersController;
