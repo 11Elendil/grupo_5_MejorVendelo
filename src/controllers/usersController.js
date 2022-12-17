@@ -19,7 +19,8 @@ const usersController = {
         let archivoUsuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
         let usuarioRegistrado = false;
         for (let i = 0; i < archivoUsuarios.length; i++) {
-            if (archivoUsuarios[i].email == req.body.email && bcrypt.compareSync(req.body.password, archivoUsuarios[i].password)) {
+            if (req.body !== undefined && req.body.email !== undefined && archivoUsuarios[i].email == req.body.email && bcrypt.compareSync(req.body.password, archivoUsuarios[i].password)) {
+
                 usuarioRegistrado = true;
                 break;
             }

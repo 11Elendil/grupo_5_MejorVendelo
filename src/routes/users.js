@@ -82,7 +82,7 @@ const validacionesRegistro = [
   ]
 
 
-router.get('/login',validacionesLogin,usersController.login);
+router.get('/login',usersController.login);
 router.post('/login', validacionesLogin,usersController.login);
 router.get('/register',validacionesRegistro,usersController.register);
 
