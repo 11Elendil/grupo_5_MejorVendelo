@@ -86,7 +86,7 @@ const validacionesRegistro = [
   router.get('/login',usersController.login);
   router.post('/login', validacionesLogin,usersController.ingresar);
   router.get('/register',usersController.register);
-  router.post('/register',upload.single('avatar'),validacionesRegistro,usersController.create);
+  router.post('/register',upload.single('avatar'),usersController.create);
 
 
 

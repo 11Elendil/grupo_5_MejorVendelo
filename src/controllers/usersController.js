@@ -15,15 +15,15 @@ const usersController = {
       },
     
       create: (req, res) => {
-        let errors = validationResult(req);
+        res.send('lalala');
+       /* let errors = validationResult(req);
         if (errors.isEmpty()) {
           let user = {
-            nombre: req.body.first_name,
-            apellido: req.body.last_name,
+            nombre: req.body.firstName,
+            apellido: req.body.lastName,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
             avatar:  req.file ? req.file.filename : '',
-            role: 1
           }
           let archivoUsers = fs.readFileSync(path.resolve(__dirname, '../data/users.json'), {
             encoding: 'utf-8'
@@ -46,7 +46,7 @@ const usersController = {
             errors: errors.errors,  old: req.body
             
           });
-        }
+        }*/
       },
 
 ingresar: (req, res) =>{
