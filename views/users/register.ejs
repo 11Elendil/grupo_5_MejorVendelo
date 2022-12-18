@@ -1,12 +1,20 @@
 <%- include("../partials/head", {pageTitle: "Registrarme", stylesheet: "register.css"}) %>
 
+
     <header>
+        
         <p class="barrasMenu"><i class="fas fa-bars"></i></p>
         <a href="/">
             <img class="logo" src="images/logoConTitulo.png" height="45px">
         </a>
     </header>
-    
+    <% if (typeof errors !== 'undefined') { %>
+        <% errors.forEach(function(error) { %>
+          <div class="error">
+            <%= error.msg %>
+          </div>
+        <% }); %>
+      <% } %>
     <div class="contenedor-logo">
         <a href="/">
             <img class="logo2" src="/images/isologoNaranja.png">
@@ -21,16 +29,23 @@
 
         <div class="campo-form">
             <label>Nombre</label>
-            <input type="text" name="nombre" required>
+            <input type="text" name="firstName" >
+                <% if (typeof errors !== 'undefined' && typeof errors.firstName !== 'undefined') { %>
+                  <div class="error">
+                    <%= errors.firstName.msg %>
+                  </div>
+                <% } %>
+              </div>
+            
         </div>
 
         <div class="campo-form">
             <label>Apellido</label>
-            <input type="text" name="apellido" required>
+            <input type="text" name="lastName" required>
         </div>
         <div class="campo-form">
             <label>Email</label>
-            <input type="email" name="emailUsuario" required>
+            <input type="email" name="email" required>
         </div>
         <div class="campo-form">
             <div class="radio-buttons">
@@ -52,11 +67,11 @@
 
         <div class="campo-form">
             <label>Contraseña</label>
-            <input type="password" name="contraseniaUsuario" required>
+            <input type="password" name="password" required>
         </div>
         <div class="campo-form">
             <label>Confirmar contraseña</label>
-            <input type="password" name="contraseniaUsuario" required>
+            <input type="password" name="password" required>
         </div>
 
         <div class="caja-boton">

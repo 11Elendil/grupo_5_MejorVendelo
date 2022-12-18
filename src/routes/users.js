@@ -7,6 +7,7 @@ const fs = require('fs');
 const multer = require('multer');
 const {body}= require ('express-validator');
 
+
 const usersController = require('../controllers/usersController');
 let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
 
@@ -47,24 +48,24 @@ const validacionesLogin = [
 ];
 const validacionesRegistro = [
   //Aquí incoporé otras validaciones, para que las tengan de guía para sus proyectos  
-  body('nombre').isLength({
+  body('firstName').isLength({
         min: 1
       }).withMessage('El campo nombre no puede estar vacío'),
-    body('apellido').isLength({min: 1
+    body('lastName').isLength({min: 1
       }).withMessage('El campo apellido no puede estar vacío'),
-    body('emailUsuario').isEmail().withMessage('Agregar un email válido'),
+    body('email').isEmail().withMessage('Agregar un email válido'),
 
     //Aquí valido el Password   
-    body('contraseniaUsuario').isLength({min: 6 }).withMessage('La contraseña debe tener un mínimo de 6 caractéres'),
+    body('password').isLength({min: 6 }).withMessage('La contraseña debe tener un mínimo de 6 caractéres'),
     
     //Aquí valido la confimación del password dispuesto por el usuario
-    body('contraseniaUsuario').isLength({min: 6 }).withMessage('La confirmación de la contraseña debe tener un mínimo de 6 caractéres'),
+    body('password').isLength({min: 6 }).withMessage('La confirmación de la contraseña debe tener un mínimo de 6 caractéres'),
 
     //Aquí valido si las contraseñas son iguales o no
     //El ( value ) viene a ser el valor que viaje en el name del del input del campo 
     //El valor { req } corresponde a lo que viene desde el formulario
 
-    body('contraseniaUsuario').custom((value, {req}) =>{
+    body('password').custom((value, {req}) =>{
         if(req.body.password == value ){
             return true    // Si yo retorno un true  no se muestra el error     
         }else{
@@ -82,9 +83,11 @@ const validacionesRegistro = [
   ]
 
 
-router.get('/login',usersController.login);
-router.post('/login', validacionesLogin,usersController.ingresar);
-//router.get('/register',validacionesRegistro,usersController.register);
+  router.get('/login',usersController.login);
+  router.post('/login', validacionesLogin,usersController.ingresar);
+  router.get('/register',usersController.register);
+  router.post('/register',upload.single('avatar'),validacionesRegistro,usersController.create);
+
 
 
 

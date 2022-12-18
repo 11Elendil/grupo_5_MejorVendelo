@@ -9,6 +9,7 @@ const userRoutes = require('./src/routes/users');
 
 const path = require('path');
 const publicFolderPath = path.resolve('public');
+
 app.use(express.static(publicFolderPath));
 
 app.set("view engine", "ejs");
