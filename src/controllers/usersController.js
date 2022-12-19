@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const multer = require('multer');
 const { validationResult } = require('express-validator')
 
@@ -15,21 +15,14 @@ const usersController = {
       },
     
       create: (req, res) => {
-     
-     let user = {
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      password: bcryptjs.hashSync(req.body.password, 10),
-      avatar:  req.file ? req.file.filename : '',
-    }
-    res.send(user)
-      /* let errors = validationResult(req);
+       
+       let errors = validationResult(req);
         if (errors.isEmpty()) {
           let user = {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.email,
+            type : req.body.type,
             password: bcrypt.hashSync(req.body.password, 10),
             avatar:  req.file ? req.file.filename : '',
           }
@@ -46,7 +39,7 @@ const usersController = {
           users.push(user);
           usersJSON = JSON.stringify(users, null, 2);
           fs.writeFileSync(path.resolve(__dirname, '../data/users.json'), usersJSON);
-          res.redirect('users/login');
+          res.redirect('../views/index.ejs');
         } else {
           
             
@@ -54,7 +47,7 @@ const usersController = {
             errors: errors.errors,  old: req.body
             
           });
-        }*/
+        }
       },
 
 ingresar: (req, res) =>{
