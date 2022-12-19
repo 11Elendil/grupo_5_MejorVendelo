@@ -273,39 +273,8 @@
     "firstName": "gaston",
     "lastName": "terminiello",
     "email": "gastonnt123@gmail.com",
-    "password": "$2b$10$42Hgqoeez4jxSvXCC5mbcui0jL38jUhuYUbooSPJdgcGpWl0N6RPu",
-    "avatar": "foto-1671462671715.png"
-  },
-  {
-    "firstName": "gaston",
-    "lastName": "terminiello",
-    "email": "gastonnt123@gmail.com",
-    "type": "on",
-    "password": "$2b$10$Hqpval36SU8cJgRNJS//k.2yrZGzLdmhnCQUpt2rY75aRj6hFs.My",
-    "avatar": "foto-1671462858231.png"
-  },
-  {
-    "firstName": "gaston",
-    "lastName": "terminiello",
-    "email": "gastonnt123@gmail.com",
     "type": "Comprador",
-    "password": "$2b$10$97XAg7XhmdPOHq/baMWD.uAKr8BmLYyAF4DM1SXoTGtzyfvGKt1jG",
-    "avatar": "foto-1671462932682.png"
-  },
-  {
-    "firstName": "gaston",
-    "lastName": "terminiello",
-    "email": "gastonnt123@gmail.com",
-    "type": "Comprador",
-    "password": "$2b$10$MneHra/UXjhxZCw1KVTS8u86Hibzss5j3Nte2HkzO4m3866Xtd3Gm",
-    "avatar": "foto-1671463003720.png"
-  },
-  {
-    "firstName": "gaston",
-    "lastName": "terminiello",
-    "email": "gastonnt123@gmail.com",
-    "type": "Comprador",
-    "password": "$2b$10$3YEm6JYrWdvDuOqRarXhQeuVisKiU7KCbtJ3YbNSOXyYPJyWK3bPi",
-    "avatar": "foto-1671463076172.png"
+    "password": "$2b$10$SAOdPN0oUWQTvEdBfixW7uJjmkApQHN4NuweYeS/hZtCxyXgFPyUq",
+    "avatar": "foto-1671466316215.png"
   }
 ]

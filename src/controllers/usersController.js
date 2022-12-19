@@ -39,7 +39,7 @@ const usersController = {
           users.push(user);
           usersJSON = JSON.stringify(users, null, 2);
           fs.writeFileSync(path.resolve(__dirname, '../data/users.json'), usersJSON);
-          res.redirect('../views/index.ejs');
+          res.redirect('/users/login');
         } else {
           
             
@@ -65,11 +65,11 @@ ingresar: (req, res) =>{
       if(req.body.recordarme){
         res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})
       }
-      return res.redirect('/');   //Aquí ustedes mandan al usuario para donde quieran (Perfil- home - a donde deseen)
+      return res.render('/');   //Aquí ustedes mandan al usuario para donde quieran (Perfil- home - a donde deseen)
 
     }else{
       //Devolver a la vista los errores
-      return res.render('users/login', {errors: errors.errors});
+      return res.render('/users/login', {errors: errors.errors});
 
     }
   },
