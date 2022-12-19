@@ -57,7 +57,7 @@ ingresar: (req, res) =>{
     if(errors.isEmpty()){
       let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
       let usuarioLogueado = archivoUsuarios.find(usuario => usuario.email == req.body.email)
-      const bcrypt = require('bcrypt');
+      //const bcrypt = require('bcrypt');
 
 // ...
 
@@ -75,11 +75,11 @@ if(usuarioLogueado){
     // La contraseña es incorrecta, muestra un error al usuario
     return res.render('users/login', {errors: {password: {msg: 'La contraseña es incorrecta'}}, old: req.body});
   }
+
 } else {
   // El usuario no existe, muestra un error al usuario
   return res.render('users/login', {errors: {email: {msg: 'El usuario no existe'}}, old: req.body});
 }
-
     }
   },
 }

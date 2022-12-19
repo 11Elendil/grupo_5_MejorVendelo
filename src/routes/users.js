@@ -47,7 +47,6 @@ const validacionesLogin = [
 
 ];
 const validacionesRegistro = [
-  //Aquí incoporé otras validaciones, para que las tengan de guía para sus proyectos  
   body('firstName').isLength({
         min: 1
       }).withMessage('El campo nombre no puede estar vacío'),
