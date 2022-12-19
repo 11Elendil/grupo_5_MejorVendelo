@@ -57,19 +57,28 @@ ingresar: (req, res) =>{
     if(errors.isEmpty()){
       let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
       let usuarioLogueado = archivoUsuarios.find(usuario => usuario.email == req.body.email)
-      //return res.send(usuarioLogueado);
-      //Como podemos modificar nuestros req.body
-      delete usuarioLogueado.password;
-      req.session.usuario = usuarioLogueado;  //Guardar del lado del servidor
-      //Aquí voy a guardar las cookies del usuario que se loguea
-      if(req.body.recordarme){
-        res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})
-      }
-      return res.render('/');   //Aquí ustedes mandan al usuario para donde quieran (Perfil- home - a donde deseen)
+      const bcrypt = require('bcrypt');
 
-    }else{
-      //Devolver a la vista los errores
-      return res.render('/users/login', {errors: errors.errors});
+// ...
+
+if(usuarioLogueado){
+  // Compara la contraseña proporcionada con el hash almacenado
+  if(bcrypt.compareSync(req.body.password, usuarioLogueado.password)){
+    // La contraseña es correcta, procede como en el código original
+    delete usuarioLogueado.password;
+    req.session.usuario = usuarioLogueado;
+    /*if(req.body.recordarme){
+      res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})
+    }*/
+    return res.redirect('/');
+  } else {
+    // La contraseña es incorrecta, muestra un error al usuario
+    return res.render('users/login', {errors: {password: {msg: 'La contraseña es incorrecta'}}, old: req.body});
+  }
+} else {
+  // El usuario no existe, muestra un error al usuario
+  return res.render('users/login', {errors: {email: {msg: 'El usuario no existe'}}, old: req.body});
+}
 
     }
   },
