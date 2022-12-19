@@ -63,14 +63,16 @@ ingresar: (req, res) =>{
 // ...
 
 if(usuarioLogueado){
+  
   // Compara la contraseña proporcionada con el hash almacenado
   if(bcrypt.compareSync(req.body.password, usuarioLogueado.password)){
     // La contraseña es correcta, procede como en el código original
     delete usuarioLogueado.password;
     req.session.usuario = usuarioLogueado;
-    /*if(req.body.recordarme){
+    if(req.body.recordarme){
       res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})
-    }*/
+    }
+    //res.send("esta ok")
     return res.redirect('/');
   } else {
     // La contraseña es incorrecta, muestra un error al usuario

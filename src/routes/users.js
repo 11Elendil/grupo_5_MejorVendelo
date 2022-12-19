@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path')
 
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const fs = require('fs');
 const multer = require('multer');
 const {body}= require ('express-validator');
@@ -46,6 +46,7 @@ const validacionesLogin = [
     }).withMessage('Usurio o contraseña no coinciden'),
 
 ];
+
 const validacionesRegistro = [
   body('firstName').isLength({
         min: 1
@@ -87,7 +88,8 @@ const validacionesRegistro = [
   router.get('/register',usersController.register);
   router.post('/register',validacionesRegistro,upload.single('avatar'),usersController.create);
 
-
+  
+  
 
 
 module.exports = router;
