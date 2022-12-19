@@ -8,20 +8,21 @@
             <img class="logo" src="images/logoConTitulo.png" height="45px">
         </a>
     </header>
-    <% if (typeof errors !== 'undefined') { %>
-        <% errors.forEach(function(error) { %>
-          <div class="error">
-            <%= error.msg %>
-          </div>
-        <% }); %>
-      <% } %>
+
     <div class="contenedor-logo">
         <a href="/">
             <img class="logo2" src="/images/isologoNaranja.png">
         </a>
     </div>
+    <% if(typeof(errors) != 'undefined'){%>
+        <ul class="alert alert-danger">
+           <% errors.forEach(error => { %>
+              <li><%= error.msg%></li>
+           <%});%>
+         </ul>
+     <%}%>  
     
-    <form action="/register" method="POST" >
+    <form action="/users/register" method="POST" enctype="multipart/form-data">
 
         <div class="titulo">
             <h2>COMPLETA TUS DATOS</h2>
@@ -29,23 +30,18 @@
 
         <div class="campo-form">
             <label>Nombre</label>
-            <input type="text" name="firstName" >
-                <% if (typeof errors !== 'undefined' && typeof errors.firstName !== 'undefined') { %>
-                  <div class="error">
-                    <%= errors.firstName.msg %>
-                  </div>
-                <% } %>
-              </div>
+            <input type="text" name="firstName" value="<%= typeof old != 'undefined' ? old.firstName : '' %>"> 
+        </div>
             
         </div>
 
         <div class="campo-form">
             <label>Apellido</label>
-            <input type="text" name="lastName" required>
+            <input type="text" name="lastName" value="<%= typeof old != 'undefined' ? old.LastName : '' %>" required>
         </div>
         <div class="campo-form">
             <label>Email</label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" value="<%= typeof old != 'undefined' ? old.email : '' %>" required>
         </div>
         <div class="campo-form">
             <div class="radio-buttons">

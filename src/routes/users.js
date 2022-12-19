@@ -13,7 +13,7 @@ let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../da
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, path.resolve('../images/users'));    
+      cb(null, path.resolve('public/images/users'));    
     },
     filename: function (req, file, cb) {
       cb(null, 'foto' + '-' + Date.now()+ path.extname(file.originalname));      
