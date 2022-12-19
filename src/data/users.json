@@ -276,5 +276,13 @@
     "type": "Comprador",
     "password": "$2b$10$SAOdPN0oUWQTvEdBfixW7uJjmkApQHN4NuweYeS/hZtCxyXgFPyUq",
     "avatar": "foto-1671466316215.png"
+  },
+  {
+    "firstName": "Lautaro",
+    "lastName": "Goscilo",
+    "email": "lgoscilo@gmail.com",
+    "type": "Vendedor",
+    "password": "$2b$10$EuHZQLKkFJJNvkA1zZ4.pOU93VOFBkz3t6uHKhMythQknaZED2ZKK",
+    "avatar": "foto-1671475246844.png"
   }
 ]

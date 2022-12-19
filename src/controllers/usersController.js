@@ -42,11 +42,12 @@ const usersController = {
           res.redirect('/users/login');
         } else {
           
-            
-          return res.render(path.resolve(__dirname, '../views/users/register'), {
+          return res.render('users/register', {
             errors: errors.errors,  old: req.body
-            
           });
+          
+            
+        
         }
       },
 
