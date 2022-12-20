@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path')
 
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const fs = require('fs');
 const multer = require('multer');
 const {body}= require ('express-validator');
@@ -21,17 +21,21 @@ const storage = multer.diskStorage({
   }) 
 const upload= multer({ storage })
 
+//rustas login
+router.get('/login',usersController.login);
+
 const validacionesLogin = [
-    body ('email').isEmail().withMessage('Email invalido'),
-    body ('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
+    body('email').isEmail().withMessage('Email invalido').bail(),
+    body('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres').bail(),
     body('email').custom( (value  ) =>{
+      console.log(value);
         for (let i = 0; i < archivoUsuarios.length; i++) {
             if (archivoUsuarios[i].email == value) {
                 return true    
             }
         }
         return false
-      }).withMessage('Usuario no se encuentra registrado...'),
+      }).withMessage('el email no se encuentra registrado...'),
       body('password').custom( (value, {req}) =>{
         for (let i = 0; i < archivoUsuarios.length; i++) {
             if (archivoUsuarios[i].email == req.body.email) {
@@ -59,7 +63,7 @@ const validacionesRegistro = [
     body('password').isLength({min: 6 }).withMessage('La contraseña debe tener un mínimo de 6 caractéres'),
     
     //Aquí valido la confimación del password dispuesto por el usuario
-    body('password').isLength({min: 6 }).withMessage('La confirmación de la contraseña debe tener un mínimo de 6 caractéres'),
+    /*body('password').isLength({min: 6 }).withMessage('La confirmación de la contraseña debe tener un mínimo de 6 caractéres'),
 
     //Aquí valido si las contraseñas son iguales o no
     //El ( value ) viene a ser el valor que viaje en el name del del input del campo 
@@ -71,7 +75,7 @@ const validacionesRegistro = [
         }else{
             return false   // Si retorno un false si se muestra el error
         }    
-    }).withMessage('Las contraseñas deben ser iguales'),
+    }).withMessage('Las contraseñas deben ser iguales'),*/
 
     //Aquí obligo a que el usuario seleccione su avatar
     body('avatar').custom((value, {req}) =>{
@@ -83,11 +87,11 @@ const validacionesRegistro = [
   ]
 
 
-  router.get('/login',usersController.login);
-  router.post('/login', validacionesLogin,usersController.ingresar);
+  
   router.get('/register',usersController.register);
-  router.post('/register',validacionesRegistro,upload.single('avatar'),usersController.create);
+  router.post('/register',upload.single('avatar'),validacionesRegistro,usersController.create);
 
+  router.post('/login', validacionesLogin,usersController.ingresar);
   
   
 

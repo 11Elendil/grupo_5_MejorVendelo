@@ -284,5 +284,21 @@
     "type": "Vendedor",
     "password": "$2b$10$EuHZQLKkFJJNvkA1zZ4.pOU93VOFBkz3t6uHKhMythQknaZED2ZKK",
     "avatar": "foto-1671475246844.png"
+  },
+  {
+    "firstName": "Lautaro",
+    "lastName": "czc",
+    "email": "czcx@sds.com",
+    "type": "Comprador",
+    "password": "$2a$10$awpMyS9m/TUpHgv0DeFqWOygbhBbAbRor87LxbMuAQXM5rpl3DSlS",
+    "avatar": "foto-1671489358258.png"
+  },
+  {
+    "firstName": "Lautaro",
+    "lastName": "Goscilo",
+    "email": "lgoscilo@gmail.com",
+    "type": "Vendedor",
+    "password": "$2a$10$T.GdPNOC9.u6P4QiLSjPR.Yy2utEBlaykRApTvCMTWTpJtb97goZe",
+    "avatar": "foto-1671489487007.png"
   }
 ]

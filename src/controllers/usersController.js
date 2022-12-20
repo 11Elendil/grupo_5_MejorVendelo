@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const multer = require('multer');
 const { validationResult } = require('express-validator')
 
@@ -25,6 +25,7 @@ const usersController = {
             type : req.body.type,
             password: bcrypt.hashSync(req.body.password, 10),
             avatar:  req.file ? req.file.filename : '',
+            
           }
           let archivoUsers = fs.readFileSync(path.resolve(__dirname, '../data/users.json'), {
             encoding: 'utf-8'
@@ -51,38 +52,39 @@ const usersController = {
         }
       },
 
-ingresar: (req, res) =>{
+ingresar: (req, res, next) =>{
     
     const errors = validationResult(req);
+    //console.log(req.body);
     //return res.send(errors.mapped());
     if(errors.isEmpty()){
       let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
       let usuarioLogueado = archivoUsuarios.find(usuario => usuario.email == req.body.email)
       //const bcrypt = require('bcrypt');
 
-// ...
+      // ...
 
-if(usuarioLogueado){
-  
-  // Compara la contraseña proporcionada con el hash almacenado
-  if(bcrypt.compareSync(req.body.password, usuarioLogueado.password)){
-    // La contraseña es correcta, procede como en el código original
-    delete usuarioLogueado.password;
-    req.session.usuario = usuarioLogueado;
-    if(req.body.recordarme){
-      res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})
-    }
-    //res.send("esta ok")
-    return res.redirect('/');
-  } else {
-    // La contraseña es incorrecta, muestra un error al usuario
-    return res.render('users/login', {errors: {password: {msg: 'La contraseña es incorrecta'}}, old: req.body});
-  }
+      if(usuarioLogueado){
+        
+        // Compara la contraseña proporcionada con el hash almacenado
+        if(bcrypt.compareSync(req.body.password, usuarioLogueado.password)){
+          // La contraseña es correcta, procede como en el código original
+          delete usuarioLogueado.password;
+          req.session.usuario = usuarioLogueado;
+          if(req.body.recordarme){
+            res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})
+          }
+          //res.send("esta ok")
+          return res.redirect('/');
+        } else {
+          // La contraseña es incorrecta, muestra un error al usuario
+          return res.render('users/login', {errors: {password: {msg: 'La contraseña es incorrecta'}}, old: req.body});
+        }
 
-} else {
-  // El usuario no existe, muestra un error al usuario
-  return res.render('users/login', {errors: {email: {msg: 'El usuario no existe'}}, old: req.body});
-}
+      } else {
+        // El usuario no existe, muestra un error al usuario
+        return res.render('users/login', {errors: {email: {msg: 'El usuario no existe'}}, old: req.body});
+      }
     }
   },
 }
