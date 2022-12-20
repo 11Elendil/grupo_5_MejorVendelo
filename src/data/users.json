@@ -300,5 +300,13 @@
     "type": "Vendedor",
     "password": "$2a$10$T.GdPNOC9.u6P4QiLSjPR.Yy2utEBlaykRApTvCMTWTpJtb97goZe",
     "avatar": "foto-1671489487007.png"
+  },
+  {
+    "firstName": "gaston",
+    "lastName": "terminiello",
+    "email": "gastonnt123@gmail.com",
+    "type": "Comprador",
+    "password": "$2a$10$QO0Nw938lSh.smJPzAybEeeLn0AavtdHzps/gVhL59ZXBVdH6tcpu",
+    "avatar": "foto-1671497565626.png"
   }
 ]
