@@ -3,7 +3,10 @@ const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const multer = require('multer');
 const { validationResult } = require('express-validator')
-
+//users tiene la base de usuarios
+const users = fs.readFileSync(path.resolve(__dirname, '../data/users.json'), {
+  encoding: 'utf-8'
+});
 const usersController = {
     login: function (req, res)
     {
@@ -15,17 +18,22 @@ const usersController = {
       },
     
       create: (req, res) => {
-       
-       let errors = validationResult(req);
+      let errors = validationResult(req);
+      //res.send(errors);
         if (errors.isEmpty()) {
           let user = {
+           /*id: let maxId = 0;
+    for (let i = 0; i < users.length; i++) {
+      if (maxId < users[i].id) {
+        maxId = users[i].id;
+      };
+    }*/
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.email,
             type : req.body.type,
             password: bcrypt.hashSync(req.body.password, 10),
             avatar:  req.file ? req.file.filename : '',
-            
           }
           let archivoUsers = fs.readFileSync(path.resolve(__dirname, '../data/users.json'), {
             encoding: 'utf-8'
@@ -56,8 +64,8 @@ ingresar: (req, res, next) =>{
     
     const errors = validationResult(req);
     //console.log(req.body);
-    //return res.send(errors.mapped());
-    if(errors.isEmpty()){
+    return res.send(errors.mapped());
+    if(!errors.isEmpty()){
       let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
       let usuarioLogueado = archivoUsuarios.find(usuario => usuario.email == req.body.email)
       //const bcrypt = require('bcrypt');
