@@ -62,8 +62,8 @@ const usersController = {
 
 ingresar: (req, res, next) =>{
     
-    const errors = validationResult(req);
-    //console.log(req.body);
+    //const errors = validationResult(req);
+    res.send("este es el body: " + req.body)
     return res.send(errors.mapped());
     if(!errors.isEmpty()){
       let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));

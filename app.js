@@ -12,6 +12,9 @@ const publicFolderPath = path.resolve('public');
 
 app.use(express.static(publicFolderPath));
 
+app.use(express.urlencoded({extended: false}));
+app.use(express.json())
+
 app.set("view engine", "ejs");
 
 app.use("/", mainRoutes);

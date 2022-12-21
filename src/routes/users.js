@@ -29,7 +29,7 @@ const upload= multer({ storage })
 
 //rustas login
 router.get('/login',usersController.login);
-router.post('/login', validacionesLogin,usersController,ingresar);
+router.post('/login', validacionesLogin,usersController.ingresar);
 //rutas register
 router.get('/register',usersController.register);
 router.post('/register', upload.single('avatar'), validacionesRegistro, usersController.create);
