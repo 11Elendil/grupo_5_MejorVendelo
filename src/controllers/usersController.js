@@ -14,8 +14,11 @@ const usersController = {
     },
     perfil: function (req, res)
     {
-        //res.render('users/perfil')
-        res.send(req.session.user)
+        if (req.session.user){
+          const user = req.session.user
+          return res.render('users/perfil', {user:user})
+        }
+        return res.send("no estas logeado")
     },
 
     register: function(req, res){
@@ -72,7 +75,11 @@ ingresar: (req, res, next) =>{
     
     req.session.user = usuarioLogueado;
 
-    res.redirect("/")
+    if (req.session.user){
+      const user = req.session.user
+      return res.render('users/perfil', {user:user})
+    }
+    return res.send("no estas logeado")
     /*
     const errors = validationResult(req);
     if(!errors.isEmpty()){
