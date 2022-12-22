@@ -12,6 +12,11 @@ const usersController = {
     {
         res.render('users/login')
     },
+    perfil: function (req, res)
+    {
+        //res.render('users/perfil')
+        res.send(req.session.user)
+    },
 
     register: function(req, res){
         return  res.render('users/register');
@@ -62,16 +67,21 @@ const usersController = {
 
 ingresar: (req, res, next) =>{
     
-    //const errors = validationResult(req);
-    res.send("este es el body: " + req.body)
-    return res.send(errors.mapped());
+    let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
+    let usuarioLogueado = archivoUsuarios.find(usuario => usuario.email == req.body.email)
+    
+    req.session.user = usuarioLogueado;
+
+    res.redirect("/")
+    /*
+    const errors = validationResult(req);
     if(!errors.isEmpty()){
+
       let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
       let usuarioLogueado = archivoUsuarios.find(usuario => usuario.email == req.body.email)
-      //const bcrypt = require('bcrypt');
+      const bcrypt = require('bcrypt');
 
       // ...
-
       if(usuarioLogueado){
         
         // Compara la contraseña proporcionada con el hash almacenado
@@ -79,9 +89,9 @@ ingresar: (req, res, next) =>{
           // La contraseña es correcta, procede como en el código original
           delete usuarioLogueado.password;
           req.session.usuario = usuarioLogueado;
-          if(req.body.recordarme){
-            res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})
-          }
+          //if(req.body.recordarme){
+            //res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})
+          //}
           //res.send("esta ok")
           return res.redirect('/');
         } else {
@@ -94,6 +104,8 @@ ingresar: (req, res, next) =>{
         return res.render('users/login', {errors: {email: {msg: 'El usuario no existe'}}, old: req.body});
       }
     }
+    */
+
   },
 }
 

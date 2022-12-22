@@ -34,6 +34,8 @@ router.post('/login', validacionesLogin,usersController.ingresar);
 router.get('/register',usersController.register);
 router.post('/register', upload.single('avatar'), validacionesRegistro, usersController.create);
 
+router.get("/perfil", usersController.perfil)
+
 module.exports = router;
 
 

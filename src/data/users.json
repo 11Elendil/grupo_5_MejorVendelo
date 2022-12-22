@@ -292,5 +292,13 @@
     "type": "Comprador",
     "password": "$2a$10$EZrMxJ5/9ML3kb68sZeOkuPvAD46SlIXCTFtBXvfOEVeZDiTPCZda",
     "avatar": "foto-1671631458509.png"
+  },
+  {
+    "firstName": "mateo",
+    "lastName": "fenrnadez",
+    "email": "mateofernandez@gmail.com",
+    "type": "Comprador",
+    "password": "$2a$10$Mp6wOT4lyJzzBiu2flT4rOyEZqozxrPcFd4iowko5z4Pc1udhK1Xy",
+    "avatar": "foto-1671716530803.png"
   }
 ]
