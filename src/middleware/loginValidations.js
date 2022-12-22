@@ -33,7 +33,7 @@ module.exports = function validacionesLogin(req, res, next) {
       //next();
     } else {
       // Si no son iguales, envía un mensaje de error
-      res.status(401).json({ message: "Email o contraseña incorrectos ACAAA" });
+      res.status(401).json({ message: "Contraseña incorrecta" });
     }
   });
 };
