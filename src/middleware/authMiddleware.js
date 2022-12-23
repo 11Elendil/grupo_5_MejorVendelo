@@ -1,5 +1,9 @@
-const validationlogin = (req,res,next)=>{
+const autheticatedValidation = (req, res, next) => {
 
-};
+    if(req.session.user){
+        return res.redirect("/perfil")
+    }
+    return next();
+}
 
-module.exports = validationlogin;
+module.exports = autheticatedValidation

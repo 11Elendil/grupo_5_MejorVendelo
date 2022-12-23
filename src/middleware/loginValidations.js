@@ -28,12 +28,12 @@ module.exports = function validacionesLogin(req, res, next) {
     }
 
     if (result) {
-        res.redirect('/');
+        //res.redirect('/');
       // Si son iguales, llama a la función next() para continuar con el proceso
-      //next();
+        next();
     } else {
       // Si no son iguales, envía un mensaje de error
-      res.status(401).json({ message: "Email o contraseña incorrectos ACAAA" });
+      res.status(401).json({ message: "Contraseña incorrecta" });
     }
   });
 };

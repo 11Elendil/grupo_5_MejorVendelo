@@ -8,7 +8,6 @@
  const productsController = {
     index: (req,res)=>{
         
-            
         res.render('products',{products:products})
     },
    

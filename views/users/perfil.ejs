@@ -1,0 +1,17 @@
+<%- include("../partials/head", {pageTitle: "Formulario Producto" , stylesheet: "perfil.css" }) %>
+
+
+    <%- include("../partials/header")%>
+
+    <h1 class="tituloPerfil">Mi perfil</h1>
+
+    <div class="contenedorPerfil">
+
+        <div>Nombre: <%= user.firstName %> </div>
+        <div>Apellido: <%= user.lastName %></div>
+        <div>Email: <%= user.email %></div>
+        
+
+    </div>
+
+    <%- include("../partials/footer") %>

@@ -12,6 +12,7 @@ const {validationResult} = require('express-validator');
 const usersController = require('../controllers/usersController');
 const validacionesLogin = require('../middleware/loginValidations');
 const validacionesRegistro = require('../middleware/registerValidation');
+const authMiddleware = require('../middleware/authMiddleware');
 const { ingresar } = require('../controllers/usersController');
 
 let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
@@ -28,11 +29,13 @@ const upload= multer({ storage })
 
 
 //rustas login
-router.get('/login',usersController.login);
+router.get('/login',authMiddleware,usersController.login);
 router.post('/login', validacionesLogin,usersController.ingresar);
 //rutas register
-router.get('/register',usersController.register);
+router.get('/register',authMiddleware,usersController.register);
 router.post('/register', upload.single('avatar'), validacionesRegistro, usersController.create);
+
+router.get("/perfil",authMiddleware ,usersController.perfil);
 
 module.exports = router;
 

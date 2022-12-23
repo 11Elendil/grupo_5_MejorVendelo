@@ -8,6 +8,7 @@ const productsController = require('../controllers/productsController')
 const path = require('path');
 
 const multer = require('multer');
+const guestValidation = require("../middleware/guestMiddleware");
 
 
 const storage = multer.diskStorage({
@@ -31,7 +32,7 @@ router.get('/', productsController.index)
 
 
 /* GET ADD PRODUCTS */
-router.get('/create', productsController.create)
+router.get('/create',guestValidation ,productsController.create)
 /* POST ADD PRODUCTS */
 router.post('/', upload.single('image'), productsController.store)
 
