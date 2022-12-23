@@ -7,6 +7,9 @@ const controller = {
     index: (req,res) => {
         return res.render("index.ejs", { products: products });
     },
+    index_session: (req,res) => {
+        return res.render("index.ejs", { products: products });
+    },
     productCart: (req,res) => {
         return res.render("productCart.ejs");
     },

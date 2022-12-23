@@ -1,7 +1,7 @@
 const autheticatedValidation = (req, res, next) => {
 
     if(req.session.user){
-        return res.redirect("/perfil")
+        return res.redirect("/users/perfil")
     }
     return next();
 }
