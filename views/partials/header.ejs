@@ -5,9 +5,12 @@
     </a>
     <form class="barraDeBusqueda"><input class="textoBarra" placeholder="Buscá productos, marcas..."><button><i
                 class="fas fa-search"></i></button></i></form>
+    
+    <%if(!logueado){  %> 
     <a href="/users/register">
         <p class="botonIngresar">Registrarme</p>
     </a>
+    <% } %>
     <a href="/products/create">
         <p class="botonIngresar">Vender</p>
     </a>
@@ -15,6 +18,11 @@
         <i class="fas fa-shopping-cart"></i>
     </a>
     <a href="/users/login">
-        <p class="botonIngresar">Ingresar</p>
+        <%if(logueado){  %> 
+        <p class="botonIngresar"> Mi Perfil </p>
+        <% } %>
+        <% if(!logueado){  %> 
+            <p class="botonIngresar"> Ingresar </p>
+        <% } %> 
     </a>
 </header>
