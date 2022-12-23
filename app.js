@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-
+const methodOverride = require("method-override")
 const mainRoutes = require("./src/routes/mainRoutes");
 const productRoute = require('./src/routes/productRoute');
 const userRoutes = require('./src/routes/users');
@@ -13,6 +13,7 @@ const path = require('path');
 const publicFolderPath = path.resolve('public');
 
 app.use(session({secret: "buuu"}))
+app.use(methodOverride("_method"))
 
 app.use(express.static(publicFolderPath));
 

@@ -11,7 +11,9 @@
         <div>Apellido: <%= user.lastName %></div>
         <div>Email: <%= user.email %></div>
         
-
+        <form action="/users/login?_method=DELETE" method="POST">
+            <button>Desloguearte</button>
+        </form>
     </div>
 
     <%- include("../partials/footer") %>

@@ -7,12 +7,12 @@
  
  const productsController = {
     index: (req,res)=>{
-        const logueado = req.session ? true : false;
+        const logueado = req.session.user ? true : false;
         res.render('products',{products:products, logueado:logueado})
     },
    
     detail : (req,res)=>{
-        const logueado = req.session ? true : false;     
+        const logueado = req.session.user ? true : false;
         const productDetail = req.params.id
         const product = products.find((product)=> product.id == productDetail)
         if(!product){
@@ -22,7 +22,7 @@
     
     },
     create: (req,res)=>{
-        const logueado = req.session ? true : false;
+        const logueado = req.session.user ? true : false;
         res.render('productForm', {logueado:logueado})
     },
     store: (req,res)=>{
@@ -40,7 +40,7 @@
         return res.send(req.file);
     },
     edit: (req, res) =>{
-        const logueado = req.session ? true : false;
+        const logueado = req.session.user ? true : false;
         const idProduct = req.params.id;
 		const product = products.find( product => {
 			return product.id == idProduct
