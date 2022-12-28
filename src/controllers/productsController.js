@@ -7,24 +7,26 @@
  
  const productsController = {
     index: (req,res)=>{
-        
-        res.render('products',{products:products})
+        const logueado = req.session.user ? true : false;
+        res.render('products',{products:products, logueado:logueado})
     },
    
     detail : (req,res)=>{
-    const productDetail = req.params.id
-    const product = products.find((product)=> product.id == productDetail)
-    if(!product){
-    res.send( 'no existe el producto')
-        
-    }
-    return res.render('productDetail' , {product:product})
+        const logueado = req.session.user ? true : false;
+        const productDetail = req.params.id
+        const product = products.find((product)=> product.id == productDetail)
+        if(!product){
+            res.send( 'no existe el producto')
+            }   
+        return res.render('productDetail' , {product:product, logueado:logueado})
     
     },
     create: (req,res)=>{
-        res.render('productForm')
+        const logueado = req.session.user ? true : false;
+        res.render('productForm', {logueado:logueado})
     },
     store: (req,res)=>{
+
         const newProductField = req.body;
         /* AGREGANDO EL PRODUCTO*/
         newProductField.price = Number(newProductField.price)
@@ -38,11 +40,12 @@
         return res.send(req.file);
     },
     edit: (req, res) =>{
+        const logueado = req.session.user ? true : false;
         const idProduct = req.params.id;
 		const product = products.find( product => {
 			return product.id == idProduct
 		})
-		res.render("prodcutEdit", { product })
+		res.render("prodcutEdit", { product , logueado:logueado})
     }
  };
 

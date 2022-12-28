@@ -14,6 +14,8 @@ const validacionesLogin = require('../middleware/loginValidations');
 const validacionesRegistro = require('../middleware/registerValidation');
 const authMiddleware = require('../middleware/authMiddleware');
 const { ingresar } = require('../controllers/usersController');
+const autheticatedValidation = require('../middleware/authMiddleware');
+const guestValidation = require('../middleware/guestMiddleware');
 
 let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
 
@@ -29,13 +31,15 @@ const upload= multer({ storage })
 
 
 //rustas login
-router.get('/login',authMiddleware,usersController.login);
+router.get('/login',usersController.login);
 router.post('/login', validacionesLogin,usersController.ingresar);
+router.delete("/login", usersController.logout)
+
 //rutas register
-router.get('/register',authMiddleware,usersController.register);
+router.get('/register',autheticatedValidation,usersController.register);
 router.post('/register', upload.single('avatar'), validacionesRegistro, usersController.create);
 
-router.get("/perfil",authMiddleware ,usersController.perfil);
+router.get("/perfil", usersController.perfil)
 
 module.exports = router;
 

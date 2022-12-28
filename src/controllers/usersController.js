@@ -10,8 +10,14 @@ const users = fs.readFileSync(path.resolve(__dirname, '../data/users.json'), {
 const usersController = {
     login: function (req, res)
     {
-        res.render('users/login')
+        return res.render('users/login')
     },
+    logout: function (req, res)
+    {
+        req.session.destroy();
+        return res.render('users/login')
+    },
+    
     perfil: function (req, res)
     {
         if (req.session.user){

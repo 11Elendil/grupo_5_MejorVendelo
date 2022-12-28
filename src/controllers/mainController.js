@@ -5,10 +5,12 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controller = {
     index: (req,res) => {
-        return res.render("index.ejs", { products: products });
+        const logueado = req.session.user ? true : false;
+        return res.render("index.ejs", { products: products , logueado:logueado});
     },
     productCart: (req,res) => {
-        return res.render("productCart.ejs");
+        const logueado = req.session.user ? true : false;
+        return res.render("productCart.ejs", {logueado:logueado});
     },
   
 }

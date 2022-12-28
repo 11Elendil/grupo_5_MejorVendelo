@@ -1,8 +1,8 @@
 <%- include("./partials/head", {pageTitle: "Productos", stylesheet: "products.css"}) %>
 
 
-    <%- include("partials/header")%>
-   <!--comenzar a codear-->
+<%- include("partials/header",{logueado: logueado})%>
+<!--comenzar a codear-->
   <div class="contenedor" >
   <%  products.forEach(product => { %>
 
