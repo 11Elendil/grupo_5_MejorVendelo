@@ -300,5 +300,13 @@
     "type": "Comprador",
     "password": "$2a$10$Mp6wOT4lyJzzBiu2flT4rOyEZqozxrPcFd4iowko5z4Pc1udhK1Xy",
     "avatar": "foto-1671716530803.png"
+  },
+  {
+    "firstName": "juan ",
+    "lastName": "perez",
+    "email": "juanperez@gmail.com",
+    "type": "Vendedor",
+    "password": "$2a$10$E/e9MbMU5pU2qnnBzE2EquW7c3hp9npsnz6qrUGXeRMspmF0faG/K",
+    "avatar": "foto-1672710674920.png"
   }
 ]
