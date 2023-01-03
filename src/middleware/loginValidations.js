@@ -1,5 +1,5 @@
 const users = require('../data/users.json');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 module.exports = function validacionesLogin(req, res, next) {
   // Verifica si req.body existe y si tiene una propiedad email y password
