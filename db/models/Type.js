@@ -6,8 +6,7 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        // created_at: dataTypes.TIMESTAMP,
-        // updated_at: dataTypes.TIMESTAMP,
+
         name: {
             type: dataTypes.STRING(100),
             allowNull: false
@@ -21,7 +20,14 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Type = sequelize.define(alias, cols, config); 
 
-    //Aquí debes realizar lo necesario para crear las relaciones con el modelo (Movie)
+    //Aquí van las asociaciones
+
+    Type.associate = function(models){
+        Type.hasMany(models.User, {
+            as: "users",
+            foreignKey: "typeId"
+        })
+    }
  
     return Type
 };

@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(24),
             allowNull: false
         },
-        type_id: dataTypes.BIGINT(10).UNSIGNED,
+        typeId: dataTypes.BIGINT(10).UNSIGNED,
         email: {
             type: dataTypes.STRING(24),
             allowNull: false
@@ -35,7 +35,14 @@ module.exports = (sequelize, dataTypes) => {
     }
     const User = sequelize.define(alias, cols, config); 
 
-    //Aquí debes realizar lo necesario para crear las relaciones con el modelo (Movie)
- 
+    //Aquí van las asociaciones
+
+    User.associate = function(models){
+        User.belongsTo(models.Type, {
+            as: "types",
+            foreignKey: "typeId"
+        })
+    }
+
     return User
 };
