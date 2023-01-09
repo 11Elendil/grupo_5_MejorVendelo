@@ -43,7 +43,7 @@ const usersController = {
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
                 email: req.body.email,
-                typeId : 1,
+                typeId : req.body.type,
                 password: bcrypt.hashSync(req.body.password, 10),
                 avatar:  req.file ? req.file.filename : '',
             })
