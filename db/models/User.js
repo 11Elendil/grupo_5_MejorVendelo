@@ -6,8 +6,7 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        // created_at: dataTypes.TIMESTAMP,
-        // updated_at: dataTypes.TIMESTAMP,
+
         firstName: {
             type: dataTypes.STRING(100),
             allowNull: false
@@ -31,10 +30,8 @@ module.exports = (sequelize, dataTypes) => {
         },
     };
     let config = {
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: false
+        timestamps: false,
+        tableName: "users"
     }
     const User = sequelize.define(alias, cols, config); 
 

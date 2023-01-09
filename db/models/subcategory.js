@@ -14,7 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Subcategory.init({
-    id: DataTypes.INTEGER,
+    id: {
+      type: DataTypes.BIGINT(10).UNSIGNED,
+      primaryKey: true,
+      autoIncrement: true
+  },
     name: DataTypes.STRING,
     category_id: DataTypes.INTEGER
   }, {
