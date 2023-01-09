@@ -238,5 +238,58 @@
     "password": "PLU3MYX",
     "type": "Customer",
     "avatar": "/images/avatars/jala.jpg"
+<<<<<<< Updated upstream
   }]
   
+=======
+  },
+  {
+    "firstName": "gaston",
+    "lastName": "terminiello",
+    "email": "gastonnt123@gmail.com",
+    "type": "Comprador",
+    "password": "$2b$10$SAOdPN0oUWQTvEdBfixW7uJjmkApQHN4NuweYeS/hZtCxyXgFPyUq",
+    "avatar": "foto-1671466316215.png"
+  },
+  {
+    "firstName": "Lautaro",
+    "lastName": "Goscilo",
+    "email": "lgoscilo@gmail.com",
+    "type": "Vendedor",
+    "password": "$2a$10$vYrtFvl.uEuCwPOFpKOHsu8QH0utXjzDNlKDlMHqiS4r1FIIwvE2S",
+    "avatar": "foto-1671589163661.png"
+  },
+  {
+    "firstName": "dasd",
+    "lastName": "dad",
+    "email": "dsds@sds.com",
+    "type": "Comprador",
+    "password": "$2a$10$EZrMxJ5/9ML3kb68sZeOkuPvAD46SlIXCTFtBXvfOEVeZDiTPCZda",
+    "avatar": "foto-1671631458509.png"
+  },
+  {
+    "firstName": "mateo",
+    "lastName": "fenrnadez",
+    "email": "mateofernandez@gmail.com",
+    "type": "Comprador",
+    "password": "$2a$10$Mp6wOT4lyJzzBiu2flT4rOyEZqozxrPcFd4iowko5z4Pc1udhK1Xy",
+    "avatar": "foto-1671716530803.png"
+  },
+  {
+    "firstName": "juan ",
+    "lastName": "perez",
+    "email": "juanperez@gmail.com",
+    "type": "Vendedor",
+    "password": "$2a$10$E/e9MbMU5pU2qnnBzE2EquW7c3hp9npsnz6qrUGXeRMspmF0faG/K",
+    "avatar": "foto-1672710674920.png"
+  },
+  {
+    "firstName": "MATEO",
+    "lastName": "FERNANDEZ",
+    "email": "mateo@gmail.com",
+    "typeId": 1,
+    "password": "$2a$10$aBsOBwZo.UQAD4lKUchkiuUrqcPllVT9fTzHK3D7JdzPUZVZOt9K2",
+    "avatar": "foto-1673287095472.png"
+  }
+]
+>>>>>>> Stashed changes

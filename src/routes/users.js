@@ -8,7 +8,16 @@ const multer = require('multer');
 const {body}= require ('express-validator');
 
 const usersController = require('../controllers/usersController');
+<<<<<<< Updated upstream
 let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
+=======
+const validacionesLogin = require('../middleware/loginValidations');
+const validacionesRegistro = require('../middleware/registerValidation');
+const authMiddleware = require('../middleware/authMiddleware');
+const { ingresar } = require('../controllers/usersController');
+const autheticatedValidation = require('../middleware/authMiddleware');
+const guestValidation = require('../middleware/guestMiddleware');
+>>>>>>> Stashed changes
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
