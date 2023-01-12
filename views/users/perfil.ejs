@@ -1,7 +1,7 @@
 <%- include("../partials/head", {pageTitle: "Formulario Producto" , stylesheet: "perfil.css" }) %>
 
 
-    <%- include("../partials/header", {logueado: true})%>
+    <%- include("../partials/header", {logueado: user})%>
 
     <h1 class="tituloPerfil">Mi perfil</h1>
 
@@ -10,7 +10,15 @@
         <div>Nombre: <%= user.firstName %> </div>
         <div>Apellido: <%= user.lastName %></div>
         <div>Email: <%= user.email %></div>
+        <%if(user.typeId == 1){  %> 
+            <div>Tipo: Comprador</div>
+        <% } %>
         
+        <%if(user.typeId == 2){  %> 
+            <div>Tipo: Vendedor</div>
+        <% } %>
+        
+
         <form action="/users/login?_method=DELETE" method="POST">
             <button>Desloguearte</button>
         </form>
