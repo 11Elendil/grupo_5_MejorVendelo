@@ -34,10 +34,11 @@ const usersController = {
         return  res.render('users/register');
       },
     
-      create: (req, res) => {
+    
+    create: (req, res) => {
       let errors = validationResult(req);
-      //res.send(errors);
-        if (errors.isEmpty()) {
+  
+      if (errors.isEmpty()) {
 
             db.User.create({
                 firstName: req.body.firstName,
@@ -61,20 +62,25 @@ const usersController = {
         }
       },
 
-ingresar: (req, res, next) =>{
-    
-    let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.js')));
-    let usuarioLogueado = archivoUsuarios.find(usuario => usuario.email == req.body.email)
-    
-    req.session.user = usuarioLogueado;
+    ingresar: async (req, res, next) =>{
+        
+        //let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.js')));
+        
+        const usuarios = await db.User.findAll();
 
-    if (req.session.user){
-      const user = req.session.user
-      return res.render('users/perfil', {user:user})
-    }
-    return res.send("no estas logeado")
+        let usuarioLogueado = usuarios.find(usuario => usuario.email == req.body.email)
 
-  },
+
+        //console.log(usuarioLogueado.dataValues)
+
+        req.session.user = usuarioLogueado.dataValues;
+
+        if (req.session.user){
+          const user = req.session.user
+          return res.render('users/perfil', {user:user})
+        }
+        return res.send("no estas logeado")
+      }
 }
 
 module.exports = usersController;

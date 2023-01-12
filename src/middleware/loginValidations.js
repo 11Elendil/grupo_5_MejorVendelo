@@ -1,7 +1,11 @@
-const users = require('../data/users.json');
 const bcrypt = require('bcryptjs');
+let db = require("../../db/models")
 
-module.exports = function validacionesLogin(req, res, next) {
+
+module.exports = async function validacionesLogin(req, res, next) {
+
+  const usersFromDB = await db.User.findAll();
+
   // Verifica si req.body existe y si tiene una propiedad email y password
   if (!req.body || !req.body.email || !req.body.password) {
     return res.status(400).json({ message: "Faltan campos en la solicitud" });
@@ -13,7 +17,7 @@ module.exports = function validacionesLogin(req, res, next) {
   var password = req.body.password;
 
   // Busca el usuario en el archivo JSON
-  var user = users.find(u => u.email == email);
+  var user = usersFromDB.find(u => u.email == email);
 
   // Si el usuario no existe, envía un mensaje de error
   if (!user) {
