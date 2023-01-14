@@ -5,7 +5,7 @@ const multer = require('multer');
 const { validationResult } = require('express-validator')
 //users tiene la base de usuarios
 
-let db = require("../../db/models")
+const  db = require("../../db/models")
 
 const users = fs.readFileSync(path.resolve(__dirname, '../data/users.json'), {
   encoding: 'utf-8'
