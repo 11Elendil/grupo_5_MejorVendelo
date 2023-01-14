@@ -21,10 +21,34 @@
         return res.render('productDetail' , {product:product, logueado:logueado})
     
     },
-    create: (req,res)=>{
+   /* create: (req,res)=>{
         const logueado = req.session.user ? req.session.user : undefined;
         res.render('productForm', {logueado:logueado})
-    },
+    }*/create: (req, res) => {
+      let errors = validationResult(req);
+  
+      if (errors.isEmpty()) {
+
+            db.Product.create({
+                firstName: req.body.firstName,
+                lastName: req.body.lastName,
+                email: req.body.email,
+                typeId : req.body.type,
+                avatar:  req.file ? req.file.filename : '',
+            })
+
+            return res.send("Se creo correctamente")
+
+        } else {
+          
+          return res.render('users/register', {
+            errors: errors.errors,  old: req.body
+          });
+          
+            
+        
+        }
+      },
     store: (req,res)=>{
 
         const newProductField = req.body;
