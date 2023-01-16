@@ -3,7 +3,7 @@ module.exports = (sequelize, dataTypes) => {
   let alias = 'Colors';
   let cols = {
       id: {
-          type: dataTypes.INTIGER,
+          type: dataTypes.INTEGER,
           primaryKey: true,
           autoIncrement: true
       },
@@ -21,10 +21,12 @@ module.exports = (sequelize, dataTypes) => {
   //Aquí van las asociaciones
 
   Colors.associate = function(models) {
-    Colors.hasMany(models.Product, {
+    Colors.hasMany(models.products, {
+        as: "Products",
         foreignKey: "colorsId"
-        });
+      });
 };
+
 
   return Colors
 };

@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
           primaryKey: true,
           autoIncrement: true
       },
-        Name: {
+        name: {
           type: dataTypes.STRING(100),
           allowNull: false
       },
@@ -16,30 +16,30 @@ module.exports = (sequelize, dataTypes) => {
         type: dataTypes.TEXT,
         allowNull: false
     },
-      Brand: {
+      brand: {
           type: dataTypes.STRING(24),
           allowNull: false
       },
-      categoriId:{ type: dataTypes.INTEGER},
+      categoriesId:{ type: dataTypes.INTEGER},
 
-      subCategoriId: {
+      subCategoriesId: {
           type: dataTypes.INTEGER,
           allowNull: false
       },
-      Price: {
+      price: {
           type: dataTypes.DECIMAL,
           allowNull: false
       },
       colorsId: {
-        Type: dataTypes.INTEGER,
+        type: dataTypes.INTEGER,
         allowNull: true
       },
-      SizeID: {
-        Type: dataTypes.INTEGER,
+      sizesId: {
+        type: dataTypes.INTEGER,
         allowNull: true
       },
-      Image: { 
-        Type: dataTypes.STRING,
+      image: { 
+        type: dataTypes.STRING,
         allowNull: true,
       }
     
@@ -52,22 +52,27 @@ module.exports = (sequelize, dataTypes) => {
 
   //Aquí van las asociaciones
 
-  categories.associate = function(models){
-    categories.belongsTo(models.Type, {
-        as: "Categories",
-        foreignKey: "idCategories"
-    }),
-    Products.hasMany(models.Carts, {
-      as: "Cart",
-      foreignKey: "cartsId"
-    }),
+  Products.associate = function(models){
+    
     Products.belongsTo(models.SubCategory, {
     as: "subCategories",
     foreignKey: "subCategoriesId"
     }),
-    Products.hasMany(models.Color, {
-      foreignKey: "productId"
-    })
+
+    Products.belongsTo(models.Colors, {
+      as: "Colors",
+      foreignKey: "colorsId"
+    }),
+
+    Products.belongsTo(models.Category, {
+      as: "categories",
+      foreignKey: "categoriesId"
+      }),
+  
+      Products.belongsTo(models.Size, {
+        as: "sizes",
+        foreignKey: "sizesId"
+      })
 
 }
   return Products

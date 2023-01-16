@@ -28,17 +28,8 @@ module.exports = (sequelize, dataTypes) => {
   
     //Aquí van las asociaciones
   
-    CartsProduct.associate = function(models){
-        CartsProduct.belongsTo(models.Products, {
-            as: "Product",
-            foreignKey: "idProduct"
-        });
-        CartsProduct.belongsTo(models.Carts, {
-            as: "Cart",
-            foreignKey: "cartsId"
-        });
        
-    }
+    
     return CartsProduct;
   };
   

@@ -23,18 +23,8 @@ module.exports = (sequelize, dataTypes) => {
     const Cart = sequelize.define(alias, cols, config); 
   
     //Aquí van las asociaciones
-  
-    Cart.associate = function(models){
-        Cart.hasMany(models.Products, {
-            as: "Product",
-            foreignKey: "idCategories"
-        });
-        Cart.belongsTo(models.Users, {
-            as: "User",
-            foreignKey: "userId"
-        });
-        
-    }
+
+    
     return Cart;
   };
   
