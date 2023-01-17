@@ -38,35 +38,49 @@
 
         <div class="category">
             <p type="text" name="category" id="category" placeholder="Categoria del producto">Categoria</p>
-            <select>
-                <option value="hombre">Hombre</option>
-                <option value="mujer">Mujer</option>
-                <option value="unisex">Unisex</option>
-            </select>
+            <select  name = "category">
+                <% for (let i = 0; i < categories.length; i++) {%>
+                    <option value="<%= categories[i].id %>">
+
+                        <%= categories[i].genre %> 
+
+                    </option>
+                <% } %> 
+          </select>
         </div>
         <div class="subcategory">
             <p type="text" name="subcategory" id="subcategory" placeholder="Subcategoria del producto">Subcategoria</p>
-            <select>
-      
-                <option value="remera">Remera</option>
-                <option value="pantalon">Pantalón</option>
-                <option value="zapatillas">Zapatillas</option>
-            </select>
+            <select  name = "subCategory">
+                <% for (let i = 0; i < subCategories.length; i++) {%>
+                    <option value="<%= subCategories[i].id %>">
+
+                        <%= subCategories[i].name %> 
+
+                    </option>
+                <% } %> 
+          </select>
         </div>
         <div class="condition" required>
             <input type="radio" name="condition" value="nuevo" >NUEVO
             <input type="radio" name="condition" value="usado" >USADO
         </div>
         <div class="size" required>
-            <input type="checkbox" name="size" id="S" value="S" >S
-            <input type="checkbox" name="size" id="M" value="M">M
-            <input type="checkbox" name="size" id="L" value="L">L
-            <input type="checkbox" name="size" id="XL" value="XL">XL
-            <input type="checkbox" name="size" id="XXL" value="XXL">XXL
+            <% for (let i = 0; i < sizes.length; i++) {%>
+                <input type="checkbox" name="size" value="<%= sizes[i].id%>" > <%= sizes[i].name%>
+            <% } %> 
             
         </div>
         <div class="color">
-            <input type="text" name="color" id="color" placeholder="Color del producto" required>
+            <select  name = "color">
+                <% for (let i = 0; i < colors.length; i++) {%>
+                    <option value="<%= colors[i].id %>">
+
+                        <%= colors[i].name %> 
+
+                    </option>
+                <% } %> 
+          </select>
+        
         </div>
         <br>
         <div class="description" >

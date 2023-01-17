@@ -21,10 +21,20 @@
         return res.render('productDetail' , {product:product, logueado:logueado})
     
     },
-   /* create: (req,res)=>{
+   create: async (req,res)=>{
         const logueado = req.session.user ? req.session.user : undefined;
-        res.render('productForm', {logueado:logueado})
-    }*/create: (req, res) => {
+
+        const colors = await db.Colors.findAll();
+        const sizes = await db.Size.findAll();
+        const categories = await db.Category.findAll();
+        const subCategories = await db.SubCategory.findAll(); 
+
+
+        res.render('productForm', {logueado:logueado, colors: colors, sizes: sizes, categories: categories, subCategories:subCategories})
+    },
+    
+    /*
+    create: (req, res) => {
       let errors = validationResult(req);
   
       if (errors.isEmpty()) {
@@ -43,26 +53,38 @@
           
           return res.render('users/register', {
             errors: errors.errors,  old: req.body
-          });
-          
-            
+          });           
         
         }
+   
       },
+         */
     store: (req,res)=>{
 
-        const newProductField = req.body;
-        /* AGREGANDO EL PRODUCTO*/
-        newProductField.price = Number(newProductField.price)
-        newProductField.id = products.length + 1,
-        newProductField.image = req.file.filename;
-        /*SUMANDO AL ARRAY */
-        products.push(newProductField);
+        //return res.send(req.body)
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2));
 
-        return res.send(req.file);
+        //EN LA DB FALTA EL ATRIBUTO CONDITION
+
+        db.products.create({
+          name: req.body.name,
+          description: req.body.description,
+          brand: req.body.brand,
+          price: req.body.price,
+          //image: req.file ? req.file.filename : '',
+          image : "hardcodeando", //HAY QUE PONER UN VAR CHAR MAS GRANDE ACA EN LA DB
+          subCategoriesId: req.body.subCategory,
+          colorsId: req.body.color,
+          categoriesId: req.body.category,
+          sizesId: req.body.size,
+        
+      })
+
+
+        return res.send("SE CREO EL PRODUCTO CORRECTAMENTE");
     },
+
+
     edit: (req, res) =>{
         const logueado = req.session.user ? req.session.user : undefined;
         const idProduct = req.params.id;
