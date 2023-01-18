@@ -44,6 +44,7 @@ router.get("/perfil", usersController.perfil)
 router.get("/edit", usersController.edit)
 router.post("/edit",upload.single('avatar'), usersController.editStore)
 
+router.get("/myProducts", usersController.myProducts)
 
 
 module.exports = router;

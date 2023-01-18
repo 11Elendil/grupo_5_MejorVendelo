@@ -5,7 +5,8 @@ const multer = require('multer');
 const { validationResult } = require('express-validator')
 //users tiene la base de usuarios
 
-const  db = require("../../db/models")
+const  db = require("../../db/models");
+const { Op } = require('sequelize');
 
 const users = fs.readFileSync(path.resolve(__dirname, '../data/users.json'), {
   encoding: 'utf-8'
@@ -113,6 +114,16 @@ const usersController = {
               
           
           }
+        },
+
+        myProducts: async (req, res) =>
+        {
+          const products = await db.products.findAll({
+            where: {
+              sellerId: req.session.user.id,
+            }
+          });            
+          return res.render('users/myProducts' , {products:products})
         },
 }
 

@@ -45,12 +45,14 @@
           name: req.body.name,
           description: req.body.description,
           brand: req.body.brand,
+          condition: req.body.condition,
           price: req.body.price,
           image: req.file ? req.file.filename : '',
           subCategoriesId: req.body.subCategory,
           colorsId: req.body.color,
           categoriesId: req.body.category,
           sizesId: req.body.size,
+          sellerId: req.session.user.id,
         
       })
 
