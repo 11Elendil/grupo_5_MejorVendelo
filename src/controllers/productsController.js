@@ -1,20 +1,20 @@
  const fs = require('fs')
  const path = require('path')
 
- const productsFilePath = path.join(__dirname,"../data/products.json");
- const products = JSON.parse(fs.readFileSync(productsFilePath,'utf-8'));
  const  db = require("../../db/models")
  
  const productsController = {
-    index: (req,res)=>{
+    index: async(req,res)=>{
         const logueado = req.session.user ? req.session.user : undefined;
+        const products = await db.products.findAll();
+
         res.render('products',{products:products, logueado:logueado})
     },
    
-    detail : (req,res)=>{
+    detail : async (req,res)=>{
         const logueado = req.session.user ? req.session.user : undefined;
-        const productDetail = req.params.id
-        const product = products.find((product)=> product.id == productDetail)
+        const product = await db.products.findByPk(req.params.id);
+
         if(!product){
             res.send( 'no existe el producto')
             }   
@@ -33,32 +33,7 @@
         res.render('productForm', {logueado:logueado, colors: colors, sizes: sizes, categories: categories, subCategories:subCategories})
     },
     
-    /*
-    create: (req, res) => {
-      let errors = validationResult(req);
-  
-      if (errors.isEmpty()) {
 
-            db.Product.create({
-                firstName: req.body.firstName,
-                lastName: req.body.lastName,
-                email: req.body.email,
-                typeId : req.body.type,
-                avatar:  req.file ? req.file.filename : '',
-            })
-
-            return res.send("Se creo correctamente")
-
-        } else {
-          
-          return res.render('users/register', {
-            errors: errors.errors,  old: req.body
-          });           
-        
-        }
-   
-      },
-         */
     store: (req,res)=>{
 
         //return res.send(req.body)
@@ -71,8 +46,7 @@
           description: req.body.description,
           brand: req.body.brand,
           price: req.body.price,
-          //image: req.file ? req.file.filename : '',
-          image : "hardcodeando", //HAY QUE PONER UN VAR CHAR MAS GRANDE ACA EN LA DB
+          image: req.file ? req.file.filename : '',
           subCategoriesId: req.body.subCategory,
           colorsId: req.body.color,
           categoriesId: req.body.category,
@@ -85,13 +59,12 @@
     },
 
 
-    edit: (req, res) =>{
+    edit: async (req, res) =>{
         const logueado = req.session.user ? req.session.user : undefined;
-        const idProduct = req.params.id;
-		const product = products.find( product => {
-			return product.id == idProduct
-		})
-		res.render("prodcutEdit", { product , logueado:logueado})
+        
+        const product = await db.products.findByPk(req.params.id);
+
+		res.render("prodcutEdit", { product:product , logueado:logueado})
     }
  };
 

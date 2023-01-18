@@ -1,11 +1,11 @@
 const fs = require('fs');
-const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const  db = require("../../db/models")
+
 
 const controller = {
-    index: (req,res) => {
+    index: async (req,res) => {
         const logueado = req.session.user ? req.session.user : undefined;
+        const products = await db.products.findAll();
         return res.render("index.ejs", { products: products , logueado:logueado});
     },
     productCart: (req,res) => {
