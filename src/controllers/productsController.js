@@ -4,7 +4,7 @@
  const  db = require("../../db/models")
  
  const productsController = {
-    index: async(req,res)=>{
+    index: async (req,res)=>{
         const logueado = req.session.user ? req.session.user : undefined;
         const products = await db.products.findAll();
 

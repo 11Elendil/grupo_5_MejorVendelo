@@ -22,9 +22,14 @@
 
         <img src="/images/users/<%= user.avatar %> " alt="" height="64" width="96">
         
+        <div>
         <form action="/users/login?_method=DELETE" method="POST">
             <button>Desloguearte</button>
         </form>
+
+        <a href="/users/edit"><button>Editar perfil</button></a>
+        </div>
+    
     </div>
 
     <%- include("../partials/footer") %>

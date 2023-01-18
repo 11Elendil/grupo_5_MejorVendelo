@@ -21,10 +21,10 @@ const usersController = {
         return res.render('users/login')
     },
     
-    perfil: function (req, res)
+    perfil: async function (req, res)
     {
         if (req.session.user){
-          const user = req.session.user
+          const user = await db.User.findByPk(req.session.user.id)
           return res.render('users/perfil', {user:user})
         }
         return res.send("no estas logeado")
@@ -64,14 +64,10 @@ const usersController = {
 
     ingresar: async (req, res, next) =>{
         
-        //let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.js')));
         
         const usuarios = await db.User.findAll();
 
         let usuarioLogueado = usuarios.find(usuario => usuario.email == req.body.email)
-
-
-        //console.log(usuarioLogueado.dataValues)
 
         req.session.user = usuarioLogueado.dataValues;
 
@@ -80,7 +76,44 @@ const usersController = {
           return res.render('users/perfil', {user:user})
         }
         return res.send("no estas logeado")
-      }
+      },
+
+      edit: function (req, res)
+      {
+          if (req.session.user){
+            const user = req.session.user
+            return res.render('users/edit', {user:user})
+          }
+          return res.send("no estas logeado")
+      },
+      
+      editStore: (req, res) => {
+        let errors = validationResult(req);
+    
+        if (errors.isEmpty()) {
+  
+              db.User.update({
+                  firstName: req.body.firstName,
+                  lastName: req.body.lastName,
+                  typeId : req.body.type,
+                  avatar:  req.file ? req.file.filename : '',
+              },{
+                where: {id: req.session.user.id}
+              }
+              )
+  
+              return res.send("se actualizo correctamente")
+  
+          } else {
+            
+            return res.render('users/register', {
+              errors: errors.errors,  old: req.body
+            });
+            
+              
+          
+          }
+        },
 }
 
 module.exports = usersController;
