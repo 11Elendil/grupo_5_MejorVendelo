@@ -125,6 +125,25 @@ const usersController = {
           });            
           return res.render('users/myProducts' , {products:products})
         },
+
+        myProductDetail : async (req,res)=>{
+          const logueado = req.session.user ? req.session.user : undefined;
+          const product = await db.products.findByPk(req.params.id);
+  
+          if(!product){
+              res.send( 'no existe el producto')
+              }   
+          return res.render('users/myProductsDetail/' , {product:product, logueado:logueado})
+      
+      },
+      myProductsDelete: async (req,res) => {
+
+        db.products.destroy({
+          where:{id: req.params.id}
+        })
+
+        return res.send("Se borro el producto")
+      }
 }
 
 module.exports = usersController;
