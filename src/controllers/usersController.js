@@ -143,6 +143,13 @@ const usersController = {
         })
 
         return res.send("Se borro el producto")
+      },
+      editMyProduct: async (req,res) => {
+        
+        const myProduct = await db.products.findByPk(req.params.id);
+
+        return res.render("productEdit", {logueado: true, product: myProduct})
+
       }
 }
 

@@ -47,6 +47,7 @@ router.post("/edit",upload.single('avatar'), usersController.editStore)
 router.get("/myProducts", usersController.myProducts)
 router.delete("/myProducts/:id", usersController.myProductsDelete)
 
+router.get("/editMyProduct/:id",usersController.editMyProduct)
 
 module.exports = router;
 
