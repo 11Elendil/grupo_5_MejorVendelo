@@ -49,7 +49,7 @@ const usersController = {
                 avatar:  req.file ? req.file.filename : '',
             })
 
-            return res.send("Se creo correctamente")
+            return res.render("users/login")
 
         } else {
           
