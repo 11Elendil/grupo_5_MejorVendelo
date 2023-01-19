@@ -22,10 +22,10 @@
     </div>
     
     
-    <form action="/users/register" method="POST" enctype="multipart/form-data">
+    <form action="/users/edit" method="POST" enctype="multipart/form-data">
 
         <div class="titulo">
-            <h2>COMPLETA TUS DATOS</h2>
+            <h2>EDITA TU PERFIL</h2>
         </div>
 
         <div class="campo-form">
@@ -39,10 +39,8 @@
             <label>Apellido</label>
             <input type="text" name="lastName" value="<%= typeof old != 'undefined' ? old.LastName : '' %>" required>
         </div>
-        <div class="campo-form">
-            <label>Email</label>
-            <input type="email" name="email" value="<%= typeof old != 'undefined' ? old.email : '' %>" required>
-        </div>
+
+        
         <div class="campo-form">
             <div class="radio-buttons">
                 <div>
@@ -57,17 +55,12 @@
         </div>
 
         <div class="campo-form">
-            <label>Agrega una foto</label>
+            <label>Foto de perfil</label>
             <input class="imagen-input" type="file" name="avatar">
         </div>
 
-        <div class="campo-form">
-            <label>Contraseña</label>
-            <input type="password" name="password" required>
-        </div>
-
         <div class="caja-boton">
-            <button type="submit">CREA TU CUENTA</button>
+            <button type="submit">ACTUALIZAR DATOS</button>
         </div>
     </form>
 

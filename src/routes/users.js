@@ -41,6 +41,14 @@ router.post('/register', upload.single('avatar'), validacionesRegistro, usersCon
 
 router.get("/perfil", usersController.perfil)
 
+router.get("/edit", usersController.edit)
+router.post("/edit",upload.single('avatar'), usersController.editStore)
+
+router.get("/myProducts", usersController.myProducts)
+router.delete("/myProducts/:id", usersController.myProductsDelete)
+
+router.get("/editMyProduct/:id",usersController.editMyProduct)
+
 module.exports = router;
 
 

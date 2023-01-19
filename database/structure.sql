@@ -61,48 +61,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `structure`.`Products`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `structure`.`Products` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `name` TEXT(200) NOT NULL,
-  `description` VARCHAR(45) NOT NULL,
-  `brand` VARCHAR(45) NULL,
-  `price` VARCHAR(45) NOT NULL,
-  `image` VARCHAR(45) NOT NULL,
-  `subCategoriesId` INT NOT NULL,
-  `colorsId` INT NOT NULL,
-  `categoriesId` INT NOT NULL,
-  `sizesId` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_Products_subCategories1_idx` (`subCategoriesId` ASC)  ,
-  INDEX `fk_Products_Colors1_idx` (`colorsId` ASC)  ,
-  INDEX `fk_Products_Categories1_idx` (`categoriesId` ASC)  ,
-  INDEX `fk_Products_Sizes1_idx` (`sizesId` ASC)  ,
-  CONSTRAINT `fk_Products_subCategories1`
-    FOREIGN KEY (`subCategoriesId`)
-    REFERENCES `structure`.`subCategories` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Products_Colors1`
-    FOREIGN KEY (`colorsId`)
-    REFERENCES `structure`.`Colors` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Products_Categories1`
-    FOREIGN KEY (`categoriesId`)
-    REFERENCES `structure`.`Categories` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Products_Sizes1`
-    FOREIGN KEY (`sizesId`)
-    REFERENCES `structure`.`Sizes` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `structure`.`Type`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `structure`.`Type` (
@@ -131,6 +89,58 @@ CREATE TABLE IF NOT EXISTS `structure`.`users` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+
+
+-- -----------------------------------------------------
+-- Table `structure`.`Products`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `structure`.`Products` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` TEXT(200) NOT NULL,
+  `description` VARCHAR(45) NOT NULL,
+  `condition` VARCHAR(45) NOT NULL,
+  `brand` VARCHAR(45) NULL,
+  `price` VARCHAR(45) NOT NULL,
+  `image` VARCHAR(45) NOT NULL,
+  `subCategoriesId` INT NOT NULL,
+  `colorsId` INT NOT NULL,
+  `categoriesId` INT NOT NULL,
+  `sizesId` INT NOT NULL,
+  `sellerId`INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_Products_subCategories1_idx` (`subCategoriesId` ASC)  ,
+  INDEX `fk_Products_Colors1_idx` (`colorsId` ASC)  ,
+  INDEX `fk_Products_Categories1_idx` (`categoriesId` ASC)  ,
+  INDEX `fk_Products_Sizes1_idx` (`sizesId` ASC)  ,
+  INDEX `fk_Users_idx` (`sellerId` ASC)  ,
+  CONSTRAINT `fk_Products_subCategories1`
+    FOREIGN KEY (`subCategoriesId`)
+    REFERENCES `structure`.`subCategories` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Products_Colors1`
+    FOREIGN KEY (`colorsId`)
+    REFERENCES `structure`.`Colors` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Products_Categories1`
+    FOREIGN KEY (`categoriesId`)
+    REFERENCES `structure`.`Categories` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Products_Sizes1`
+    FOREIGN KEY (`sizesId`)
+    REFERENCES `structure`.`Sizes` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Users_idx`
+    FOREIGN KEY (`sellerId`)
+    REFERENCES `structure`.`users` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
 
 
 -- -----------------------------------------------------

@@ -1,3 +1,4 @@
+const { condition } = require("sequelize");
 
 
 module.exports = (sequelize, dataTypes) => {
@@ -41,6 +42,14 @@ module.exports = (sequelize, dataTypes) => {
       image: { 
         type: dataTypes.STRING,
         allowNull: true,
+      },
+      condition: {
+        type: dataTypes.STRING,
+        allowNull: false,
+      },
+      sellerId: {
+        type: dataTypes.INTEGER,
+        allowNull:false,
       }
     
   };
@@ -69,10 +78,16 @@ module.exports = (sequelize, dataTypes) => {
       foreignKey: "categoriesId"
       }),
   
-      Products.belongsTo(models.Size, {
+    Products.belongsTo(models.Size, {
         as: "sizes",
         foreignKey: "sizesId"
-      })
+      }),
+    
+    Products.belongsTo(models.User, {
+      as:"users",
+      foreignKey: "sellerId",
+    })
+
 
 }
   return Products
