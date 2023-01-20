@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `structure`.`Products` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` TEXT(200) NOT NULL,
   `description` VARCHAR(45) NOT NULL,
-  `condition` VARCHAR(45) NOT NULL,
+  `productCondition` VARCHAR(45) NOT NULL,
   `brand` VARCHAR(45) NULL,
   `price` VARCHAR(45) NOT NULL,
   `image` VARCHAR(45) NOT NULL,

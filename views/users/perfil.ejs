@@ -1,35 +1,32 @@
 <%- include("../partials/head", {pageTitle: "Formulario Producto" , stylesheet: "perfil.css" }) %>
 
+<%- include("../partials/header", {logueado: user})%>
 
-    <%- include("../partials/header", {logueado: user})%>
-
+<div class="main-container">
     <h1 class="tituloPerfil">Mi perfil</h1>
 
     <div class="contenedorPerfil">
-
-        <div>Nombre: <%= user.firstName %> </div>
-        <div>Apellido: <%= user.lastName %></div>
-        <div>Email: <%= user.email %></div>
-        <%if(user.typeId == 1){  %> 
-            <div>Tipo: Comprador</div>
-        <% } %>
-        
-        <%if(user.typeId == 2){  %> 
-            <div>Tipo: Vendedor</div>
-        <% } %>
-
-        <br>
-
-        <img src="/images/users/<%= user.avatar %> " alt="" height="64" width="96">
-        
-        <div>
-        <form action="/users/login?_method=DELETE" method="POST">
-            <button>Desloguearte</button>
-        </form>
-
-        <a href="/users/edit"><button>Editar perfil</button></a>
+        <div class="info-container">
+            <div>Nombre: <%= user.firstName %> </div>
+            <div>Apellido: <%= user.lastName %></div>
+            <div>Email: <%= user.email %></div>
+            <div>Tipo:
+                <%if(user.typeId == 1){  %> 
+                    Comprador
+                <% } else if (user.typeId == 2){  %> 
+                    Vendedor
+                <% } %>
+            </div>
         </div>
-    
+        <br>
+        <img class="perfil-img" src="/images/users/<%= user.avatar %> " alt="">
+        <div class="boton-container">
+            <form action="/users/login?_method=DELETE" method="POST">
+                <button class="perfil-boton">Desloguearte</button>
+            </form>
+            <a href="/users/edit"><button class="editar-boton">Editar perfil</button></a>
+        </div>
     </div>
+</div>
 
-    <%- include("../partials/footer") %>
+<%- include("../partials/footer") %>
