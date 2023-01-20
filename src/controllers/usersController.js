@@ -62,8 +62,8 @@ const usersController = {
         
         }
       },
-
-    ingresar: async (req, res, next) =>{
+     
+      ingresar: async (req, res, next) =>{
         
         
         const usuarios = await db.User.findAll();
