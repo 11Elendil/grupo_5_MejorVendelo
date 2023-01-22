@@ -36,11 +36,6 @@
 
     store: (req,res)=>{
 
-        //return res.send(req.body)
-
-
-        //EN LA DB FALTA EL ATRIBUTO CONDITION
-
         db.products.create({
           name: req.body.name,
           description: req.body.description,
@@ -53,14 +48,10 @@
           categoriesId: req.body.category,
           sizesId: req.body.size,
           sellerId: req.session.user.id,
-        
-      })
-
-
-        return res.send("SE CREO EL PRODUCTO CORRECTAMENTE");
+        });
+    
+        return res.redirect('/');
     },
-
-
     edit: async (req, res) =>{
         const logueado = req.session.user ? req.session.user : undefined;
         
