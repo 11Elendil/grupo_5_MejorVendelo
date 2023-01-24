@@ -58,6 +58,24 @@
         const product = await db.products.findByPk(req.params.id);
 
 		res.render("prodcutEdit", { product:product , logueado:logueado})
+    },
+    
+    update: async (req,res) => {
+
+        console.log("ESE ES EL NUEVO NAME: ", req.body);
+        console.log("ESE ES EL NUEVO NAME: ", req.body.price);
+
+        console.log("ESE ES EL ID: ", req.params.id);
+
+
+        db.products.update({
+            name: req.body.name,
+        },{
+          where: {id: req.params.id}
+        }
+        )
+
+        return res.send("Se actualizo correctamente")
     }
  };
 
