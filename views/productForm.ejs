@@ -60,10 +60,12 @@
                 <% } %> 
           </select>
         </div>
-        <div class="condition" required>
-            <input type="radio" name="condition" value="nuevo" >NUEVO
-            <input type="radio" name="condition" value="usado" >USADO
-        </div>
+        
+        <div class="condition">
+            <input type="radio" name="condition" value="nuevo" required>NUEVO
+            <input type="radio" name="condition" value="usado" required>USADO
+          </div>
+          
         <div class="size" required>
             <% for (let i = 0; i < sizes.length; i++) {%>
                 <input type="checkbox" name="size" value="<%= sizes[i].id%>" > <%= sizes[i].name%>

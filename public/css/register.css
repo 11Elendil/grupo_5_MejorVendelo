@@ -151,8 +151,12 @@ input:focus {
         margin-bottom: 30px;
     }
 
-    .caja-boton{
-        margin-top: 60px;
+    .caja-boton {
+        position: absolute;
+        bottom: 5px;
+        left: 75%;
+        transform: translateX(-50%);
     }
+    
 
 }

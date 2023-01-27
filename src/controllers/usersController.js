@@ -62,8 +62,8 @@ const usersController = {
         
         }
       },
-
-    ingresar: async (req, res, next) =>{
+     
+      ingresar: async (req, res, next) =>{
         
         
         const usuarios = await db.User.findAll();
@@ -150,7 +150,7 @@ const usersController = {
 
         return res.render("productEdit", {logueado: true, product: myProduct})
 
-      }
+º      }
 }
 
 module.exports = usersController;
