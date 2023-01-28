@@ -43,4 +43,5 @@ router.get('/:id/edit', productsController.edit);
 //router.put('/:id', productsController.update);
 
 // router.get ('/products)
+router.post("/productEdit/:id", productsController.update)
 module.exports = router
