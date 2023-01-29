@@ -102,4 +102,24 @@
         <img src="/images/perchero2.png" alt="imagen1">
     </div>
 </div>
+
+<script>
+    window.addEventListener('load',()=>{
+        /*validacion  nombre del producto*/
+        const nameProduct = document.querySelector('#name');
+        nameProduct.addEventListener('blur',()=>{
+            if(nameProduct.value.length < 5){
+                alert("El nombre del producto debe tener al menos 5 caracteres")
+                nameProduct.focus();
+            }
+        });
+        /*validacion descripcion del producto*/
+        const description = document.querySelector('#description');
+        description.addEventListener('blur',()=>{
+            if (description.value.length < 20){
+                alert('la descripcion debe tener al menos 20 caracteres')
+            }
+        })
+    })
+</script>
     <%- include("./partials/footer") %>
