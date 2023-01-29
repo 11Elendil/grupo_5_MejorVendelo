@@ -14,11 +14,17 @@
     detail : async (req,res)=>{
         const logueado = req.session.user ? req.session.user : undefined;
         const product = await db.products.findByPk(req.params.id);
+        const size = await db.Size.findOne({where: {id: product.sizesId}});
+
+        const color = await db.Colors.findOne({where: {id: product.colorsId}});
+        const category = await db.Category.findOne({where: {id: product.categoriesId}});
+        const subCategory = await db.SubCategory.findOne({where: {id: product.subCategoriesId}});
+
 
         if(!product){
             res.send( 'no existe el producto')
             }   
-        return res.render('productDetail' , {product:product, logueado:logueado})
+        return res.render('productDetail' , {product:product, logueado:logueado, size, color, category, subCategory})
     
     },
    create: async (req,res)=>{
