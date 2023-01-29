@@ -16,12 +16,18 @@
                     </div>
                     <div class="name">
                         <label for="name">Nombre Del Producto</label>
-                        <input type="text" name="name" id="name" placeholder= "nuevo nombre" required>
+                        <input type="text" name="name" id="name" placeholder= "nuevo nombre" required value="<%= product.name %>">
                     </div>
 
                     <div class="price">
                         <p class="price">Precio</p>
-                        <input type="number" name="price" id="price" placeholder="$" required>
+                        <input type="number" name="price" id="price" placeholder="$" required value="<%= product.price %>">
+                    </div>
+                    <br>
+
+                    <div class="description">
+                        <p class="description">Precio</p>
+                        <input type="text" name="description" required value="<%= product.description %>">
                     </div>
                     <br>
                     <!--

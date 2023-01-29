@@ -76,6 +76,8 @@
 
         db.products.update({
             name: req.body.name,
+            price: req.body.price,
+            description: req.body.description,
         },{
           where: {id: req.params.id}
         }
