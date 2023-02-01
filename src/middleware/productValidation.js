@@ -20,6 +20,26 @@ const upload = multer({
   }
 });
 
+// validationProduct.js
+
+function validateProduct(name, description, image) {
+  if (name.length < 5) {
+    return "El nombre es obligatorio y debe tener al menos 5 caracteres.";
+  }
+  if (description.length < 20) {
+    return "La descripción debe tener al menos 20 caracteres.";
+  }
+  const validImageTypes = [".jpg", ".jpeg", ".png", ".gif"];
+  if (!validImageTypes.some(type => image.endsWith(type))) {
+    return "La imagen debe ser un archivo válido de tipo JPG, JPEG, PNG o GIF.";
+  }
+  return "Producto válido.";
+}
+
+module.exports = {
+  validateProduct
+};
+
 
 
 
