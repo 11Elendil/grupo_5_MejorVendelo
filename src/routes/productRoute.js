@@ -1,10 +1,12 @@
 
 const express = require("express");
+const {validationResult}= require("express-validator");
+const {body}= require("express-validator");
 const router = express.Router();
 
 /*controller require*/
-const productsController = require('../controllers/productsController') 
-
+const productsController = require('../controllers/productsController'); 
+const validacionesProduct = require('../middleware/productValidation');
 const path = require('path');
 
 const multer = require('multer');
@@ -26,6 +28,7 @@ const upload = multer({storage});
 
 
 
+
 /* GET ALL PRODUCTS */
 
 router.get('/', productsController.index)
@@ -34,7 +37,7 @@ router.get('/', productsController.index)
 /* GET ADD PRODUCTS */
 router.get('/create',guestValidation ,productsController.create)
 /* POST ADD PRODUCTS */
-router.post('/', upload.single('image'), productsController.store)
+router.post('/', upload.single('image'), validacionesProduct,productsController.store)
 
 
 /* GET ONE PRODUCT */
