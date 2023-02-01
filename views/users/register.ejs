@@ -30,15 +30,18 @@
 
         <div class="campo-form">
             <label>Nombre</label>
-            <input type="text" name="firstName" value="<%= typeof old != 'undefined' ? old.firstName : '' %>"> 
+            <input type="text" name="firstName" id="firstName" value="<%= typeof old != 'undefined' ? old.firstName : '' %>">
+            <div class="error" id="name-error"></div>
         </div>
             
         </div>
 
         <div class="campo-form">
             <label>Apellido</label>
-            <input type="text" name="lastName" value="<%= typeof old != 'undefined' ? old.LastName : '' %>" required>
+            <input type="text" name="lastName" id="lastName" value="<%= typeof old != 'undefined' ? old.LastName : '' %>" required>
+            <div id="lastName-error" class="error"></div>
         </div>
+        
         <div class="campo-form">
             <label>Email</label>
             <input type="email" name="email" value="<%= typeof old != 'undefined' ? old.email : '' %>" required>
@@ -70,7 +73,55 @@
             <button type="submit">CREA TU CUENTA</button>
         </div>
     </form>
+    <script>
+        
+        window.addEventListener('load', function() {
 
+   
+ 
+
+
+// Nombre
+const nameField = document.querySelector("#firstName");
+const nameError = document.querySelector("#name-error");
+
+nameField.addEventListener("blur", function() {
+    if (nameField.value.length < 2) {
+        nameError.innerHTML = "El nombre debe tener 2 caracteres minimo";
+    } else {
+        nameError.innerHTML = "";
+    }
+});
+
+// Apellido
+const lastNameField = document.querySelector("#lastName");
+const lastNameError = document.querySelector("#lastName-error");
+
+lastNameField.addEventListener("blur", function() {
+if (lastNameField.value.length < 2) {
+lastNameError.innerHTML = "El apellido debe tener 2 caracteres minimo";
+} else {
+lastNameError.innerHTML = "";
+}
+});
+
+// Email
+
+
+// Contraseña
+
+
+// Imagen
+function validarImagen() {
+    var imagen = document.getElementById("imagen").files[0];
+    var tiposPermitidos = ["image/jpeg", "image/jpg", "image/png", "image/gif"];
+    
+    if (!tiposPermitidos.includes(imagen.type)) {
+      alert("Solo se permiten imágenes en formato jpeg, jpg, png o gif.");
+    }
+  }
+});
+    </script>
 
 </body>
 

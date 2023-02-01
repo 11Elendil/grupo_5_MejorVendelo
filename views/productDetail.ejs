@@ -52,9 +52,13 @@
             <div class="contenedor-descripcion">
 
                 <h2 class="titulo-producto"><%= product.name %> </h2>
-                <p class="precio">$<%= product.price  %> </p>
-                <p class="talle"><%= product.size %> </p>
-                <p class="descripcion"><%=product.description  %> </p>
+                <p class="precio">Precio: $<%= product.price  %> </p>
+                <p class="talle">Talle: <%= size.name %> </p>
+                <p class="descripcion">Descripcion: <%=product.description  %> </p>
+                <p class="descripcion">Color: <%=color.name  %> </p>
+                <p class="descripcion">Condicion: <%=product.condition  %> </p>
+                <p class="descripcion">Genero: <%=category.genre  %> </p>
+                <p class="descripcion">Categoria: <%=subCategory.name  %> </p>
                 
 
                 <div class="caja-boton">
