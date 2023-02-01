@@ -2,12 +2,12 @@ window.addEventListener('load', function() {
 
    
  
-// Nombre
+
 
     // Nombre
     const nameField = document.querySelector("#firstName");
     const nameError = document.querySelector("#name-error");
-
+    
     nameField.addEventListener("blur", function() {
         if (nameField.value.length < 2) {
             nameError.innerHTML = "El nombre debe tener 2 caracteres minimo";
@@ -15,52 +15,72 @@ window.addEventListener('load', function() {
             nameError.innerHTML = "";
         }
     });
-
-
-
-// Email
-var emailField = document.getElementById("email");
-emailField.addEventListener("blur", function() {
-  if (!/^\S+@\S+\.\S+$/.test(emailField.value)) {
-    alert("Ingresa un correo valido");
-    document.getElementById("submit-button").disabled = true;
-  } else {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        if (this.responseText == "invalid") {
-          alert("El correo ya esta en uso");
-          document.getElementById("submit-button").disabled = true;
+    
+    // Apellido
+    const lastNameField = document.querySelector("#lastName");
+    const lastNameError = document.querySelector("#lastName-error");
+    
+    lastNameField.addEventListener("blur", function() {
+    if (lastNameField.value.length < 2) {
+    lastNameError.innerHTML = "El apellido debe tener 2 caracteres minimo";
+    } else {
+    lastNameError.innerHTML = "";
+    }
+    });
+    
+    // Email
+    
+      // Validación de email
+      const emailField = document.querySelector("#email");
+      const emailError = document.querySelector("#email-error");
+    
+      emailField.addEventListener("blur", function() {
+        // Verifica si el correo electrónico es válido
+        if (!/\S+@\S+\.\S+/.test(emailField.value)) {
+          emailError.innerHTML = "Ingrese un correo electrónico válido";
         } else {
-          document.getElementById("submit-button").disabled = false;
+          // Verifica si el correo electrónico existe en la base de datos
+          // Se puede hacer una consulta ajax o usar algún otro método para verificar si existe en la base de datos
+          emailError.innerHTML = "";
         }
+      });
+    
+    
+    
+    // Contraseña
+    const passwordInput = document.querySelector("#password");
+    const passwordError = document.querySelector("#password-error");
+    
+    passwordInput.addEventListener("blur", function() {
+        if (passwordInput.value.length < 8) {
+            passwordError.innerHTML = "La contraseña debe tener al menos 8 caracteres";
+        } else {
+            passwordError.innerHTML = "";
+        }
+    });
+    
+    
+    // Imagen
+    // Validación de formato de imagen en el lado del cliente
+    function validateImage(input) {
+      const image = input.files[0];
+      const allowedTypes = ['jpg', 'jpeg', 'png', 'gif'];
+      const imageType = image.name.split('.').pop().toLowerCase();
+    
+      if (!allowedTypes.includes(imageType)) {
+        alert('Deberá ser un archivo válido (JPG, JPEG, PNG, GIF)');
+        return false;
+      }
+    
+      return true;
+    }
+    
+    // Asociar la validación de la imagen con el evento onsubmit del formulario
+    const form = document.getElementById('myForm');
+    form.onsubmit = function(event) {
+      const input = document.getElementById('image');
+      if (!validateImage(input)) {
+        event.preventDefault();
       }
     };
-    xhttp.open("GET", "verify_email.php?email=" + emailField.value, true);
-    xhttp.send();
-  }
-});
-
-// Contraseña
-var passwordField = document.getElementById("password");
-passwordField.addEventListener("blur", function() {
-  if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/.test(passwordField.value)) {
-    alert("La contraseña debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas y un caracter especial");
-    document.getElementById("submit-button").disabled = true;
-  } else {
-    document.getElementById("submit-button").disabled = false;
-  }
-});
-
-// Imagen
-var imageField = document.getElementById("image");
-imageField.addEventListener("change", function() {
-  var extension = imageField.value.split(".").pop();
-  if (!/^(jpg|png|gif|jpeg)$/.test(extension)) {
-    alert("Solo se permiten imágenes en formato JPG, PNG, GIF o JPEG");
-    document.getElementById("submit-button").disabled = true;
-  } else {
-    document.getElementById("submit-button").disabled = false;
-  }
-});
-});
+    });

@@ -44,8 +44,9 @@
         
         <div class="campo-form">
             <label>Email</label>
-            <input type="email" name="email" value="<%= typeof old != 'undefined' ? old.email : '' %>" required>
-        </div>
+            <input type="email" name="email" id="email" value="<%= typeof old != 'undefined' ? old.email : '' %>" required>
+            <div id="email-error" class="error"></div>
+          </div>
         <div class="campo-form">
             <div class="radio-buttons">
                 <div>
@@ -61,12 +62,15 @@
 
         <div class="campo-form">
             <label>Agrega una foto</label>
-            <input class="imagen-input" type="file" name="avatar">
+            <input class="imagen-input" type="file" name="avatar" id="imagen" >
+            <div id="imagen-error" class="error"></div>
         </div>
 
         <div class="campo-form">
             <label>Contraseña</label>
-            <input type="password" name="password" required>
+            <div id="password-error" class="error"></div>
+            <input type="password" name="password"  id = "password" required>
+            
         </div>
 
         <div class="caja-boton">
@@ -107,19 +111,59 @@ lastNameError.innerHTML = "";
 
 // Email
 
+  // Validación de email
+  const emailField = document.querySelector("#email");
+  const emailError = document.querySelector("#email-error");
+
+  emailField.addEventListener("blur", function() {
+    // Verifica si el correo electrónico es válido
+    if (!/\S+@\S+\.\S+/.test(emailField.value)) {
+      emailError.innerHTML = "Ingrese un correo electrónico válido";
+    } else {
+      // Verifica si el correo electrónico existe en la base de datos
+      // Se puede hacer una consulta ajax o usar algún otro método para verificar si existe en la base de datos
+      emailError.innerHTML = "";
+    }
+  });
+
+
 
 // Contraseña
+const passwordInput = document.querySelector("#password");
+const passwordError = document.querySelector("#password-error");
+
+passwordInput.addEventListener("blur", function() {
+    if (passwordInput.value.length < 8) {
+        passwordError.innerHTML = "La contraseña debe tener al menos 8 caracteres";
+    } else {
+        passwordError.innerHTML = "";
+    }
+});
 
 
 // Imagen
-function validarImagen() {
-    var imagen = document.getElementById("imagen").files[0];
-    var tiposPermitidos = ["image/jpeg", "image/jpg", "image/png", "image/gif"];
-    
-    if (!tiposPermitidos.includes(imagen.type)) {
-      alert("Solo se permiten imágenes en formato jpeg, jpg, png o gif.");
-    }
+// Validación de formato de imagen en el lado del cliente
+function validateImage(input) {
+  const image = input.files[0];
+  const allowedTypes = ['jpg', 'jpeg', 'png', 'gif'];
+  const imageType = image.name.split('.').pop().toLowerCase();
+
+  if (!allowedTypes.includes(imageType)) {
+    alert('Deberá ser un archivo válido (JPG, JPEG, PNG, GIF)');
+    return false;
   }
+
+  return true;
+}
+
+// Asociar la validación de la imagen con el evento onsubmit del formulario
+const form = document.getElementById('myForm');
+form.onsubmit = function(event) {
+  const input = document.getElementById('image');
+  if (!validateImage(input)) {
+    event.preventDefault();
+  }
+};
 });
     </script>
 
