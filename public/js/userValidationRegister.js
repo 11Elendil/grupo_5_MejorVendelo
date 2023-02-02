@@ -1,7 +1,3 @@
-window.addEventListener('load', function() {
-
-   
- 
 
 
     // Nombre
@@ -83,4 +79,4 @@ window.addEventListener('load', function() {
         event.preventDefault();
       }
     };
-    });
+    
