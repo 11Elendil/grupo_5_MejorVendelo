@@ -23,8 +23,9 @@
         <div class="image">
             <label for="image">Imagen del Producto</label>
             <br>
-            <button type="button" class="iconImageInput" id="image"> <i class="fa-solid fa-camera"></i></button>
+            <button type="button" class="iconImageInput" id="imagen"> <i class="fa-solid fa-camera"></i></button>
             <input type="file" name="image" id="image" accept="image/*" multiple required>
+            <div id="errorImagen" type='error'></div>
             
         </div>
         <div class="price">
@@ -117,9 +118,51 @@
         const description = document.querySelector('#description');
         description.addEventListener('blur',()=>{
             if (description.value.length < 20){
-                alert('la descripcion debe tener al menos 20 caracteres')
+                ('la descripcion debe tener al menos 20 caracteres')
             }
-        })
+        });
+       /* const errorImagen = document.querySelector('#errorImagen')
+        const imagen = document.querySelector('#image');
+        const array = imagen.value.split('.')
+        const formatosPermitidos = ['png','jpeg','gif','jpg']
+        imagen.addEventListener('load',()=>{
+        const formatoValido = false
+            for (const formato of formatosPermitidos){
+                if(array[1] === formato){
+                    formatoValido = true;
+                     break;
+                }
+            }
+        if (!formatoValido) {
+        errorImagen.innerHTML= 'los formatos permitidos son png, jpeg, gif, jpg';
+        }
+
+           
+           
+        })*/
+        
+
+    
     })
+    window.addEventListener('storage', (event) => {
+        if (event.key === 'imagen') {
+        const errorImagen = document.querySelector('#errorImagen');
+        const imagen = event.newValue;
+        const array = imagen.split('.');
+        const formatosPermitidos = ['png', 'jpeg', 'gif', 'jpg'];
+        let formatoValido = false;
+
+        for (const formato of formatosPermitidos) {
+        if (array[1] === formato) {
+        formatoValido = true;
+        break;
+      }
+    }
+
+    if (!formatoValido) {
+      errorImagen.innerHTML = 'los formatos permitidos son png, jpeg, gif, jpg';
+    }
+  }
+});
 </script>
     <%- include("./partials/footer") %>

@@ -15,7 +15,9 @@
                     </div>
                 </div>
             </div>
+
             <h2 class="tituloSeccion">Prestá atención a nuestra promociones de este mes!</h2>
+            
             <section class="promociones"> 
                 <% products.forEach( product=> { %>
                     <a href="products/detail/<%= product.id %>">
@@ -29,6 +31,9 @@
                             </p>
                             <p class="precio">$<%= product.price%>
                             </p>
+                            
+                            <p class="precio">Condicion: <%= product.condition%>
+                            
                         </div>
                     </a>
                     <%}) %>
