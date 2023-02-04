@@ -2,17 +2,19 @@
     window.addEventListener('load',()=>{
         /*validacion  nombre del producto*/
         const nameProduct = document.querySelector('#name');
+        const nameProductError = document.querySelector('#nameProductError')
         nameProduct.addEventListener('blur',()=>{
             if(nameProduct.value.length < 5){
-                alert("El nombre del producto debe tener al menos 5 caracteres")
+                nameProductError.innerHTML= "El nombre del producto debe tener al menos 5 caracteres"
                 nameProduct.focus();
             }
         });
         /*validacion descripcion del producto*/
         const description = document.querySelector('#description');
+        const descriptionError = document.querySelector('#descriptionError')
         description.addEventListener('blur',()=>{
             if (description.value.length < 20){
-                ('la descripcion debe tener al menos 20 caracteres')
+                descriptionError.innerHTML = 'la descripcion debe tener al menos 20 caracteres'
             }
         });
         /* validacion de imagen*/

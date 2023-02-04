@@ -19,6 +19,8 @@
         <div class="name">
             <label for="name">Nombre Del Producto</label>
             <input type="text" name="name" id="name" placeholder="Remera,pantalon..." required>
+            <div id="nameProductError"></div>
+
         </div>
         <div class="image">
             <label for="image">Imagen del Producto</label>
@@ -88,6 +90,7 @@
         <br>
         <div class="description" >
             <textarea name="description" id="description" cols="30" rows="10" placeholder="Descripción..."></textarea>
+            <div id="descriptionError"></div>
         </div>
        <div class="enviar-limpiar">
         <button class=“botonEnviar” type="submit" value="ENVIAR">ENVIAR</button>
@@ -103,66 +106,4 @@
         <img src="/images/perchero2.png" alt="imagen1">
     </div>
 </div>
-
-<script>
-    window.addEventListener('load',()=>{
-        /*validacion  nombre del producto*/
-        const nameProduct = document.querySelector('#name');
-        nameProduct.addEventListener('blur',()=>{
-            if(nameProduct.value.length < 5){
-                alert("El nombre del producto debe tener al menos 5 caracteres")
-                nameProduct.focus();
-            }
-        });
-        /*validacion descripcion del producto*/
-        const description = document.querySelector('#description');
-        description.addEventListener('blur',()=>{
-            if (description.value.length < 20){
-                ('la descripcion debe tener al menos 20 caracteres')
-            }
-        });
-       /* const errorImagen = document.querySelector('#errorImagen')
-        const imagen = document.querySelector('#image');
-        const array = imagen.value.split('.')
-        const formatosPermitidos = ['png','jpeg','gif','jpg']
-        imagen.addEventListener('load',()=>{
-        const formatoValido = false
-            for (const formato of formatosPermitidos){
-                if(array[1] === formato){
-                    formatoValido = true;
-                     break;
-                }
-            }
-        if (!formatoValido) {
-        errorImagen.innerHTML= 'los formatos permitidos son png, jpeg, gif, jpg';
-        }
-
-           
-           
-        })*/
-        
-
-    
-    })
-    window.addEventListener('storage', (event) => {
-        if (event.key === 'imagen') {
-        const errorImagen = document.querySelector('#errorImagen');
-        const imagen = event.newValue;
-        const array = imagen.split('.');
-        const formatosPermitidos = ['png', 'jpeg', 'gif', 'jpg'];
-        let formatoValido = false;
-
-        for (const formato of formatosPermitidos) {
-        if (array[1] === formato) {
-        formatoValido = true;
-        break;
-      }
-    }
-
-    if (!formatoValido) {
-      errorImagen.innerHTML = 'los formatos permitidos son png, jpeg, gif, jpg';
-    }
-  }
-});
-</script>
     <%- include("./partials/footer") %>
