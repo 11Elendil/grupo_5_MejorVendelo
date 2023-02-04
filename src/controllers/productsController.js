@@ -85,6 +85,8 @@
 
         return res.send("Se actualizo correctamente")
     }
+    
  };
+ 
 
  module.exports = productsController;

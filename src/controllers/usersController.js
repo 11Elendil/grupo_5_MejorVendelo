@@ -50,7 +50,11 @@ const usersController = {
                 avatar:  req.file ? req.file.filename : '',
             })
 
+<<<<<<< HEAD
             return res.render("users/login")
+=======
+            return res.render("users/login");
+>>>>>>> f5030857cb9757d5a765e540db0a605881410106
 
         } else {
           

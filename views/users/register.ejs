@@ -1,3 +1,6 @@
+<head>
+    <script src ="/js/userValidationRegister.js" defer> </script>
+</head>
 <%- include("../partials/head", {pageTitle: "Registrarme", stylesheet: "register.css"}) %>
 
 <% if(typeof(errors) != 'undefined'){%>
@@ -44,8 +47,9 @@
         
         <div class="campo-form">
             <label>Email</label>
-            <input type="email" name="email" value="<%= typeof old != 'undefined' ? old.email : '' %>" required>
-        </div>
+            <input type="email" name="email" id="email" value="<%= typeof old != 'undefined' ? old.email : '' %>" required>
+            <div id="email-error" class="error"></div>
+          </div>
         <div class="campo-form">
             <div class="radio-buttons">
                 <div>
@@ -61,67 +65,23 @@
 
         <div class="campo-form">
             <label>Agrega una foto</label>
-            <input class="imagen-input" type="file" name="avatar">
+            <input class="imagen-input" type="file" name="avatar" id="imagen" >
+            <div id="imagen-error" class="error"></div>
         </div>
 
         <div class="campo-form">
             <label>Contraseña</label>
-            <input type="password" name="password" required>
+            <div id="password-error" class="error"></div>
+            <input type="password" name="password"  id = "password" required>
+            
         </div>
 
         <div class="caja-boton">
             <button type="submit">CREA TU CUENTA</button>
         </div>
     </form>
-    <script>
-        
-        window.addEventListener('load', function() {
-
-   
- 
-
-
-// Nombre
-const nameField = document.querySelector("#firstName");
-const nameError = document.querySelector("#name-error");
-
-nameField.addEventListener("blur", function() {
-    if (nameField.value.length < 2) {
-        nameError.innerHTML = "El nombre debe tener 2 caracteres minimo";
-    } else {
-        nameError.innerHTML = "";
-    }
-});
-
-// Apellido
-const lastNameField = document.querySelector("#lastName");
-const lastNameError = document.querySelector("#lastName-error");
-
-lastNameField.addEventListener("blur", function() {
-if (lastNameField.value.length < 2) {
-lastNameError.innerHTML = "El apellido debe tener 2 caracteres minimo";
-} else {
-lastNameError.innerHTML = "";
-}
-});
-
-// Email
-
-
-// Contraseña
-
-
-// Imagen
-function validarImagen() {
-    var imagen = document.getElementById("imagen").files[0];
-    var tiposPermitidos = ["image/jpeg", "image/jpg", "image/png", "image/gif"];
     
-    if (!tiposPermitidos.includes(imagen.type)) {
-      alert("Solo se permiten imágenes en formato jpeg, jpg, png o gif.");
-    }
-  }
-});
-    </script>
+    
 
 </body>
 
