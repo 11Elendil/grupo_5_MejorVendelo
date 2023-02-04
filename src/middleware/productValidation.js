@@ -22,7 +22,7 @@ const upload = multer({
 
 // validationProduct.js
 
-function validateProduct(name, description, image) {
+function productValidation(name, description, image) {
   if (name.length < 5) {
     return "El nombre es obligatorio y debe tener al menos 5 caracteres.";
   }
@@ -37,25 +37,6 @@ function validateProduct(name, description, image) {
 }
 
 module.exports = {
-  validateProduct
-};
+  productValidation};
 
 
-
-
-
-const validacionesProduct = [
-  body('name').isLength({
-        min: 5
-      }).withMessage('El campo nombre no puede estar vacío'),
-    
-    body('condition').isLength({
-        min: 20
-    }).withMessage('Almenos  tiene que tener 20 carateres'),
-
-    
-    
-    
-    
-      ]
-module.exports = validacionesProduct;
