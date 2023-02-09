@@ -1,7 +1,6 @@
  const fs = require('fs')
  const path = require('path')
-// productsController.js
-const productValidation = require('../validation/productvalidation');
+
 
 // rest of the code
 

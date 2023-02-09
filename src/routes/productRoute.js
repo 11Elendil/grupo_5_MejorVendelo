@@ -6,7 +6,7 @@ const router = express.Router();
 
 /*controller require*/
 const productsController = require('../controllers/productsController'); 
-const validacionesProduct = require('../middleware/productValidation');
+const productValidationBack = require('../middleware/productValidation');
 const path = require('path');
 
 const multer = require('multer');
@@ -37,7 +37,8 @@ router.get('/', productsController.index)
 /* GET ADD PRODUCTS */
 router.get('/create',guestValidation ,productsController.create)
 /* POST ADD PRODUCTS */
-router.post('/', upload.single('image'), validacionesProduct,productsController.store)
+router.post('/', upload.single('image'),productValidationBack,productsController.store)
+
 
 
 /* GET ONE PRODUCT */
