@@ -5,8 +5,12 @@
         <script src="/js/productForm.js" defer></script>
 
         <div class="contenedorGeneral">
+<<<<<<< HEAD:views/prodcutEdit.ejs
+            <form action="/products/<%= product.id %>?_method=put " method="post" enctype="multipart/form-data">
+=======
             
             <form action="/products/productEdit/<%= product.id %> " method="POST" enctype="multipart/form-data">
+>>>>>>> fc3b3eec7cc0491ae6f44fda5758127c99f6138f:views/productEdit.ejs
                 <div class="createProduct">
                     <div class="titleForm">
                         <div class="imageForm">
@@ -34,8 +38,6 @@
 
                     <div class="imageinput">
                         <label for="imageinput">Imagen del Producto</label>
-                        <button type="button" class="iconImageInput" id="botonimagen"> <i
-                                class="fa-solid fa-camera"></i></button>
                         <input type="file" name="imageInput" id="imageinput" accept="image/*" multiple required>
 
                     </div>

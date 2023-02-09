@@ -6,8 +6,17 @@ const mainRoutes = require("./src/routes/mainRoutes");
 const productRoute = require('./src/routes/productRoute');
 const userRoutes = require('./src/routes/users');
 
+<<<<<<< HEAD
+const mainRoutes = require("./routes/mainRoutes")
+const productRoute = require('./routes/productRoute')
+const methodOverride =  require('method-override');
+app.use(methodOverride('_method'));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+=======
 const session = require("express-session")
 
+>>>>>>> fc3b3eec7cc0491ae6f44fda5758127c99f6138f
 
 const path = require('path');
 const publicFolderPath = path.resolve('public');
