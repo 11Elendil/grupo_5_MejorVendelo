@@ -44,9 +44,6 @@ body form div{
     text-align: center;
 }
 
-.imageinput input{
-    visibility: hidden;
-}
 button.iconImageInput{
     width: 80px;
     display: flex;

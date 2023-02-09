@@ -4,7 +4,10 @@ const app = express();
 
 const mainRoutes = require("./routes/mainRoutes")
 const productRoute = require('./routes/productRoute')
-
+const methodOverride =  require('method-override');
+app.use(methodOverride('_method'));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 const path = require('path');
 const publicFolderPath = path.resolve('public')
