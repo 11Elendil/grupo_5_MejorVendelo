@@ -57,7 +57,9 @@ input:focus {
 .caja-boton{
     display: flex;
     justify-content: space-around;
-    margin-top: 60px;
+    clear: both; /* agrega esta propiedad */
+    text-align: center; /* centra el botón horizontalmente */
+    margin-top: 20px; /* agrega margen superior al botón */
 }
 
 .caja-boton button{
@@ -151,8 +153,12 @@ input:focus {
         margin-bottom: 30px;
     }
 
-    .caja-boton{
-        margin-top: 60px;
+    .caja-boton {
+        position: absolute;
+        bottom: 5px;
+        left: 75%;
+        transform: translateX(-50%);
     }
+    
 
 }

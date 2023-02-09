@@ -1,6 +1,7 @@
 <%- include("./partials/head", {pageTitle: "Formulario Producto" , stylesheet: "productForm.css" }) %>
 
 
+<<<<<<< HEAD
     <%- include("partials/header")%>
         <script src="/js/productForm.js" defer></script>
 
@@ -84,3 +85,111 @@
             </div>
         </div>
         <%- include("./partials/footer") %>
+=======
+<%- include("partials/header",{logueado: logueado})%>
+<script src="/js/productForm.js" defer></script>
+    
+    <div class="contenedorGeneral">
+<div class="imagen1">
+    <img src="/images/perchero1.jpg" alt="imagen1">
+</div>
+    <form action="/products" method="post" enctype="multipart/form-data">
+        <div class="createProduct">
+        <div class="titleForm">
+            <div class="imageForm">
+                
+                <label>PUBLICA TU PRODUCTO</label>    
+            </div>
+        </div>
+        <div class="name">
+            <label for="name">Nombre Del Producto</label>
+            <input type="text" name="name" id="name" placeholder="Remera,pantalon..." required>
+            <div id="nameProductError"></div>
+
+        </div>
+        <div class="image">
+            <label for="image">Imagen del Producto</label>
+            <br>
+            <button type="button" class="iconImageInput" id="imagen"> <i class="fa-solid fa-camera"></i></button>
+            <input type="file" name="image" id="image" accept="image/*" multiple required>
+            <div id="errorImagen" type='error'></div>
+            
+        </div>
+        <div class="price">
+            <p class="price">Precio</p>
+            <input type="number" name="price" id="price" placeholder="$" required>
+        </div>
+        <br>
+
+        <div class="brand">
+        <input type="text" name="brand" id="brand" placeholder="Marca del producto" required> </div>
+
+        <div class="category">
+            <p type="text" name="category" id="category" placeholder="Categoria del producto">Categoria</p>
+            <select  name = "category">
+                <% for (let i = 0; i < categories.length; i++) {%>
+                    <option value="<%= categories[i].id %>">
+
+                        <%= categories[i].genre %> 
+
+                    </option>
+                <% } %> 
+          </select>
+        </div>
+        <div class="subcategory">
+            <p type="text" name="subcategory" id="subcategory" placeholder="Subcategoria del producto">Subcategoria</p>
+            <select  name = "subCategory">
+                <% for (let i = 0; i < subCategories.length; i++) {%>
+                    <option value="<%= subCategories[i].id %>">
+
+                        <%= subCategories[i].name %> 
+
+                    </option>
+                <% } %> 
+          </select>
+        </div>
+        
+        <div class="condition">
+            <input type="radio" name="condition" value="nuevo" required>NUEVO
+            <input type="radio" name="condition" value="usado" required>USADO
+          </div>
+          
+        <div class="size" required>
+            <% for (let i = 0; i < sizes.length; i++) {%>
+                <input type="checkbox" name="size" value="<%= sizes[i].id%>" > <%= sizes[i].name%>
+            <% } %> 
+            
+        </div>
+        <div class="color">
+            <select  name = "color">
+                <% for (let i = 0; i < colors.length; i++) {%>
+                    <option value="<%= colors[i].id %>">
+
+                        <%= colors[i].name %> 
+
+                    </option>
+                <% } %> 
+          </select>
+        
+        </div>
+        <br>
+        <div class="description" >
+            <textarea name="description" id="description" cols="30" rows="10" placeholder="Descripción..."></textarea>
+            <div id="descriptionError"></div>
+        </div>
+       <div class="enviar-limpiar">
+        <button class=“botonEnviar” type="submit" value="ENVIAR">ENVIAR</button>
+        <br>
+        <button class=“botonLimpiar” type="reset" value="LIMPIAR">LIMPIAR</button>
+        </div>
+     
+
+        </div>
+        
+       </form>
+       <div class="imagen1">
+        <img src="/images/perchero2.png" alt="imagen1">
+    </div>
+</div>
+    <%- include("./partials/footer") %>
+>>>>>>> fc3b3eec7cc0491ae6f44fda5758127c99f6138f

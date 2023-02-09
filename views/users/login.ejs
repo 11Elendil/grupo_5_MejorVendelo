@@ -1,0 +1,30 @@
+<%- include("../partials/head", {pageTitle: "Ingresar", stylesheet: "login.css"}) %>
+
+
+    <%- include("../partials/header", {logueado: false, tipo: undefined}) %>
+    
+    
+    <main>
+        <form action="/users/login" method="POST">
+            
+            <p>
+                <label></label>
+                <input class="inputFormulario" type="text" name="email" required placeholder="Email de usuario">
+            </p>
+
+            <p>
+                <label></label>
+                <input class="inputFormulario" type="password" name="password" required placeholder="Contraseña">
+            </p>
+
+
+            <button class=“botonEnviar” type="submit" value="ENVIAR">ENVIAR</button>
+
+
+        </form>
+
+    </main>
+    </header>
+
+    <%- include("../partials/footer") %>
+

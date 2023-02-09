@@ -1,0 +1,312 @@
+[
+  {
+    "id": 1,
+    "firstName": "eget",
+    "lastName": "nonummy maecenas",
+    "email": "nburdoun0@foxnews.com",
+    "password": "aLmzCKq9",
+    "type": "Customer",
+    "avatar": "/images/avatars/jala.jpg"
+  },
+  {
+    "id": 2,
+    "firstName": "tempus",
+    "lastName": "id",
+    "email": "alowrance1@plala.or.jp",
+    "password": "EK6h50cnoi",
+    "type": "Admin",
+    "avatar": "/images/avatars/pretzel.jpg"
+  },
+  {
+    "id": 3,
+    "firstName": "consequat",
+    "lastName": "pulvinar nulla",
+    "email": "hmenezes2@fastcompany.com",
+    "password": "PJtxzZCn1",
+    "type": "Admin",
+    "avatar": "/images/avatars/pretzel.jpg"
+  },
+  {
+    "id": 4,
+    "firstName": "consequat",
+    "lastName": "donec semper",
+    "email": "lcollister3@hp.com",
+    "password": "SlRogR4",
+    "type": "Customer",
+    "avatar": "/images/avatars/jala.jpg"
+  },
+  {
+    "id": 5,
+    "firstName": "et eros",
+    "lastName": "id",
+    "email": "cclerke4@ucla.edu",
+    "password": "VyetjVa1n",
+    "type": "Admin",
+    "avatar": "/images/avatars/pletzale.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "vestibulum ante",
+    "lastName": "dolor vel",
+    "email": "jdyott5@who.int",
+    "password": "gvZAsxMYX",
+    "type": "Admin",
+    "avatar": "/images/avatars/kipa.jpg"
+  },
+  {
+    "id": 7,
+    "firstName": "eros vestibulum",
+    "lastName": "mauris",
+    "email": "rshorey6@dedecms.com",
+    "password": "YA26aXM816",
+    "type": "Customer",
+    "avatar": "/images/avatars/pretzel.jpg"
+  },
+  {
+    "id": 8,
+    "firstName": "dictumst",
+    "lastName": "vel",
+    "email": "erean7@army.mil",
+    "password": "JE1qcPRDpsia",
+    "type": "Customer",
+    "avatar": "/images/avatars/pletzale.jpg"
+  },
+  {
+    "id": 9,
+    "firstName": "elementum",
+    "lastName": "consectetuer adipiscing",
+    "email": "rswaffer8@artisteer.com",
+    "password": "ZqMGkn5SQ",
+    "type": "Customer",
+    "avatar": "/images/avatars/jala.jpg"
+  },
+  {
+    "id": 10,
+    "firstName": "pellentesque",
+    "lastName": "aliquam erat",
+    "email": "sbritt9@jiathis.com",
+    "password": "UnhDHzRrqkWD",
+    "type": "Admin",
+    "avatar": "/images/avatars/polloCorazon.jpg"
+  },
+  {
+    "id": 11,
+    "firstName": "nisi vulputate",
+    "lastName": "lectus vestibulum",
+    "email": "gderxa@merriam-webster.com",
+    "password": "1PiL26EYZ",
+    "type": "Customer",
+    "avatar": "/images/avatars/jala.jpg"
+  },
+  {
+    "id": 12,
+    "firstName": "neque vestibulum",
+    "lastName": "nibh ligula",
+    "email": "hgidneyb@sciencedirect.com",
+    "password": "7IfapP",
+    "type": "Admin",
+    "avatar": "/images/avatars/jala.jpg"
+  },
+  {
+    "id": 13,
+    "firstName": "platea",
+    "lastName": "curabitur",
+    "email": "oeyrec@bing.com",
+    "password": "Cen8JYmx",
+    "type": "Customer",
+    "avatar": "/images/avatars/jala.jpg"
+  },
+  {
+    "id": 14,
+    "firstName": "proin leo",
+    "lastName": "vitae",
+    "email": "icockind@qq.com",
+    "password": "kGCh56ao",
+    "type": "Admin",
+    "avatar": "/images/avatars/tostada.jpg"
+  },
+  {
+    "id": 15,
+    "firstName": "ac",
+    "lastName": "sit amet",
+    "email": "cneede@ehow.com",
+    "password": "GqQwuk",
+    "type": "Customer",
+    "avatar": "/images/avatars/tostada.jpg"
+  },
+  {
+    "id": 16,
+    "firstName": "nullam",
+    "lastName": "praesent",
+    "email": "mharronf@ca.gov",
+    "password": "GnqK2j",
+    "type": "Admin",
+    "avatar": "/images/avatars/pretzel.jpg"
+  },
+  {
+    "id": 17,
+    "firstName": "in",
+    "lastName": "cursus vestibulum",
+    "email": "vbartulg@nydailynews.com",
+    "password": "oFDPUwh5WF",
+    "type": "Customer",
+    "avatar": "/images/avatars/polloCorazon.jpg"
+  },
+  {
+    "id": 18,
+    "firstName": "viverra",
+    "lastName": "quis turpis",
+    "email": "greaderh@jigsy.com",
+    "password": "X8FPn9WfB",
+    "type": "Admin",
+    "avatar": "/images/avatars/jala.jpg"
+  },
+  {
+    "id": 19,
+    "firstName": "vestibulum",
+    "lastName": "aliquet",
+    "email": "lmeakesi@theatlantic.com",
+    "password": "AtazKffBE",
+    "type": "Admin",
+    "avatar": "/images/avatars/jala.jpg"
+  },
+  {
+    "id": 20,
+    "firstName": "integer",
+    "lastName": "luctus",
+    "email": "jburtwhistlej@a8.net",
+    "password": "SYpmUoao63",
+    "type": "Customer",
+    "avatar": "/images/avatars/pretzel.jpg"
+  },
+  {
+    "id": 21,
+    "firstName": "consequat ut",
+    "lastName": "in porttitor",
+    "email": "iwannank@yandex.ru",
+    "password": "NJOKWqBZlAsR",
+    "type": "Customer",
+    "avatar": "/images/avatars/polloCorazon.jpg"
+  },
+  {
+    "id": 22,
+    "firstName": "sed",
+    "lastName": "aliquet",
+    "email": "mperottil@sun.com",
+    "password": "CgMNgG",
+    "type": "Customer",
+    "avatar": "/images/avatars/pretzel.jpg"
+  },
+  {
+    "id": 23,
+    "firstName": "a feugiat",
+    "lastName": "et",
+    "email": "wkassidym@auda.org.au",
+    "password": "4Gpd9jU",
+    "type": "Admin",
+    "avatar": "/images/avatars/jala.jpg"
+  },
+  {
+    "id": 24,
+    "firstName": "libero",
+    "lastName": "cubilia",
+    "email": "mkitchasiden@hexun.com",
+    "password": "LbV2ZgjXW",
+    "type": "Customer",
+    "avatar": "/images/avatars/pretzel.jpg"
+  },
+  {
+    "id": 25,
+    "firstName": "in hac",
+    "lastName": "quis",
+    "email": "cbasnetto@tinyurl.com",
+    "password": "8pKSTc7K5YJ",
+    "type": "Admin",
+    "avatar": ""
+  },
+  {
+    "id": 26,
+    "firstName": "nonummy",
+    "lastName": "ut massa",
+    "email": "rdurwardp@mozilla.org",
+    "password": "zTbZc8YYz",
+    "type": "Customer",
+    "avatar": "/images/avatars/tostada.jpg"
+  },
+  {
+    "id": 27,
+    "firstName": "sapien",
+    "lastName": "non",
+    "email": "jaleshkovq@hp.com",
+    "password": "uEiK8b1",
+    "type": "Admin",
+    "avatar": "/images/avatars/pretzel.jpg"
+  },
+  {
+    "id": 28,
+    "firstName": "ut dolor",
+    "lastName": "eu",
+    "email": "jjeanesr@ucsd.edu",
+    "password": "pu4gIr",
+    "type": "Admin",
+    "avatar": "/images/avatars/pletzale.jpg"
+  },
+  {
+    "id": 29,
+    "firstName": "tortor quis",
+    "lastName": "nulla facilisi",
+    "email": "dminters@delicious.com",
+    "password": "WKNVqSG",
+    "type": "Customer",
+    "avatar": "/images/avatars/pletzale.jpg"
+  },
+  {
+    "id": 30,
+    "firstName": "nam",
+    "lastName": "maecenas tincidunt",
+    "email": "bbarrellt@squidoo.com",
+    "password": "PLU3MYX",
+    "type": "Customer",
+    "avatar": "/images/avatars/jala.jpg"
+  },
+  {
+    "firstName": "gaston",
+    "lastName": "terminiello",
+    "email": "gastonnt123@gmail.com",
+    "type": "Comprador",
+    "password": "$2b$10$SAOdPN0oUWQTvEdBfixW7uJjmkApQHN4NuweYeS/hZtCxyXgFPyUq",
+    "avatar": "foto-1671466316215.png"
+  },
+  {
+    "firstName": "Lautaro",
+    "lastName": "Goscilo",
+    "email": "lgoscilo@gmail.com",
+    "type": "Vendedor",
+    "password": "$2a$10$vYrtFvl.uEuCwPOFpKOHsu8QH0utXjzDNlKDlMHqiS4r1FIIwvE2S",
+    "avatar": "foto-1671589163661.png"
+  },
+  {
+    "firstName": "dasd",
+    "lastName": "dad",
+    "email": "dsds@sds.com",
+    "type": "Comprador",
+    "password": "$2a$10$EZrMxJ5/9ML3kb68sZeOkuPvAD46SlIXCTFtBXvfOEVeZDiTPCZda",
+    "avatar": "foto-1671631458509.png"
+  },
+  {
+    "firstName": "mateo",
+    "lastName": "fenrnadez",
+    "email": "mateofernandez@gmail.com",
+    "type": "Comprador",
+    "password": "$2a$10$Mp6wOT4lyJzzBiu2flT4rOyEZqozxrPcFd4iowko5z4Pc1udhK1Xy",
+    "avatar": "foto-1671716530803.png"
+  },
+  {
+    "firstName": "juan ",
+    "lastName": "perez",
+    "email": "juanperez@gmail.com",
+    "type": "Vendedor",
+    "password": "$2a$10$E/e9MbMU5pU2qnnBzE2EquW7c3hp9npsnz6qrUGXeRMspmF0faG/K",
+    "avatar": "foto-1672710674920.png"
+  }
+]

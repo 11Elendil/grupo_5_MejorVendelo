@@ -1,0 +1,99 @@
+<%- include("./partials/head", {pageTitle: "Formulario Producto" , stylesheet: "productForm.css" }) %>
+
+
+    <%- include("partials/header",{logueado: logueado})%>
+        <script src="/js/productForm.js" defer></script>
+
+        <div class="contenedorGeneral">
+<<<<<<< HEAD:views/prodcutEdit.ejs
+            <form action="/products/<%= product.id %>?_method=put " method="post" enctype="multipart/form-data">
+=======
+            
+            <form action="/products/productEdit/<%= product.id %> " method="POST" enctype="multipart/form-data">
+>>>>>>> fc3b3eec7cc0491ae6f44fda5758127c99f6138f:views/productEdit.ejs
+                <div class="createProduct">
+                    <div class="titleForm">
+                        <div class="imageForm">
+                            <img src="" alt="">
+                            <label>EDITÁ TU PRODUCTO</label>
+                        </div>
+                    </div>
+                    <div class="name">
+                        <label for="name">Nombre Del Producto</label>
+                        <input type="text" name="name" id="name" placeholder= "nuevo nombre" required value="<%= product.name %>">
+                    </div>
+
+                    <div class="price">
+                        <p class="price">Precio</p>
+                        <input type="number" name="price" id="price" placeholder="$" required value="<%= product.price %>">
+                    </div>
+                    <br>
+
+                    <div class="description">
+                        <p class="description">Precio</p>
+                        <input type="text" name="description" required value="<%= product.description %>">
+                    </div>
+                    <br>
+                    <!--
+
+                    <div class="imageinput">
+                        <label for="imageinput">Imagen del Producto</label>
+                        <input type="file" name="imageInput" id="imageinput" accept="image/*" multiple required>
+
+                    </div>
+                    <div class="priceForm">
+                        <p class="precio">Precio</p>
+                        <input type="number" name="priceForm" id="priceForm" value="$" required>
+                    </div>
+     
+                    <div class=" category">
+                        <p type="text" name="category" id="category" placeholder="Categoria del producto">Categoria</p>
+                        <select>
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                            <option value="unisex">Unisex</option>
+                        </select>
+                    </div>
+                    <div class="subcategory">
+                        <p type="text" name="subcategory" id="subcategory" placeholder="Subcategoria del producto">
+                            Subcategoria</p>
+                        <select>
+                            <option value="remera">Remera</option>
+                            <option value="pantalon">Pantalón</option>
+                            <option value="zapatillas">Zapatillas</option>
+                        </select>
+                    </div>
+                    <div class="condicion" required>
+                        <input type="radio" name="condicion" value="nuevo">NUEVO
+                        <input type="radio" name="condicion" value="usado">USADO
+                    </div>
+                    <div class="talle" required>
+                        <input type="checkbox" name="talle" id="S" value="S">S
+                        <input type="checkbox" name="talle" id="M" value="M">M
+                        <input type="checkbox" name="talle" id="L" value="L">L
+                        <input type="checkbox" name="talle" id="XL" value="XL">XL
+                        <input type="checkbox" name="talle" id="XXL" value="XXL">XXL
+
+                    </div>
+                    <div class="colorForm">
+                        <input type="text" name="colorForm" id="colorForm" placeholder="Color del producto" required>
+                    </div>
+                    <br>
+                    <div class="descrip">
+                        <textarea name="cajaTexto" id="cajaTexto" cols="30" rows="10"
+                            placeholder="Descripción..."></textarea>
+                    </div>
+
+                    -->
+
+                    <div class="enviar-limpiar">
+                        <button class=“botonEnviar” type="submit" value="ENVIAR">ACTUALIZAR</button>
+                        <br>
+                        <button class=“botonLimpiar” type="reset" value="LIMPIAR">LIMPIAR</button>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+        <%- include("./partials/footer") %>

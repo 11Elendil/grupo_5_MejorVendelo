@@ -1,0 +1,86 @@
+
+<%- include("../partials/head", {pageTitle: "Registrarme", stylesheet: "register.css"}) %>
+
+<% if(typeof(errors) != 'undefined'){%>
+    <ul class="alert alert-danger">
+       <% errors.forEach(error => { %>
+          <li><%= error.msg%></li>
+       <%});%>
+     </ul>
+ <%}%>      
+    <header>
+        
+        <p class="barrasMenu"><i class="fas fa-bars"></i></p>
+        <a href="/">
+            <img class="logo" src="images/logoConTitulo.png" height="45px">
+        </a>
+    </header>
+
+    <div class="contenedor-logo">
+        <a href="/">
+            <img class="logo2" src="/images/isologoNaranja.png">
+        </a>
+    </div>
+    
+    
+    <form action="/users/register" method="POST" enctype="multipart/form-data">
+
+        <div class="titulo">
+            <h2>COMPLETA TUS DATOS</h2>
+        </div>
+
+        <div class="campo-form">
+            <label>Nombre</label>
+            <input type="text" name="firstName" id="firstName" value="<%= typeof old != 'undefined' ? old.firstName : '' %>">
+            <div class="error" id="name-error"></div>
+        </div>
+            
+        </div>
+
+        <div class="campo-form">
+            <label>Apellido</label>
+            <input type="text" name="lastName" id="lastName" value="<%= typeof old != 'undefined' ? old.LastName : '' %>" required>
+            <div id="lastName-error" class="error"></div>
+        </div>
+        
+        <div class="campo-form">
+            <label>Email</label>
+            <input type="email" name="email" id="email" value="<%= typeof old != 'undefined' ? old.email : '' %>" required>
+            <div id="email-error" class="error"></div>
+          </div>
+        <div class="campo-form">
+            <div class="radio-buttons">
+                <div>
+                    <label>Comprador</label>
+                    <input type="radio" name="type" value="1"required>
+                </div>
+                <div>
+                    <label>Vendedor</label>
+                    <input type="radio" name="type" value="2" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="campo-form">
+            <label>Agrega una foto</label>
+            <input class="imagen-input" type="file" name="avatar" id="imagen" >
+            <div id="imagen-error" class="error"></div>
+        </div>
+
+        <div class="campo-form">
+            <label>Contraseña</label>
+            <div id="password-error" class="error"></div>
+            <input type="password" name="password"  id = "password" required>
+            
+        </div>
+
+        <div class="caja-boton">
+            <button type="submit">CREA TU CUENTA</button>
+        </div>
+    </form>
+    
+    
+
+</body>
+
+</html>

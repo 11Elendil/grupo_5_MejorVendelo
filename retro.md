@@ -15,3 +15,6 @@ Nuestros objetivos para el tercer sprint serían trabajar con más conciencia ac
 ## Sprint 3
 
 Mejoramos como grupo. Estuvimos mas organizados aplicando correctamente la herramienta de Trello. LLegamos mas traquilos a la entrega utilizando mejor los tiempos que teniamos disponibles. Esperamos poder continuar con esta gran mecanica de trabajo y mantenerala a lo largo de los siguientes Sprints.
+
+## Sprint 4
+Tomamos la inciativa de hacer reuniones mas frecuentes para ayudarnos mutuamente, y organizarnos de mejor manera.

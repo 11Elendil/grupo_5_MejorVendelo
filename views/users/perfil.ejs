@@ -1,0 +1,32 @@
+<%- include("../partials/head", {pageTitle: "Formulario Producto" , stylesheet: "perfil.css" }) %>
+
+<%- include("../partials/header", {logueado: user})%>
+
+<div class="main-container">
+    <h1 class="tituloPerfil">Mi perfil</h1>
+
+    <div class="contenedorPerfil">
+        <div class="info-container">
+            <div>Nombre: <%= user.firstName %> </div>
+            <div>Apellido: <%= user.lastName %></div>
+            <div>Email: <%= user.email %></div>
+            <div>Tipo:
+                <%if(user.typeId == 1){  %> 
+                    Comprador
+                <% } else if (user.typeId == 2){  %> 
+                    Vendedor
+                <% } %>
+            </div>
+        </div>
+        <br>
+        <img class="perfil-img" src="/images/users/<%= user.avatar %> " alt="">
+        <div class="boton-container">
+            <form action="/users/login?_method=DELETE" method="POST">
+                <button class="perfil-boton">Desloguearte</button>
+            </form>
+            <a href="/users/edit"><button class="editar-boton">Editar perfil</button></a>
+        </div>
+    </div>
+</div>
+
+<%- include("../partials/footer") %>

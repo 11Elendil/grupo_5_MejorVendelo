@@ -1,20 +1,47 @@
 <header>
     <p class="barrasMenu"><i class="fas fa-bars"></i></p>
     <a href="/">
-        <img class="logo" src="images/logoConTitulo.png" height="45px">
+        <img class="logo" src="/images/logoConTitulo.png" height="45px">
     </a>
     <form class="barraDeBusqueda"><input class="textoBarra" placeholder="Buscá productos, marcas..."><button><i
                 class="fas fa-search"></i></button></i></form>
-    <a href="/register">
+    
+    <%if(logueado == undefined){  %> 
+    <a href="/users/register">
         <p class="botonIngresar">Registrarme</p>
     </a>
-    <a href="/products/create">
-        <p class="botonIngresar">Vender</p>
-    </a>
-    <a href="/productCart">
-        <i class="fas fa-shopping-cart"></i>
-    </a>
-    <a href="/login">
-        <p class="botonIngresar">Ingresar</p>
-    </a>
+    <% } %>
+
+
+    <%if(logueado != undefined && logueado.typeId == 2){  %> 
+        <a href="/products/create">
+            <p class="botonIngresar">Vender</p>
+        </a>
+
+        <a href="/users/myProducts">
+            <p class="botonIngresar">Mis productos</p>
+        </a>
+
+
+    <% } %>
+
+
+
+    
+    <%if(logueado != undefined && logueado.typeId == 1){  %> 
+        <a href="/productCart">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+    <% } %>
+    
+
+
+    
+    <%if(logueado != undefined){  %> 
+        <a href="/users/perfil"> <p class="botonIngresar"> Mi Perfil </p> </a>
+    <% } %>
+    <% if(logueado == undefined){  %> 
+        <a href="/users/login"> <p class="botonIngresar"> Ingresar </p> </a>
+    <% } %> 
+
 </header>

@@ -1,7 +1,7 @@
 <%- include("./partials/head", {pageTitle: "Detalle Producto", stylesheet: "productDetail.css"}) %>
 
-    <%- include("./partials/header") %>
-    <script src="/js/productDetailJava.js" defer></script>
+<%- include("partials/header",{logueado: logueado})%>
+<script src="/js/productDetailJava.js" defer></script>
 
     <main>
 
@@ -11,8 +11,10 @@
     <h1></h1>
   </div>
   <div class="container">
+
+    <!-- esto no tiene sentido porque solo estamos guardando una imagen por cada producto. Habria que hacer que se puedan agregar varias
+
     <ul class="thumb">
-      <!-- Thumbnail 1 -->
       <li>
         <a href="https://res.cloudinary.com/d3d3g0/image/upload/v1536708886/Labs/Feathers.jpg" target="imgBox">
           <picture>
@@ -21,7 +23,6 @@
         </a>
       </li>
       
-      <!-- Thumbnail 2 -->
       <li>
         <a href="https://res.cloudinary.com/d3d3g0/image/upload/v1536708889/Labs/Eye.jpg" target="imgBox">
           <picture>
@@ -30,7 +31,6 @@
         </a>
       </li>
       
-      <!-- Thumbnail 3 -->
       <li>
         <a href="https://res.cloudinary.com/d3d3g0/image/upload/v1536708888/Labs/Flowers.jpg" target="imgBox">
           <picture>
@@ -39,22 +39,26 @@
         </a>
       </li>
     </ul>
-    
+    -->
     <!-- Image Box
          By default the box always shows the first image -->
     <div class="imgBox">
       <picture>
-        <img src="/images/<%= product.imagen %> " alt="Product image">
+        <img src="/images/<%= product.image %> " alt="Product image">
       </picture>
     </div>
   </div>
 
             <div class="contenedor-descripcion">
 
-                <h2 class="titulo-producto"><%= product.nombre %> </h2>
-                <p class="precio">$<%= product.precio  %> </p>
-                <p class="talle"><%= product.talles %> </p>
-                <p class="descripcion"><%=product.descripcion  %> </p>
+                <h2 class="titulo-producto"><%= product.name %> </h2>
+                <p class="precio">Precio: $<%= product.price  %> </p>
+                <p class="talle">Talle: <%= size.name %> </p>
+                <p class="descripcion">Descripcion: <%=product.description  %> </p>
+                <p class="descripcion">Color: <%=color.name  %> </p>
+                <p class="descripcion">Condicion: <%=product.condition  %> </p>
+                <p class="descripcion">Genero: <%=category.genre  %> </p>
+                <p class="descripcion">Categoria: <%=subCategory.name  %> </p>
                 
 
                 <div class="caja-boton">

@@ -29,21 +29,25 @@ body form div{
     font-size: 40px;
     text-align: center;
 }
-.nameproduct{
+.name{
     margin:5%;
     text-align: center;
     }
-.nameproduct input{
+.name input{
     border: none;
     border-radius: 5px;
 }
 
 /*imagen del producto*/
-.imageinput{
+.image{
     margin: 5%;
     text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fc3b3eec7cc0491ae6f44fda5758127c99f6138f
 button.iconImageInput{
     width: 80px;
     display: flex;
@@ -69,16 +73,20 @@ color: #f4eb9e;
 
 /*FIN imagen del producto*/
 
-.priceForm{
+.price{
     display: flex;
     flex-wrap: wrap;
     place-content: center;
     text-align: center;
 }
-.priceForm input{
+.price input{
     border: none;
     border-radius: 5px;
 }
+.brand input{
+ border: none;
+    border-radius: 5px;}
+
 .category{
     text-align: center;
 }
@@ -86,13 +94,13 @@ color: #f4eb9e;
     text-align: center;
 }
 
-.condicion{
+.condition{
     display: block;
     margin:5%;
     text-align: center;
     
 }
-.talle{
+.size{
     display: block;
     margin:5%;
     text-align: center;
@@ -122,14 +130,14 @@ color: #f4eb9e;
     background:#9cd0ac;
     color: #f4eb9e
   }
-  .descrip{
+  .description{
     display: flex;
   }
   select{
     border: none;
     border-radius: 5px;
   }
-  .colorForm input{
+  .color input{
     border: none;
     border-radius: 5px;
   }
