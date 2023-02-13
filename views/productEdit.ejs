@@ -5,12 +5,8 @@
         <script src="/js/productForm.js" defer></script>
 
         <div class="contenedorGeneral">
-<<<<<<< HEAD:views/prodcutEdit.ejs
-            <form action="/products/<%= product.id %>?_method=put " method="post" enctype="multipart/form-data">
-=======
             
             <form action="/products/productEdit/<%= product.id %> " method="POST" enctype="multipart/form-data">
->>>>>>> fc3b3eec7cc0491ae6f44fda5758127c99f6138f:views/productEdit.ejs
                 <div class="createProduct">
                     <div class="titleForm">
                         <div class="imageForm">
@@ -30,7 +26,7 @@
                     <br>
 
                     <div class="description">
-                        <p class="description">Precio</p>
+                        <p class="description">Descripción</p>
                         <input type="text" name="description" required value="<%= product.description %>">
                     </div>
                     <br>

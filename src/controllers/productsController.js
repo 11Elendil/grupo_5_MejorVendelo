@@ -86,7 +86,7 @@
         }
         )
 
-        return res.send("Se actualizo correctamente")
+        return res.redirect('/');
     }
     
  };

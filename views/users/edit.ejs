@@ -30,14 +30,14 @@
 
         <div class="campo-form">
             <label>Nombre</label>
-            <input type="text" name="firstName" value="<%= typeof old != 'undefined' ? old.firstName : '' %>"> 
+            <input type="text" name="firstName" value="<%= typeof user != 'undefined' ? user.firstName : '' %>"> 
         </div>
             
         </div>
 
         <div class="campo-form">
             <label>Apellido</label>
-            <input type="text" name="lastName" value="<%= typeof old != 'undefined' ? old.LastName : '' %>" required>
+            <input type="text" name="lastName" value="<%= typeof user != 'undefined' ? user.lastName : '' %>" required>
         </div>
 
         
@@ -56,7 +56,8 @@
 
         <div class="campo-form">
             <label>Foto de perfil</label>
-            <input class="imagen-input" type="file" name="avatar">
+            <input class="imagen-input"  type="file" name="avatar" value="<%= typeof user != 'undefined' ? user.avatar : '' %>"> 
+           <img class="perfil-img" src="/images/users/<%= user.avatar %> " alt="">
         </div>
 
         <div class="caja-boton">

@@ -71,7 +71,7 @@
           
         <div class="size" required>
             <% for (let i = 0; i < sizes.length; i++) {%>
-                <input type="checkbox" name="size" value="<%= sizes[i].id%>" > <%= sizes[i].name%>
+                <input type="radio" name="size" value="<%= sizes[i].id%>" > <%= sizes[i].name%>
             <% } %> 
             
         </div>

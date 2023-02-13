@@ -21,8 +21,10 @@
         const errorImagen = document.querySelector('#errorImagen')
         const imagen = document.querySelector('#image');
         const array = imagen.value.split('.')
-        const formatosPermitidos = ['png','jpeg','gif','jpg']
-        imagen.addEventListener('load',()=>{
+        const formatosPermitidos = ['image/png','image/jpeg','image/gif','image/jpg']
+        imagen.addEventListener('change',()=>{
+            const archivoAValidar = imagen.files [0];
+            
         const formatoValido = false
             for (const formato of formatosPermitidos){
                 if(array[1] === formato){

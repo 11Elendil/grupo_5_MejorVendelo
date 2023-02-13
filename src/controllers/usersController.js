@@ -79,10 +79,11 @@ const usersController = {
         return res.send("no estas logeado")
       },
 
-      edit: function (req, res)
-      {
+      edit: async (req, res) =>{
+      
           if (req.session.user){
-            const user = req.session.user
+            const user = await db.User.findByPk(req.session.user.id);
+           
             return res.render('users/edit', {user:user})
           }
           return res.send("no estas logeado")
@@ -103,7 +104,7 @@ const usersController = {
               }
               )
   
-              return res.send("se actualizo correctamente")
+              return res.redirect('/')
   
           } else {
             
@@ -142,7 +143,7 @@ const usersController = {
           where:{id: req.params.id}
         })
 
-        return res.send("Se borro el producto")
+        return res.redirect('/');
       },
       editMyProduct: async (req,res) => {
         
