@@ -3,12 +3,17 @@
         /*validacion  nombre del producto*/
         const nameProduct = document.querySelector('#name');
         const nameProductError = document.querySelector('#nameProductError')
-        nameProduct.addEventListener('blur',()=>{
-            if(nameProduct.value.length < 5){
-                nameProductError.innerHTML= "El nombre del producto debe tener al menos 5 caracteres"
-                nameProduct.focus();
-            }
-        });
+        if (nameProduct){
+            
+            nameProduct.addEventListener('blur',()=>{
+                if(nameProduct.value.length < 5){
+                    nameProductError.innerHTML= "El nombre del producto debe tener al menos 5 caracteres"
+                    nameProduct.focus();
+                }
+            });
+
+        }
+        
         /*validacion descripcion del producto*/
         const description = document.querySelector('#description');
         const descriptionError = document.querySelector('#descriptionError')
@@ -22,16 +27,19 @@
         const imagen = document.querySelector('#image');
         const array = imagen.value.split('.')
         const formatosPermitidos = ['image/png','image/jpeg','image/gif','image/jpg']
+        
+
+        
         imagen.addEventListener('change',()=>{
-            const archivoAValidar = imagen.files [0];
-            
-        const formatoValido = false
-            for (const formato of formatosPermitidos){
-                if(array[1] === formato){
-                    formatoValido = true;
-                     break;
-                }
-            }
+            const archivoAValidar = imagen.files[0];
+            console.log(archivoAValidar)
+        
+        let formatoValido = true
+        
+        if(!formatosPermitidos.includes(archivoAValidar.type)) {
+            formatoValido = false
+        } 
+        
         if (!formatoValido) {
         errorImagen.innerHTML= 'los formatos permitidos son png, jpeg, gif, jpg';
         }

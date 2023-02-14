@@ -71,13 +71,8 @@
     
     update: async (req,res) => {
 
-        console.log("ESE ES EL NUEVO NAME: ", req.body);
-        console.log("ESE ES EL NUEVO NAME: ", req.body.price);
 
-        console.log("ESE ES EL ID: ", req.params.id);
-
-
-        db.products.update({
+        await db.products.update({
             name: req.body.name,
             price: req.body.price,
             description: req.body.description,

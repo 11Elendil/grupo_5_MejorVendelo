@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `structure`.`Products` (
   `condition` VARCHAR(45) NOT NULL,
   `brand` VARCHAR(45) NULL,
   `price` VARCHAR(45) NOT NULL,
-  `image` VARCHAR(45) NOT NULL,
+  `image` VARCHAR(200) NOT NULL,
   `subCategoriesId` INT NOT NULL,
   `colorsId` INT NOT NULL,
   `categoriesId` INT NOT NULL,

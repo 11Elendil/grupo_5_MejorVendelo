@@ -76,3 +76,5 @@ VALUES (DEFAULT, "Camisa");
 
 INSERT INTO subCategories
 VALUES (DEFAULT, "Campera");
+
+
