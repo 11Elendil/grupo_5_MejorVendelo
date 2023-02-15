@@ -2,6 +2,8 @@
 
 <%- include("./partials/head", {pageTitle: "Productos", stylesheet: "products.css"}) %>
 
+<%- include("./partials/header", {logueado: logueado})%>
+
 <body>
     <div class="contenedor" >
         <%  products.forEach(product => { %>

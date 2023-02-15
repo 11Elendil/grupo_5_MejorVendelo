@@ -15,6 +15,8 @@ const controller = {
     },
   
     search: async (req, res) => {
+        const logueado = req.session.user ? req.session.user : undefined;
+
         const query = req.query.q;
         if (!query) {
           return res.redirect('/');
@@ -30,7 +32,7 @@ const controller = {
               ],
             },
           });
-          res.render('search', { products });
+          res.render('search', { products, logueado });
         } catch (err) {
           console.error(err);
           res.status(500).send('Error en la búsqueda');
