@@ -3,9 +3,14 @@
     <a href="/">
         <img class="logo" src="/images/logoConTitulo.png" height="45px">
     </a>
-    <form class="barraDeBusqueda"><input class="textoBarra" placeholder="Buscá productos, marcas..."><button><i
-                class="fas fa-search"></i></button></i></form>
-    
+    <form action="/search" method="GET" class="barraDeBusqueda">
+        <input name="q" class="textoBarra" placeholder="Buscá productos, marcas...">
+        <button type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      
+               
     <%if(logueado == undefined){  %> 
     <a href="/users/register">
         <p class="botonIngresar">Registrarme</p>
