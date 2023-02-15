@@ -1,6 +1,6 @@
  const fs = require('fs')
  const path = require('path')
-
+ 
 
 // rest of the code
 
@@ -82,9 +82,8 @@
         )
 
         return res.redirect('/');
-    }
-    
- };
- 
+    },
 
+      
+ }
  module.exports = productsController;

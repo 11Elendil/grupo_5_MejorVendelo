@@ -1,0 +1,28 @@
+<% var enBusqueda = true %>
+
+<%- include("./partials/head", {pageTitle: "Productos", stylesheet: "products.css"}) %>
+
+<%- include("./partials/header", {logueado: logueado})%>
+
+<body>
+    <div class="contenedor" >
+        <%  products.forEach(product => { %>
+      
+          <div class="product1">
+      <h2><%=product.nombre %> </h2><br>
+      <p class="imagenArticulo"><img src="/images/<%= product.image %>" alt="prenda1"></p>
+            <div class="info-podruct">
+      
+              <div class="descrition"><%=product.description%></div>
+              <div class="price">$<%= product.price %></div>
+              </div>
+              </div>
+         <% }) %> 
+        </div>
+      
+</body>
+</html>
+<%- include("./partials/footer") %>    
+   
+   
+   
