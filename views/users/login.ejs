@@ -3,19 +3,29 @@
 
     <%- include("../partials/header", {logueado: false, tipo: undefined}) %>
     
-    
+    <% if(typeof(errors) != 'undefined'){%>
+        <ul class="alert alert-danger">
+           <% errors.forEach(error => { %>
+              <li><%= error.msg%></li>
+           <%});%>
+         </ul>
+     <%}%> 
+     
     <main>
         <form action="/users/login" method="POST">
             
             <p>
                 <label></label>
-                <input class="inputFormulario" type="text" name="email" required placeholder="Email de usuario">
+                <input class="inputFormulario" type="text" name="email" required placeholder="Email de usuario" id="emailLogin">
+                <div class="error" id="emailError"></div>
             </p>
 
             <p>
                 <label></label>
-                <input class="inputFormulario" type="password" name="password" required placeholder="Contraseña">
+                <input class="inputFormulario" type="password" name="password" required placeholder="Contraseña" id="passwordLogin">
+                <div class="error" id="passwordError"></div>
             </p>
+
 
 
             <button class=“botonEnviar” type="submit" value="ENVIAR">ENVIAR</button>
@@ -25,6 +35,6 @@
 
     </main>
     </header>
-
+    <script src ="/js/userValidationLogin.js" defer> </script>
     <%- include("../partials/footer") %>
 
