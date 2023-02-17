@@ -66,7 +66,7 @@
         
         const product = await db.products.findByPk(req.params.id);
 
-		res.render("prodcutEdit", { product:product , logueado:logueado})
+		res.render("productEdit", { product:product , logueado:logueado})
     },
     
     update: async (req,res) => {
