@@ -32,3 +32,5 @@ Hola ! mi nombre es Gaston  Terminiello , estudio analisis de sistema, tengo 26 
 
 ### Reymundo C.
 Hola! mi nombre reymundo Cuezzo , soy tecnico electronico , tecnico en refrigeración .Tengo 44 años y mi meta es aprender a programar.
+
+*Para que la base funcione. Primero deben crear una llamada structure y luego importar structure2 desde los archivos del proyecto.
