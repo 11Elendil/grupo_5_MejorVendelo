@@ -5,7 +5,9 @@ header {
     color: white;
     height: 60px;
 }
-
+a{
+    text-decoration: none;
+}
 header p {
     align-self: center;
 }
