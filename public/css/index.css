@@ -177,4 +177,12 @@ body {
     .fa-shopping-cart{
         display: block;
     }
+
+    .articulo p {
+        text-align: center;
+    }
+    .articulo p img {
+        height: 300px;
+        width: auto;
+    }
 }

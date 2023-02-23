@@ -1,0 +1,1 @@
+Para que la base funcione. Primero deben crear una llamada structure y luego importar structure2 desde los archivos del proyecto.

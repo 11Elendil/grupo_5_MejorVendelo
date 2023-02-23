@@ -50,6 +50,8 @@ router.get('/:id/edit', productsController.edit);
 router.put('/:id', productsController.update);
 
 // router.get ('/products)
-router.post("/productEdit/:id", upload.single('image'), productsController.update)
+router.post("/productEdit/:id", upload.single('image'), productsController.update);
+
+
 
 module.exports = router

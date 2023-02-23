@@ -28,7 +28,8 @@ const usersController = {
           const user = await db.User.findByPk(req.session.user.id)
           return res.render('users/perfil', {user:user})
         }
-        return res.send("no estas logeado")
+        return res.redirect("/")
+        
     },
 
     register: function(req, res){
@@ -76,7 +77,7 @@ const usersController = {
           const user = req.session.user
           return res.render('users/perfil', {user:user})
         }
-        return res.send("no estas logeado")
+        return res.redirect('/')
       },
 
       edit: async (req, res) =>{
