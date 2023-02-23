@@ -20,29 +20,28 @@ body {
 }
 
 .contenedorPerfil {
-    text-align: center;
-    font-size: 30px;
-    margin: 50px 0;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
 }
-
-.info-container {
-    text-align: left;
-    font-size: 20px;
+  
+  
+  .info-container {
+    
     margin: 20px;
-    width: 100%;
-}
+    font-size: 30px
+  }
+  
 
-.perfil-img {
-    width: 300px;
-    height: 300px;
+
+  .perfil-img {
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    margin: 20px;
-}
+    margin: 10px;
+  }
+  
 
 .boton-container {
     display: flex;
