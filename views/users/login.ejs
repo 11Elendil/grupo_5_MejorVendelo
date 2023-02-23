@@ -2,7 +2,9 @@
 
 
     <%- include("../partials/header", {logueado: undefined ,tipo: undefined}) %>
-    
+    <% if(error != null){ %>
+        <div class="error"> <%= error.mensaje %></div>
+    <% } %>
     <% if(typeof(errors) != 'undefined'){%>
         <ul class="alert alert-danger">
            <% errors.forEach(error => { %>
