@@ -56,12 +56,13 @@
 
         <div class="campo-form">
             <label>Foto de perfil</label>
-            <input class="imagen-input"  type="file" name="avatar" value="<%= typeof user != 'undefined' ? user.avatar : '' %>"> 
-            
-             <!-- <img class="perfil-img" src="/images/users/<%= user.avatar %> " alt=""> -->
-
-        </div>
-
+            <input class="imagen-input" type="file" name="avatar"> 
+            <br>
+            <div class="fotoPerfil">
+              <img class="perfil-img" src="/images/users/<%= user.avatar %>" alt=""> 
+            </div>
+          </div>
+          
         <div class="caja-boton">
             <button type="submit">ACTUALIZAR DATOS</button>
         </div>

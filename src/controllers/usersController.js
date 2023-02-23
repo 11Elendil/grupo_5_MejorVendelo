@@ -94,29 +94,44 @@ const usersController = {
         let errors = validationResult(req);
     
         if (errors.isEmpty()) {
-  
-              db.User.update({
-                  firstName: req.body.firstName,
-                  lastName: req.body.lastName,
-                  typeId : req.body.type,
-                  avatar:  req.file ? req.file.filename : '',
-              },{
-                where: {id: req.session.user.id}
-              }
-              )
-  
-              return res.redirect('/')
-  
-          } else {
-            
+    
+            db.User.findByPk(req.session.user.id)
+                .then(user => {
+                    let avatar = user.avatar;
+                    if (req.file) {
+                        avatar = req.file.filename;
+                    }
+    
+                    db.User.update({
+                        firstName: req.body.firstName,
+                        lastName: req.body.lastName,
+                        typeId : req.body.type,
+                        avatar:  avatar,
+                    },{
+                        where: {id: req.session.user.id}
+                    })
+                    .then(() => {
+                        return res.redirect('/');
+                    })
+                    .catch(error => {
+                        console.log(error);
+                        return res.status(500).send('Hubo un error al actualizar el usuario');
+                    });
+                })
+                .catch(error => {
+                    console.log(error);
+                    return res.status(500).send('Hubo un error al buscar el usuario');
+                });
+    
+        } else {
+    
             return res.render('users/register', {
-              errors: errors.errors,  old: req.body
+                errors: errors.errors,  old: req.body
             });
-            
-              
-          
-          }
-        },
+    
+        }
+    },
+    
 
         myProducts: async (req, res) =>
         {
