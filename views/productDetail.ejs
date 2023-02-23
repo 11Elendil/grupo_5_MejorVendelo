@@ -7,47 +7,17 @@
 
 
 <body>
-  <div>
-    <h1></h1>
-  </div>
-  <div class="container">
-
-    <!-- esto no tiene sentido porque solo estamos guardando una imagen por cada producto. Habria que hacer que se puedan agregar varias
-
-    <ul class="thumb">
-      <li>
-        <a href="https://res.cloudinary.com/d3d3g0/image/upload/v1536708886/Labs/Feathers.jpg" target="imgBox">
-          <picture>
-            <img src="/images/camisa4.png" alt="" height="64" width="96">
-          </picture>
-        </a>
-      </li>
-      
-      <li>
-        <a href="https://res.cloudinary.com/d3d3g0/image/upload/v1536708889/Labs/Eye.jpg" target="imgBox">
-          <picture>
-            <img src="/images/camisa2.png" alt="" height="64" width="96">
-          </picture>
-        </a>
-      </li>
-      
-      <li>
-        <a href="https://res.cloudinary.com/d3d3g0/image/upload/v1536708888/Labs/Flowers.jpg" target="imgBox">
-          <picture>
-            <img src="/images/prenda.png" alt="" height="64" width="96">
-          </picture>
-        </a>
-      </li>
-    </ul>
-    -->
-    <!-- Image Box
-         By default the box always shows the first image -->
-    <div class="imgBox">
-      <picture>
-        <img src="/images/<%= product.image %> " alt="Product image">
-      </picture>
-    </div>
-  </div>
+  <form action="/products/productCart/<%= product.id %>"  method="POST" enctype="multipart/form-data">
+              <div>
+                <h1>Detalle del Producto</h1>
+              </div>
+              <div class="container">
+                <div class="imgBox">
+                  <picture>
+                    <img src="/images/<%= product.image %> " alt="Product image">
+                  </picture>
+                </div>
+              </div>
 
             <div class="contenedor-descripcion">
 
@@ -64,7 +34,7 @@
                 <div class="caja-boton">
                     <button type="submit">Agregar al carrito</button>
                 </div>
-        
+    </form>    
                 <div class="contenedorEnviosPagos">
                     <div class="envios">
                     <p> 

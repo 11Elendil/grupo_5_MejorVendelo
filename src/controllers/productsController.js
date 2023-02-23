@@ -4,7 +4,8 @@
 
 // rest of the code
 
- const  db = require("../../db/models")
+ const  db = require("../../db/models");
+const Products = require('../../db/models/Products');
  
  const productsController = {
     index: async (req,res)=>{
@@ -83,6 +84,35 @@
 
         return res.redirect('/');
     },
+    addProductCart: async (req,res)=>{
+        const logueado = req.session.user ? req.session.user : undefined;
+        const product = await db.products.findByPk(req.params.id);
+       /* const size = await db.Size.findOne({where: {id: product.sizesId}});
+
+        const color = await db.Colors.findOne({where: {id: product.colorsId}});
+        const category = await db.Category.findOne({where: {id: product.categoriesId}});
+        const subCategory = await db.SubCategory.findOne({where: {id: product.subCategoriesId}});*/
+
+
+        if(!product){
+            res.send( 'no existe el producto')
+            }   
+        return res.render('productCart' , {product:product, logueado:logueado})}
+       /* try {
+            const productId = req.params.id;
+            const product = await db.products.findById(productId);
+            const userId = req.session.userId; // asumiendo que estás utilizando express-session
+            
+            // buscar al usuario correspondiente y agregar el producto al carrito
+            const user = await db.users.findById(userId);
+            user.cart.push(product);
+            await user.save();
+            
+            res.redirect('/productCart')
+         } catch (error) {
+        console.log(error);
+        res.status(500).send('Hubo un error al agregar el producto al carrito');
+      }}*/
 
       
  }

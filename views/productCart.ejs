@@ -3,19 +3,15 @@
 
 <%- include("partials/header",{logueado: logueado})%>
 
-    <div class="images-none">
-        <img src="/images/prenda1.png" alt="vestido">
-        <img src="/images/prenda2.png" alt="">
-        <img src="/images/prenda3.png" alt="">
-        <img src="/images/prenda4.png" alt="">
-    </div>
+    
     <section class="products">
         <article>
             <div class="product1">
-                <img src="/images/prenda1.png" alt="">
+                <img src="/images/<%= product.image %>" alt="">
                 <div class="info-podruct">
-                    <div class="description">vestido manga corta , con lunares </div>
-                    <div class="price">$5000</div>
+                    <div class="name"><%= product.name %></div>
+                    <div class="description"><%= product.description %> </div>
+                    <div class="price">$<%= product.price %></div>
                     <div class="agregar-quitar">
                         <button id="reset" class="reset"><i class="fa-solid fa-minus"></i></button>
                         <input type="number" id="cantidad" class="cantidad" value="2">

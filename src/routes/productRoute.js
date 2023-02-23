@@ -40,7 +40,7 @@ router.get('/', productsController.index)
 /* GET ADD PRODUCTS */
 router.get('/create',guestValidation ,productsController.create)
 /* POST ADD PRODUCTS */
-router.post('/', upload.single('image'),productValidationBack,productsController.store)
+router.post('/', upload.single('image'),productValidationBack,productsController.store);
 
 
 
@@ -51,6 +51,9 @@ router.put('/:id', productsController.update);
 
 // router.get ('/products)
 router.post("/productEdit/:id", upload.single('image'), productsController.update);
+
+
+router.post('/productCart/:id', productsController.addProductCart)
 
 
 
