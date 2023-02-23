@@ -45,11 +45,11 @@
             <div class="radio-buttons">
                 <div>
                     <label>Comprador</label>
-                    <input type="radio" name="type" value="1"required>
+                    <input type="radio" name="type" value= 1 <% if(typeof user != 'undefined' && user.typeId === 1 ){ %>checked<% } %> required>
                 </div>
                 <div>
                     <label>Vendedor</label>
-                    <input type="radio" name="type" value="2" required>
+                    <input type="radio" name="type" value= 2 <% if(typeof user != 'undefined' && user.typeId === 2 ){ %>checked<% } %> required>
                 </div>
             </div>
         </div>
@@ -57,6 +57,7 @@
         <div class="campo-form">
             <label>Foto de perfil</label>
             <input class="imagen-input"  type="file" name="avatar" value="<%= typeof user != 'undefined' ? user.avatar : '' %>"> 
+            
              <!-- <img class="perfil-img" src="/images/users/<%= user.avatar %> " alt=""> -->
 
         </div>

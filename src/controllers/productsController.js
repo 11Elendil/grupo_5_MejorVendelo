@@ -85,6 +85,8 @@ const Products = require('../../db/models/Products');
         return res.redirect('/');
     },
     addProductCart: async (req,res)=>{
+        const user = req.session.user
+        console.log(user)
         const logueado = req.session.user ? req.session.user : undefined;
         const product = await db.products.findByPk(req.params.id);
        /* const size = await db.Size.findOne({where: {id: product.sizesId}});
