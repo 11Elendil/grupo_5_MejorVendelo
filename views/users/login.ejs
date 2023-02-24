@@ -3,13 +3,7 @@
 
     <%- include("../partials/header", {logueado: undefined ,tipo: undefined}) %>
     
-    <% if(typeof(errors) != 'undefined'){%>
-        <ul class="alert alert-danger">
-           <% errors.forEach(error => { %>
-              <li><%= error.msg%></li>
-           <%});%>
-         </ul>
-     <%}%> 
+    
      
     <main>
         <form action="/users/login" method="POST">
@@ -26,10 +20,14 @@
                 <div class="error" id="passwordError"></div>
             </p>
 
+<% if (typeof error !== 'undefined') { %>
+    <div class="alert"><%= error %></div>
+  <% } %>
 
 
             <button class=“botonEnviar” type="submit" value="ENVIAR">ENVIAR</button>
-
+           
+                 
 
         </form>
 

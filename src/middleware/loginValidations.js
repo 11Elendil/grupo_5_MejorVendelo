@@ -33,11 +33,13 @@ module.exports = async function validacionesLogin(req, res, next) {
 
     if (result) {
         //res.redirect('/');
-      // Si son iguales, llama a la función next() para continuar con el proceso
+      // Si son ig9uales, llama a la función next() para continuar con el proceso
         next();
     } else {
       // Si no son iguales, envía un mensaje de error
-      res.status(401).json({ message: "Contraseña incorrecta" });
+      res.render('users/login', { error: "Contraseña incorrecta"})
+      
+      
     }
   });
 };
