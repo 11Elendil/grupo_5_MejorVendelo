@@ -14,10 +14,7 @@ const users = fs.readFileSync(path.resolve(__dirname, '../data/users.json'), {
 const usersController = {
     login: function (req, res)
     {
-      error = {
-
-      }
-        return res.render('users/login', {error: error})
+        return res.render('users/login')
     },
     logout: function (req, res)
     {
