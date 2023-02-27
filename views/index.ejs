@@ -22,17 +22,17 @@
                 <% products.forEach( product=> { %>
                     <a href="products/detail/<%= product.id %>">
                         <div class="articulo">
-                            <p class="nombre">
+                            <h1 class="nombre">
                                 <%= product.name %>
-                            </p>
+                            </h1>
                             <p class="imagenArticulo"><img src="/images/<%= product.image %>" alt="prenda1"></p>
-                            <p class="descripcion">
-                                <%= product.description %>
-                            </p>
+            
                             <p class="precio">$<%= product.price%>
                             </p>
                             
-                            <p class="precio">Condicion: <%= product.condition%>
+                            <p class="precio">Condicion: <%= product.condition%></p>
+
+                            <p class="precio">Marca: <%= product.brand%></p>
                             
                         </div>
                     </a>
