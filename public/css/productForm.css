@@ -143,6 +143,10 @@ color: #f4eb9e;
     border: none;
     border-radius: 5px;
   }
+  .imageImput{
+    width: 100px
+    ;
+  }
   
 /*fin botones envio*/
  

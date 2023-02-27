@@ -47,7 +47,10 @@ router.post('/', upload.single('image'),productValidationBack,productsController
 /* GET ONE PRODUCT */
 router.get('/detail/:id', productsController.detail)
 router.get('/:id/edit', productsController.edit); 
-router.put('/:id', productsController.update);
+router.put('/:id', upload.single('imageInput'), productsController.update);
+
+
+
 
 // router.get ('/products)
 router.post("/productEdit/:id", upload.single('image'), productsController.update);

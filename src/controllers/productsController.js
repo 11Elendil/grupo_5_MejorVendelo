@@ -1,6 +1,5 @@
  const fs = require('fs')
  const path = require('path')
- 
 
 // rest of the code
 
@@ -77,6 +76,7 @@ const Products = require('../../db/models/Products');
             name: req.body.name,
             price: req.body.price,
             description: req.body.description,
+            image: req.body.imageInput,
         },{
           where: {id: req.params.id}
         }
