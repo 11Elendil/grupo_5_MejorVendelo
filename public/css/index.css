@@ -130,6 +130,7 @@ body {
     flex-basis: calc(33.33% - 20px);
     margin-bottom: 20px;
     transition: all 0.4s;
+    width: 70vw;
 }
   
   
@@ -141,10 +142,12 @@ body {
     transform: translateY(-2px);
 }
 
-
+.articulo p {
+    text-align: center;
+}
 
 .articulo p img {
-    width: 100%;
+    width: 60%;
 }
 
 .precio,
