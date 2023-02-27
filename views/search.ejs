@@ -6,6 +6,18 @@
 
 <body>
     <div class="contenedor" >
+      
+      <%if(products.length == 0){  %> 
+        <div class="mensajeError">
+
+          <h2>No se encontraron productos que coincidan con tu busqueda.</h2>
+          <h2>Prueba con otra palabra</h2>
+
+        </div><br>
+      
+
+        <% } %>
+
         <%  products.forEach(product => { %>
       
           <div class="product1">

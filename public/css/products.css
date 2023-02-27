@@ -41,6 +41,12 @@
     margin-bottom: 10px;
   }
   
+  .mensajeError {
+    text-align: center;
+    margin: 300px;
+    font-size: 30px;
+  }
+
 body{
     margin: 0px;
     background-color: #f4eb9e;
