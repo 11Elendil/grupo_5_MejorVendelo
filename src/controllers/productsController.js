@@ -72,11 +72,12 @@ const Products = require('../../db/models/Products');
     update: async (req,res) => {
 
 
+
         await db.products.update({
             name: req.body.name,
             price: req.body.price,
             description: req.body.description,
-            image: req.body.imageInput,
+            image: req.file.filename,
         },{
           where: {id: req.params.id}
         }

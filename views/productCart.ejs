@@ -5,6 +5,9 @@
 
     
     <section class="products">
+
+        <%if(product){  %> 
+          
         <article>
             <div class="product1">
                 <img src="/images/<%= product.image %>" alt="">
@@ -25,14 +28,25 @@
                 </div>
             </div>
         </article>
-    </section>
-    <div class="card shadow">
-        <p>TOTAL</p>
-        <p>$15.000</p>
-    </div>
-    <div class="box-buy">
-        <button class=“button-buy” type="submit" value="ENVIAR">COMPRAR</button>
-    </div>
+
+        </section>
+        <div class="card shadow">
+            <p>TOTAL</p>
+            <p>$15.000</p>
+        </div>
+
+        <div class="box-buy">
+            <button class=“button-buy” type="submit" value="ENVIAR">COMPRAR</button>
+        </div>
+    
+        
+        <% } %>
+
+        <%if(!product){  %> 
+            <h2 class="mensajeError">No tienes productos en el carrito</h2>
+        <% } %>
+
+  
 
     <%- include("./partials/footer") %>
 

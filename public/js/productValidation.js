@@ -19,7 +19,8 @@
         const descriptionError = document.querySelector('#descriptionError')
         description.addEventListener('blur',()=>{
             if (description.value.length < 20){
-                descriptionError.innerHTML = 'la descripcion debe tener al menos 20 caracteres'
+                descriptionError.innerHTML = 'te recomendamos que la descripcion tenga al menos 20 caracteres'
+                description.focus();
             }
         });
         /* validacion de imagen*/

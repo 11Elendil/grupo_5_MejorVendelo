@@ -25,6 +25,13 @@ body {
 
 }
 
+.mensajeError {
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    margin: 200px;
+}
+
 article img{
     display: flex;
     height: 100%;

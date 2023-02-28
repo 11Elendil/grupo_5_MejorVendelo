@@ -71,7 +71,7 @@
           
         <div class="size" required>
             <% for (let i = 0; i < sizes.length; i++) {%>
-                <input type="radio" name="size" value="<%= sizes[i].id%>" > <%= sizes[i].name%>
+                <input required type="radio" name="size" value="<%= sizes[i].id%>" > <%= sizes[i].name%>
             <% } %> 
             
         </div>
@@ -89,7 +89,7 @@
         </div>
         <br>
         <div class="description" >
-            <textarea name="description" id="description" cols="30" rows="10" placeholder="Descripción..."></textarea>
+            <textarea required name="description" id="description" cols="30" rows="10" placeholder="Descripción..."></textarea>
             <div id="descriptionError"></div>
         </div>
        <div class="enviar-limpiar">

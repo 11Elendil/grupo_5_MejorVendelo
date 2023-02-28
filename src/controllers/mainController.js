@@ -11,7 +11,7 @@ const controller = {
     },
     productCart: (req,res) => {
         const logueado = req.session.user ? req.session.user : undefined;
-        return res.render("productCart.ejs", {logueado:logueado});
+        return res.render("productCart.ejs", {logueado:logueado, product: false});
     },
   
     search: async (req, res) => {
