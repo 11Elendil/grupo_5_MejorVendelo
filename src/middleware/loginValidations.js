@@ -21,7 +21,7 @@ module.exports = async function validacionesLogin(req, res, next) {
 
   // Si el usuario no existe, envía un mensaje de error
   if (!user) {
-    return res.status(401).json({ message: "Email o contraseña incorrectos" });
+    return res.render('users/login', { error: "No existe el usuario"})
   }
 
   // Compara la contraseña enviada por el usuario con la contraseña hasheada del archivo JSON
